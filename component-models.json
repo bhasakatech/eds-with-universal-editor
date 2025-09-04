@@ -293,5 +293,12 @@
         ]
       }
      ]
-  }
+  },
+  {
+  "name": "Hero",
+  "model": "hero",
+  "image": "/content/dam/image.png",
+  "imageAlt": "Helix - a shape like a corkscrew",
+  "text": "<h1>Welcome to AEM</h1>"
+   }
 ]
