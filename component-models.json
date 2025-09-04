@@ -233,24 +233,40 @@
          "value": ""
        },
        {
+         "component": "text",
+         "valueType": "string",
+         "name": "nagi",
+         "label": "Nagi Style",
+         "value": ""
+       },
+       {
         "component": "select",
-        "name": "classes",
-        "value": "",
-        "label": "Background Color",
-        "description": "The quote background color",
-        "valueType": "string",
+        "name": "titleType",
+        "label": "Title Type",
         "options": [
           {
-            "name": "Red",
-            "value": "bg-red"
+          "name": "h1",
+          "value": "h1"
           },
           {
-            "name": "Green",
-            "value": "bg-green"
+          "name": "h2",
+          "value": "h2"
           },
           {
-            "name": "Blue",
-            "value": "bg-blue"
+          "name": "h3",
+          "value": "h3"
+          },
+          {
+          "name": "h4",
+          "value": "h4"
+          },
+          {
+          "name": "h5",
+          "value": "h5"
+          },
+          {
+          "name": "h6",
+          "value": "h6"
           }
         ]
       }
