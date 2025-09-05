@@ -193,7 +193,7 @@
         },
         {
           "title": "Carousol",
-          "id": "carousl",
+          "id": "carousol",
           "plugins": {
             "xwalk": {
               "page": {
