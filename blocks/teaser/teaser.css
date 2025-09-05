@@ -1,0 +1,13 @@
+.teaser-carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+
+.teaser-carousel img {
+  flex: 0 0 auto;
+  scroll-snap-align: center;
+  width: 100%;
+  max-width: 300px;
+  margin-right: 1rem;
+}
