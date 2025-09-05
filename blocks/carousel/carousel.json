@@ -1,0 +1,18 @@
+{
+    "definitions": [],
+    "models": [
+        {
+            "id": "teaser",
+            "fields": [
+                {
+                    "component": "reference",
+                    "valueType": "string",
+                    "name": "image",
+                    "label": "Image",
+                    "multi": true
+                }
+            ]
+        }
+    ],
+    "filters": []
+}
