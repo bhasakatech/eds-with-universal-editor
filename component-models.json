@@ -189,37 +189,6 @@
       }
     ]
   },
-  
-  {
-    "id": "vamshi",
-    "fields": [
-      {
-        "component": "text",
-        "name": "titleText",
-        "label": "Title",
-        "valueType": "string"
-      },
-      {
-        "component": "text",
-        "name": "buttonLabel",
-        "label": "Button Label",
-        "valueType": "string"
-      },
-      {
-        "component": "reference",
-        "name": "image",
-        "label": "Banner Image",
-        "valueType": "string",
-        "multi": true
-      },
-      {
-        "component": "text",
-        "name": "imageAlt",
-        "label": "Image Alt Text",
-        "valueType": "string"
-      }
-    ]
-  },
   {
     "id": "hero",
     "fields": [
