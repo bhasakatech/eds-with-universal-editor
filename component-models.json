@@ -142,6 +142,24 @@
     ]
   },
   {
+    "id": "annoucementBar",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "text",
+        "label": "Text Label"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      }
+    ]
+  },
+  {
     "id": "card",
     "fields": [
       {
@@ -157,24 +175,6 @@
         "value": "",
         "label": "Text",
         "valueType": "string"
-      }
-    ]
-  },
-  {
-    "id": "carouselheader",
-    "fields": [
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "text",
-        "label": "Text Label"
-      },
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "image",
-        "label": "Image",
-        "multi": false
       }
     ]
   },
@@ -237,29 +237,11 @@
     "id": "teaser",
     "fields": [
       {
-        "component": "select",
-        "name": "classes",
-        "value": "",
-        "label": "Teaser options",
-        "description": "",
-        "valueType": "string",
-        "options": [
-          {
-            "name": "Default",
-            "value": ""
-          },
-          {
-            "name": "Side-by-side",
-            "value": "side-by-side"
-          }
-        ]
-      },
-      {
         "component": "reference",
         "valueType": "string",
         "name": "image",
         "label": "Image",
-        "multi": false
+        "multi": true
       },
       {
         "component": "text",
@@ -293,35 +275,28 @@
     "id": "carousol",
     "fields": [
       {
-        "component": "multifield",
-        "name": "slides",
-        "label": "Slides",
-        "fields": [
-          {
-            "component": "reference",
-            "name": "image",
-            "label": "Slide Image",
-            "valueType": "string"
-          },
-          {
-            "component": "text",
-            "name": "altText",
-            "label": "Alt Text",
-            "valueType": "string"
-          },
-          {
-            "component": "text",
-            "name": "caption",
-            "label": "Caption",
-            "valueType": "string"
-          },
-          {
-            "component": "aem-content",
-            "name": "link",
-            "label": "Slide Link",
-            "valueType": "string"
-          }
-        ]
+        "component": "reference",
+        "name": "image",
+        "label": "Slide Image",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "alttext",
+        "label": "Alt Text",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "caption",
+        "label": "Caption",
+        "valueType": "string"
+      },
+      {
+        "component": "aem-content",
+        "name": "link",
+        "label": "Slide Link",
+        "valueType": "string"
       }
     ]
   }
