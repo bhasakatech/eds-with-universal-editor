@@ -217,28 +217,33 @@
   },  
   {
   "id": "vamshi",
-  "fields": [
-    {
-      "component": "text-input",
-      "name": "titleText",
-      "label": "Title"
-    },
-    {
-      "component": "text-input",
-      "name": "buttonLabel",
-      "label": "Button Label"
-    },
-    {
-      "component": "reference",
-      "name": "image",
-      "label": "Banner Image"
-    },
-    {
-      "component": "text-input",
-      "name": "imageAlt",
-      "label": "Image Alt Text"
-    }
-  ]
+ "fields": [
+  {
+    "component": "text-input",
+    "name": "titleText",
+    "label": "Title",
+    "valueType": "string"
+  },
+  {
+    "component": "text-input",
+    "name": "buttonLabel",
+    "label": "Button Label",
+    "valueType": "string"
+  },
+  {
+    "component": "reference",
+    "name": "image",
+    "label": "Banner Image",
+    "valueType": "string"
+  },
+  {
+    "component": "text-input",
+    "name": "imageAlt",
+    "label": "Image Alt Text",
+    "valueType": "string"
+  }
+]
+
 }
 
 ]
