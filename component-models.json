@@ -219,11 +219,29 @@
     "id": "teaser",
     "fields": [
       {
+        "component": "select",
+        "name": "classes",
+        "value": "",
+        "label": "Teaser options",
+        "description": "",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Side-by-side",
+            "value": "side-by-side"
+          }
+        ]
+      },
+      {
         "component": "reference",
         "valueType": "string",
         "name": "image",
         "label": "Image",
-        "multi": true
+        "multi": false
       },
       {
         "component": "text",
@@ -252,34 +270,5 @@
         "valueType": "string"
       }
     ]
-  },{
-      "id": "vamshi",
-      "fields": [
-        {
-          "component": "text",
-          "name": "title",
-          "label": "Title",
-          "valueType": "string"
-        },
-        {
-          "component": "text",
-          "name": "buttonLabel",
-          "label": "Button Label",
-          "valueType": "string"
-        },
-        {
-          "component": "reference",
-          "name": "image",
-          "label": "Banner Image",
-          "valueType": "string",
-          "multi": true
-        },
-        {
-          "component": "text",
-          "name": "imageAlt",
-          "label": "Image Alt Text",
-          "valueType": "string"
-        }
-      ]
-    }
+  }
 ]
