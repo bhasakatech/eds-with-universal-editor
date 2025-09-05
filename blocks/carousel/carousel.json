@@ -2,7 +2,7 @@
     "definitions": [],
     "models": [
         {
-            "id": "teaser",
+            "id": "carousel",
             "fields": [
                 {
                     "component": "reference",
