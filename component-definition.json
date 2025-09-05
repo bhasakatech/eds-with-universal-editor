@@ -83,21 +83,6 @@
       "id": "blocks",
       "components": [
         {
-          "title": "Annoucement Bar",
-          "id": "annoucementBar",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "annoucementBar",
-                  "model": "annoucementBar"
-                }
-              }
-            }
-          }
-        },
-        {
           "title": "Cards",
           "id": "cards",
           "plugins": {
@@ -122,6 +107,21 @@
                 "template": {
                   "name": "Card",
                   "model": "card"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Annoucement Bar",
+          "id": "carouselheader",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "carouselheader",
+                  "model": "carouselheader"
                 }
               }
             }
