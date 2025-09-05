@@ -288,5 +288,41 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "carousol",
+    "fields": [
+      {
+        "component": "multifield",
+        "name": "slides",
+        "label": "Slides",
+        "fields": [
+          {
+            "component": "reference",
+            "name": "image",
+            "label": "Slide Image",
+            "valueType": "string"
+          },
+          {
+            "component": "text",
+            "name": "altText",
+            "label": "Alt Text",
+            "valueType": "string"
+          },
+          {
+            "component": "text",
+            "name": "caption",
+            "label": "Caption",
+            "valueType": "string"
+          },
+          {
+            "component": "aem-content",
+            "name": "link",
+            "label": "Slide Link",
+            "valueType": "string"
+          }
+        ]
+      }
+    ]
   }
 ]
