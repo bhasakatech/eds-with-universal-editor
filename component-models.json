@@ -252,34 +252,71 @@
         "valueType": "string"
       }
     ]
-  },{
-      "id": "vamshi",
-      "fields": [
-        {
-          "component": "text",
-          "name": "title",
-          "label": "Title",
-          "valueType": "string"
-        },
-        {
-          "component": "text",
-          "name": "buttonLabel",
-          "label": "Button Label",
-          "valueType": "string"
-        },
-        {
-          "component": "reference",
-          "name": "image",
-          "label": "Banner Image",
-          "valueType": "string",
-          "multi": true
-        },
-        {
-          "component": "text",
-          "name": "imageAlt",
-          "label": "Image Alt Text",
-          "valueType": "string"
-        }
-      ]
-    }
+  },
+  {
+    "id": "vamshi",
+    "fields": [
+      {
+        "component": "text",
+        "name": "title",
+        "label": "Title",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "buttonLabel",
+        "label": "Button Label",
+        "valueType": "string"
+      },
+      {
+        "component": "reference",
+        "name": "image",
+        "label": "Banner Image",
+        "valueType": "string",
+        "multi": true
+      },
+      {
+        "component": "text",
+        "name": "imageAlt",
+        "label": "Image Alt Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "carousel",
+    "fields": [
+      {
+        "component": "multifield",
+        "name": "slides",
+        "label": "Slides",
+        "fields": [
+          {
+            "component": "reference",
+            "name": "image",
+            "label": "Slide Image",
+            "valueType": "string"
+          },
+          {
+            "component": "text",
+            "name": "altText",
+            "label": "Alt Text",
+            "valueType": "string"
+          },
+          {
+            "component": "text",
+            "name": "caption",
+            "label": "Caption",
+            "valueType": "string"
+          },
+          {
+            "component": "aem-content",
+            "name": "link",
+            "label": "Slide Link",
+            "valueType": "string"
+          }
+        ]
+      }
+    ]
+  }
 ]
