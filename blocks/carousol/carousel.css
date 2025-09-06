@@ -1,0 +1,41 @@
+.carousol-wrapper {
+  position: relative;
+  width: 600px; /* adjust to your design */
+  margin: auto;
+  overflow: hidden;
+}
+
+.carousol.block {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousol-slide {
+  min-width: 100%;
+  flex-shrink: 0;
+  text-align: center;
+}
+
+.carousol-slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.carousol-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.carousol-btn.left {
+  left: 10px;
+}
+
+.carousol-btn.right {
+  right: 10px;
+}
