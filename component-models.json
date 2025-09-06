@@ -276,22 +276,11 @@
     "fields": [
       {
         "component": "reference",
-        "name": "image",
-        "label": "Slide Image",
+        "name": "leftbuttonimage",
+        "label": "Left Button Image",
         "valueType": "string"
       },
       {
-        "component": "text",
-        "name": "alttext",
-        "label": "Alt Text",
-        "valueType": "string"
-      },
-      {
-        "component": "text",
-        "name": "caption",
-        "label": "Caption",
-        "valueType": "string"
-      }, {
         "component": "reference",
         "name": "image",
         "label": "Slide Image",
@@ -308,7 +297,8 @@
         "name": "caption",
         "label": "Caption",
         "valueType": "string"
-      }, {
+      },
+      {
         "component": "reference",
         "name": "image",
         "label": "Slide Image",
@@ -325,7 +315,8 @@
         "name": "caption",
         "label": "Caption",
         "valueType": "string"
-      }, {
+      },
+      {
         "component": "reference",
         "name": "image",
         "label": "Slide Image",
@@ -341,6 +332,30 @@
         "component": "text",
         "name": "caption",
         "label": "Caption",
+        "valueType": "string"
+      },
+      {
+        "component": "reference",
+        "name": "image",
+        "label": "Slide Image",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "alttext",
+        "label": "Alt Text",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "caption",
+        "label": "Caption",
+        "valueType": "string"
+      },
+      {
+        "component": "reference",
+        "name": "rightbuttonimage",
+        "label": "Right Button Image",
         "valueType": "string"
       }
     ]
