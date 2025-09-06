@@ -282,74 +282,14 @@
       },
       {
         "component": "reference",
-        "name": "image",
-        "label": "Slide Image",
+        "name": "image1",
+        "label": "Slide Image 1",
         "valueType": "string"
       },
-      {
-        "component": "text",
-        "name": "alttext",
-        "label": "Alt Text",
-        "valueType": "string"
-      },
-      {
-        "component": "text",
-        "name": "caption",
-        "label": "Caption",
-        "valueType": "string"
-      },
-      {
+       {
         "component": "reference",
-        "name": "image",
-        "label": "Slide Image",
-        "valueType": "string"
-      },
-      {
-        "component": "text",
-        "name": "alttext",
-        "label": "Alt Text",
-        "valueType": "string"
-      },
-      {
-        "component": "text",
-        "name": "caption",
-        "label": "Caption",
-        "valueType": "string"
-      },
-      {
-        "component": "reference",
-        "name": "image",
-        "label": "Slide Image",
-        "valueType": "string"
-      },
-      {
-        "component": "text",
-        "name": "alttext",
-        "label": "Alt Text",
-        "valueType": "string"
-      },
-      {
-        "component": "text",
-        "name": "caption",
-        "label": "Caption",
-        "valueType": "string"
-      },
-      {
-        "component": "reference",
-        "name": "image",
-        "label": "Slide Image",
-        "valueType": "string"
-      },
-      {
-        "component": "text",
-        "name": "alttext",
-        "label": "Alt Text",
-        "valueType": "string"
-      },
-      {
-        "component": "text",
-        "name": "caption",
-        "label": "Caption",
+        "name": "image2",
+        "label": "Slide Image 2",
         "valueType": "string"
       },
       {
