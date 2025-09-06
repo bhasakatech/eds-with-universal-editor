@@ -276,26 +276,26 @@
     "fields": [
       {
         "component": "reference",
-        "name": "image",
-        "label": "Slide Image",
+        "name": "leftbuttonimage",
+        "label": "Left Button Image",
         "valueType": "string"
       },
       {
-        "component": "text",
-        "name": "alttext",
-        "label": "Alt Text",
+        "component": "reference",
+        "name": "image1",
+        "label": "Slide Image 1",
+        "valueType": "string"
+      },
+       {
+        "component": "reference",
+        "name": "image2",
+        "label": "Slide Image 2",
         "valueType": "string"
       },
       {
-        "component": "text",
-        "name": "caption",
-        "label": "Caption",
-        "valueType": "string"
-      },
-      {
-        "component": "aem-content",
-        "name": "link",
-        "label": "Slide Link",
+        "component": "reference",
+        "name": "rightbuttonimage",
+        "label": "Right Button Image",
         "valueType": "string"
       }
     ]

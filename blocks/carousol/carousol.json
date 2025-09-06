@@ -16,11 +16,50 @@
   "models": [
     {
       "id": "carousol",
-      "fields": [       
-            { "component": "reference",   "name": "image",   "label": "Slide Image", "valueType": "string" },
-            { "component": "text",        "name": "alttext", "label": "Alt Text",    "valueType": "string" },
-            { "component": "text",        "name": "caption", "label": "Caption",     "valueType": "string" },
-            { "component": "aem-content", "name": "link",    "label": "Slide Link",  "valueType": "string" }          
+      "fields": [
+        {
+          "component": "container",
+          "name": "slideGroup",
+          "label": "Slide Group",
+          "fields": [
+            {
+              "component": "reference",
+              "name": "image1",
+              "label": "Slide Image 1",
+              "valueType": "string"
+            },
+            {
+              "component": "text",
+              "name": "alttext1",
+              "label": "Alt Text1",
+              "valueType": "string"
+            },
+            {
+              "component": "reference",
+              "name": "image2",
+              "label": "Slide Image2",
+              "valueType": "string"
+            },
+            {
+              "component": "text",
+              "name": "alttext2",
+              "label": "Alt Text2",
+              "valueType": "string"
+            }
+          ]
+        },
+        {
+          "component": "reference",
+          "name": "leftbuttonimage",
+          "label": "Left Button Image",
+          "valueType": "string"
+        },
+        {
+          "component": "reference",
+          "name": "rightbuttonimage",
+          "label": "Right Button Image",
+          "valueType": "string"
+        }
       ]
     }
   ],
