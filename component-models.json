@@ -278,25 +278,29 @@
         "component": "reference",
         "name": "leftbuttonimage",
         "label": "Left Button Image",
-        "valueType": "string"
+        "valueType": "string",
+        "className": "carousol-btn carousol-btn-left"
       },
       {
         "component": "reference",
         "name": "image1",
         "label": "Slide Image 1",
-        "valueType": "string"
+        "valueType": "string",
+        "className": "carousol-image2"
       },
-       {
+      {
         "component": "reference",
         "name": "image2",
         "label": "Slide Image 2",
-        "valueType": "string"
+        "valueType": "string",
+        "className": "carousol-image1"
       },
       {
         "component": "reference",
         "name": "rightbuttonimage",
         "label": "Right Button Image",
-        "valueType": "string"
+        "valueType": "string",
+        "className": "carousol-image2"
       }
     ]
   }
