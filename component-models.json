@@ -270,34 +270,41 @@
         "valueType": "string"
       }
     ]
-  },
-  {
-    "id": "carousol",
-    "fields": [
-      {
-        "component": "reference",
-        "name": "image",
-        "label": "Slide Image",
-        "valueType": "string"
-      },
-      {
-        "component": "text",
-        "name": "alttext",
-        "label": "Alt Text",
-        "valueType": "string"
-      },
-      {
-        "component": "text",
-        "name": "caption",
-        "label": "Caption",
-        "valueType": "string"
-      },
-      {
-        "component": "aem-content",
-        "name": "link",
-        "label": "Slide Link",
-        "valueType": "string"
-      }
-    ]
-  }
+  },{
+  "id": "carousol",
+  "fields": [
+    {
+      "component": "table",
+      "name": "slides",
+      "label": "Slides",
+      "columns": [
+        {
+          "component": "reference",
+          "name": "image",
+          "label": "Slide Image",
+          "valueType": "string"
+        },
+        {
+          "component": "text",
+          "name": "altText",
+          "label": "Alt Text",
+          "valueType": "string"
+        },
+        {
+          "component": "text",
+          "name": "caption",
+          "label": "Caption",
+          "valueType": "string"
+        },
+        {
+          "component": "aem-content",
+          "name": "link",
+          "label": "Slide Link",
+          "valueType": "string"
+        }
+      ]
+    }
+  ]
+}
+
 ]
