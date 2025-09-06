@@ -15,14 +15,79 @@
   ],
   "models": [
     {
-      "id": "carousol",
-      "fields": [       
-            { "component": "reference",   "name": "image",   "label": "Slide Image", "valueType": "string" },
-            { "component": "text",        "name": "alttext", "label": "Alt Text",    "valueType": "string" },
-            { "component": "text",        "name": "caption", "label": "Caption",     "valueType": "string" },
-            { "component": "aem-content", "name": "link",    "label": "Slide Link",  "valueType": "string" }          
-      ]
-    }
+    "id": "carousol",
+    "fields": [
+      {
+        "component": "reference",
+        "name": "image",
+        "label": "Slide Image",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "alttext",
+        "label": "Alt Text",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "caption",
+        "label": "Caption",
+        "valueType": "string"
+      }, {
+        "component": "reference",
+        "name": "image",
+        "label": "Slide Image",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "alttext",
+        "label": "Alt Text",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "caption",
+        "label": "Caption",
+        "valueType": "string"
+      }, {
+        "component": "reference",
+        "name": "image",
+        "label": "Slide Image",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "alttext",
+        "label": "Alt Text",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "caption",
+        "label": "Caption",
+        "valueType": "string"
+      }, {
+        "component": "reference",
+        "name": "image",
+        "label": "Slide Image",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "alttext",
+        "label": "Alt Text",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "caption",
+        "label": "Caption",
+        "valueType": "string"
+      }
+    ]
+  }
   ],
   "filters": []
 }

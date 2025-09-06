@@ -291,11 +291,56 @@
         "name": "caption",
         "label": "Caption",
         "valueType": "string"
+      }, {
+        "component": "reference",
+        "name": "image",
+        "label": "Slide Image",
+        "valueType": "string"
       },
       {
-        "component": "aem-content",
-        "name": "link",
-        "label": "Slide Link",
+        "component": "text",
+        "name": "alttext",
+        "label": "Alt Text",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "caption",
+        "label": "Caption",
+        "valueType": "string"
+      }, {
+        "component": "reference",
+        "name": "image",
+        "label": "Slide Image",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "alttext",
+        "label": "Alt Text",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "caption",
+        "label": "Caption",
+        "valueType": "string"
+      }, {
+        "component": "reference",
+        "name": "image",
+        "label": "Slide Image",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "alttext",
+        "label": "Alt Text",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "caption",
+        "label": "Caption",
         "valueType": "string"
       }
     ]
