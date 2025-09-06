@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const slides = carousel.querySelectorAll("img[data-aue-prop^='image']");
   const leftBtn = carousel.querySelector("img[data-aue-prop='leftbuttonimage']");
   const rightBtn = carousel.querySelector("img[data-aue-prop='rightbuttonimage']");
-
+console.log(rightBtn)
   let currentIndex = 0;
 
   function showSlide(index) {
