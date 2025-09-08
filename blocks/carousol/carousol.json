@@ -1,3 +1,4 @@
+
 {
   "definitions": [
     {
@@ -20,30 +21,19 @@
         {
           "component": "container",
           "name": "slideGroup",
-          "label": "Slide Group",
+          "label": "Slides",
+          "multi": true,
           "fields": [
             {
               "component": "reference",
-              "name": "image1",
-              "label": "Slide Image 1",
+              "name": "image",
+              "label": "Slide Image",
               "valueType": "string"
             },
             {
               "component": "text",
-              "name": "alttext1",
-              "label": "Alt Text1",
-              "valueType": "string"
-            },
-            {
-              "component": "reference",
-              "name": "image2",
-              "label": "Slide Image2",
-              "valueType": "string"
-            },
-            {
-              "component": "text",
-              "name": "alttext2",
-              "label": "Alt Text2",
+              "name": "alttext",
+              "label": "Alt Text",
               "valueType": "string"
             }
           ]
