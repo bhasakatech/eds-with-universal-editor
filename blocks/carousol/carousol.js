@@ -2,8 +2,8 @@ export default function decorate(block) {
   //  all 4 elements
   const leftBtn = block.querySelector('[data-aue-prop="leftbuttonimage"]');
   const rightBtn = block.querySelector('[data-aue-prop="rightbuttonimage"]');
-  const image1 = block.querySelector('[data-aue-prop="image1"]').closest('div');
-  const image2 = block.querySelector('[data-aue-prop="image2"]').closest('div');
+  const image1 = block.querySelector('[data-aue-prop="image1"]');
+  const image2 = block.querySelector('[data-aue-prop="image2"]');
 
   // Store slides in array
   const slides = [image1, image2];
