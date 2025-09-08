@@ -1,123 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
 .carousol-wrapper {
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: linear-gradient(90deg, #2d1a87 0%, #1a2d87 100%);
-  color: #fff;
-  padding: 40px 60px;
-  border-radius: 10px;
+  width: 100%;
   overflow: hidden;
 }
 
-/* Left Content (Text + CTA) */
-.carousol-content {
-  flex: 1;
-  max-width: 50%;
-  padding-right: 30px;
-}
-
-.carousol-dots span {
-  width: 10px;
-  height: 10px;
-  background: #bbb;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.carousol-content h2 {
-  font-size: 36px;
-  font-weight: 700;
-  margin-bottom: 15px;
-}
-
-.carousol-content h2 span {
-  color: #ffd600; /* Yellow highlight */
-}
-
-.carousol-content p {
-  font-size: 18px;
-  margin-bottom: 15px;
-}
-
-.carousol-content .highlight {
-  font-weight: bold;
-  color: #25c1ff;
-}
-
-.carousol-content .btn {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 12px 25px;
-  border-radius: 6px;
-  font-weight: bold;
-  text-decoration: none;
-  color: #fff;
-  background: #00c853; /* green button */
-}
-
-.carousol-content .btn.secondary {
-  background: transparent;
-  border: 2px solid #00c853;
-  color: #00c853;
-  margin-left: 10px;
-}
-
-/* Right Image */
-.carousol-image {
-  flex: 1;
-  max-width: 50%;
-  text-align: right;
-}
-
-.carousol-image img {
-  max-width: 100%;
-  border-radius: 20px;
-}
-
-/* Navigation Arrows */
-.carousol-btn {
+.carousol.block > div:first-child,   /* Left button container */
+.carousol.block > div:last-child {  /* Right button container */
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: #000;
-  color: #fff;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  z-index: 10;
   cursor: pointer;
-  opacity: 0.8;
-  z-index: 5;
 }
 
-.carousol-btn:hover {
-  opacity: 1;
+.carousol.block > div:first-child {   /* Left button */
+  left: 20px;  /* adjust for spacing */
 }
 
-.carousol-btn-left {
-  left: 20px;
+.carousol.block > div:last-child {    /* Right button */
+  right: 20px; /* adjust for spacing */
 }
 
-.carousol-btn-right {
-  right: 20px;
+.carousol.block > div:first-child img,
+.carousol.block > div:last-child img {
+  width: 40px;   /* adjust size */
+  height: 40px;
+  border-radius: 50%;
+  background: #fff;   /* white circular bg */
+  box-shadow: 0 2px 6px rgb(0 0 0 / 20%);
+  padding: 8px;
+  transition: transform 0.3s ease;
 }
 
-/* Dots (pagination) */
-.carousol-dots {
-  position: absolute;
-  bottom: 15px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 8px;
-}
-
-.carousol-dots .active {
-  background: #fff;
-  width: 20px;
-  border-radius: 5px;
+.carousol.block > div:first-child img:hover,
+.carousol.block > div:last-child img:hover {
+  transform: scale(1.1);
 }
