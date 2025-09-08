@@ -1,5 +1,5 @@
 export default function decorate(block) {
-  // Grab all 4 elements
+  //  all 4 elements
   const leftBtn = block.querySelector('[data-aue-prop="leftbuttonimage"]');
   const rightBtn = block.querySelector('[data-aue-prop="rightbuttonimage"]');
   const image1 = block.querySelector('[data-aue-prop="image1"]').closest('div');
