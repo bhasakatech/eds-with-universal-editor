@@ -287,24 +287,16 @@
         "valueType": "string"
       },
       {
-        "component": "container",
-        "name": "slides",
-        "label": "Slides",
-        "multi": true,
-        "fields": [
-          {
-            "component": "reference",
-            "name": "image",
-            "label": "Slide Image",
-            "valueType": "string"
-          },
-          {
-            "component": "text",
-            "name": "alttext",
-            "label": "Alt Text",
-            "valueType": "string"
-          }
-        ]
+        "component": "reference",
+        "name": "image1",
+        "label": "Image One",
+        "valueType": "string"
+      },
+      {
+        "component": "reference",
+        "name": "image2",
+        "label": "Image Two",
+        "valueType": "string"
       }
     ]
   }
