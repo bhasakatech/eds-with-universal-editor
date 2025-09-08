@@ -1,54 +1,123 @@
 .carousol-wrapper {
   position: relative;
-  width: 100%;
-  max-width: 900px;
-  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(90deg, #2d1a87 0%, #1a2d87 100%);
+  color: #fff;
+  padding: 40px 60px;
+  border-radius: 10px;
   overflow: hidden;
 }
 
-.carousol-slides {
-  display: flex;
-  transition: transform 0.5s ease;
+/* Left Content (Text + CTA) */
+.carousol-content {
+  flex: 1;
+  max-width: 50%;
+  padding-right: 30px;
 }
 
-.carousol-slide {
-  min-width: 100%;
-  flex-shrink: 0;
-  display: none;
-  justify-content: center;
-  align-items: center;
+.carousol-dots span {
+  width: 10px;
+  height: 10px;
+  background: #bbb;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-.carousol-slide img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
+.carousol-content h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 15px;
 }
 
-.carousol-slide.active {
-  display: flex;
+.carousol-content h2 span {
+  color: #ffd600; /* Yellow highlight */
 }
 
+.carousol-content p {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.carousol-content .highlight {
+  font-weight: bold;
+  color: #25c1ff;
+}
+
+.carousol-content .btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 25px;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+  background: #00c853; /* green button */
+}
+
+.carousol-content .btn.secondary {
+  background: transparent;
+  border: 2px solid #00c853;
+  color: #00c853;
+  margin-left: 10px;
+}
+
+/* Right Image */
+.carousol-image {
+  flex: 1;
+  max-width: 50%;
+  text-align: right;
+}
+
+.carousol-image img {
+  max-width: 100%;
+  border-radius: 20px;
+}
+
+/* Navigation Arrows */
 .carousol-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgb(0 0 0 / 50%);
-  padding: 8px;
+  background: #000;
+  color: #fff;
   border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
-  z-index: 10;
+  opacity: 0.8;
+  z-index: 5;
 }
 
-.carousol-btn img {
-  width: 24px;
-  height: 24px;
+.carousol-btn:hover {
+  opacity: 1;
 }
 
 .carousol-btn-left {
-  left: 10px;
+  left: 20px;
 }
 
 .carousol-btn-right {
-  right: 10px;
+  right: 20px;
+}
+
+/* Dots (pagination) */
+.carousol-dots {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+
+.carousol-dots .active {
+  background: #fff;
+  width: 20px;
+  border-radius: 5px;
 }
