@@ -6,13 +6,7 @@
       "name": "leftbuttonimage",
       "label": "Left Button Image",
       "valueType": "string"
-    },
-    {
-      "component": "reference",
-      "name": "rightbuttonimage",
-      "label": "Right Button Image",
-      "valueType": "string"
-    },
+    },   
     {
       "component": "reference",
       "name": "image1",
@@ -23,6 +17,11 @@
       "component": "reference",
       "name": "image2",
       "label": "Image Two",
+      "valueType": "string"
+    }, {
+      "component": "reference",
+      "name": "rightbuttonimage",
+      "label": "Right Button Image",
       "valueType": "string"
     }
   ]
