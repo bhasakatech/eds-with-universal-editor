@@ -278,29 +278,34 @@
         "component": "reference",
         "name": "leftbuttonimage",
         "label": "Left Button Image",
-        "valueType": "string",
-        "className": "carousol-btn carousol-btn-left"
+        "valueType": "string"
       },
       {
-        "component": "reference",
-        "name": "image1",
-        "label": "Slide Image 1",
-        "valueType": "string",
-        "className": "carousol-image2"
+        "component": "container",
+        "name": "slideGroup",
+        "label": "Slides",
+        "multi": true,
+        "fields": [
+          {
+            "component": "reference",
+            "name": "image",
+            "label": "Slide Image",
+            "valueType": "string"
+          },
+          {
+            "component": "text",
+            "name": "alttext",
+            "label": "Alt Text",
+            "valueType": "string"
+          }
+        ]
       },
-      {
-        "component": "reference",
-        "name": "image2",
-        "label": "Slide Image 2",
-        "valueType": "string",
-        "className": "carousol-image1"
-      },
+      
       {
         "component": "reference",
         "name": "rightbuttonimage",
         "label": "Right Button Image",
-        "valueType": "string",
-        "className": "carousol-image2"
+        "valueType": "string"
       }
     ]
   }
