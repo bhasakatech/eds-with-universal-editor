@@ -27,4 +27,9 @@ export default function decorate(block) {
     currentIndex = (currentIndex + 1) % slides.length;
     slides[currentIndex].style.display = 'block';
   });
+
+  setInterval(() => {
+    currentIndex = (currentIndex + 1) % slides.length;
+    showSlide(currentIndex);
+  }, 2000);
 }
