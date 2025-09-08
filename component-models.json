@@ -278,46 +278,19 @@
         "component": "reference",
         "name": "leftbuttonimage",
         "label": "Left Button Image",
-        "valueType": "string",
-        "plugins": {
-          "xwalk": {
-            "page": {
-              "template": {
-                "markup": "<picture><img data-aue-prop='leftbuttonimage' data-aue-type='media' alt='Left Button'/></picture>"
-              }
-            }
-          }
-        }
+        "valueType": "string"
       },
       {
         "component": "reference",
         "name": "rightbuttonimage",
         "label": "Right Button Image",
-        "valueType": "string",
-        "plugins": {
-          "xwalk": {
-            "page": {
-              "template": {
-                "markup": "<picture><img data-aue-prop='rightbuttonimage' data-aue-type='media' alt='Right Button'/></picture>"
-              }
-            }
-          }
-        }
+        "valueType": "string"
       },
       {
         "component": "container",
         "name": "slides",
         "label": "Slides",
         "multi": true,
-        "plugins": {
-          "xwalk": {
-            "page": {
-              "template": {
-                "markup": "<div data-aue-repeat='slides'><picture><img data-aue-prop='image' data-aue-type='media' alt='{{alttext}}'/></picture></div>"
-              }
-            }
-          }
-        },
         "fields": [
           {
             "component": "reference",
