@@ -5,8 +5,12 @@
 }
 
 .section.carousol-container .carousol-wrapper {
-  position: relative;
-  width: 100%;
+    margin: 0px !important;
+    padding: 0px;
+    position: relative;
+    width: 1400px;
+    max-width: 1400px;
+    overflow: hidden;
 }
 
 .section.carousol-container .carousol.block > div:first-child,
