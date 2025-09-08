@@ -1,41 +1,54 @@
 .carousol-wrapper {
   position: relative;
-  width: 600px; /* adjust to your design */
-  margin: auto;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
   overflow: hidden;
 }
 
-.carousol.block {
+.carousol-slides {
   display: flex;
-  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease;
 }
 
 .carousol-slide {
   min-width: 100%;
   flex-shrink: 0;
-  text-align: center;
+  display: none;
+  justify-content: center;
+  align-items: center;
 }
 
 .carousol-slide img {
   width: 100%;
   height: auto;
-  display: block;
+  border-radius: 8px;
+}
+
+.carousol-slide.active {
+  display: flex;
 }
 
 .carousol-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: transparent;
-  border: none;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 8px;
+  border-radius: 50%;
   cursor: pointer;
   z-index: 10;
 }
 
-.carousol-btn.left {
+.carousol-btn img {
+  width: 24px;
+  height: 24px;
+}
+
+.carousol-btn-left {
   left: 10px;
 }
 
-.carousol-btn.right {
+.carousol-btn-right {
   right: 10px;
 }
