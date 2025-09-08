@@ -25,6 +25,8 @@
 
 .carousol.block > div:first-child img,
 .carousol.block > div:last-child img {
+  margin: 31px;
+  filter: invert(3);
   width: 40px;   /* adjust size */
   height: 40px;
   border-radius: 50%;
