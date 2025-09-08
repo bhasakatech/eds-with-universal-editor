@@ -22,7 +22,6 @@
 
 .carousol.block > div:first-child img,
 .carousol.block > div:last-child img {
-    width: 100%;
     margin: 31px;
     filter: invert(3);
     width: 40px;
