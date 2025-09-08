@@ -1,17 +1,14 @@
-/* ===== Scoped only inside .section.carousol-container ===== */
 .section.carousol-container {
   position: relative;
   width: 100%;
   overflow: hidden;
 }
 
-/* Carousel wrapper */
 .section.carousol-container .carousol-wrapper {
-  width: 100%;
   position: relative;
+  width: 100%;
 }
 
-/* Arrow button containers */
 .section.carousol-container .carousol.block > div:first-child,
 .section.carousol-container .carousol.block > div:last-child {
   position: absolute;
@@ -21,36 +18,30 @@
   cursor: pointer;
 }
 
-/* Left button */
 .section.carousol-container .carousol.block > div:first-child {
   left: 20px;
 }
 
-/* Right button */
 .section.carousol-container .carousol.block > div:last-child {
   right: 20px;
 }
 
-/* Arrow images (keep Figma style) */
 .section.carousol-container .carousol.block > div:first-child img,
 .section.carousol-container .carousol.block > div:last-child img {
-  width: 40px;   /* adjust per Figma */
+  width: 40px;
   height: 40px;
-  display: block;
   object-fit: contain;
   transition: transform 0.3s ease;
 }
 
-/* Slide images full width */
 .section.carousol-container .carousol.block > div:nth-child(2) img,
 .section.carousol-container .carousol.block > div:nth-child(3) img {
-  width: 100%;
-  height: auto;
+  width: 100% !important;
+  height: auto !important;
   display: block;
-  object-fit: cover; /* keeps proportion but fills width */
+  object-fit: cover;
 }
 
-/* Hover effect */
 .section.carousol-container .carousol.block > div:first-child img:hover,
 .section.carousol-container .carousol.block > div:last-child img:hover {
   transform: scale(1.1);
