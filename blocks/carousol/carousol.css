@@ -6,8 +6,8 @@
   overflow: hidden;
 }
 
-.carousol.block > div:first-child,   /* Left button container */
-.carousol.block > div:last-child {  /* Right button container */
+.carousol.block > div:first-child,  
+.carousol.block > div:last-child {  
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -15,22 +15,22 @@
   cursor: pointer;
 }
 
-.carousol.block > div:first-child {   /* Left button */
-  left: 20px;  /* adjust for spacing */
+.carousol.block > div:first-child {   
+  left: 20px; 
 }
 
-.carousol.block > div:last-child {    /* Right button */
-  right: 20px; /* adjust for spacing */
+.carousol.block > div:last-child {   
+  right: 20px; 
 }
 
 .carousol.block > div:first-child img,
 .carousol.block > div:last-child img {
   margin: 31px;
   filter: invert(3);
-  width: 40px;   /* adjust size */
+  width: 40px;   
   height: 40px;
   border-radius: 50%;
-  background: #fff;   /* white circular bg */
+  background: #fff;   
   box-shadow: 0 2px 6px rgb(0 0 0 / 20%);
   padding: 8px;
   transition: transform 0.3s ease;
