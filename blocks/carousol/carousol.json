@@ -40,7 +40,7 @@
         "xwalk": {
           "page": {
             "template": {
-              "markup": "<picture><img data-aue-prop='image' data-aue-type='media' alt='{{alttext}}'/></picture>"
+              "markup": "<div data-aue-repeat='slides'><picture><img data-aue-prop='image' data-aue-type='media' alt='{{alttext}}'/></picture></div>"
             }
           }
         }
