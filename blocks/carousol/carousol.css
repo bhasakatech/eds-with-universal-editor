@@ -1,49 +1,59 @@
-.carousol-wrapper {
-     width: 100%;
-    overflow: hidden;
+/* ===== Scoped only inside .section.carousol-container ===== */
+.section.carousol-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
 }
 
-.carousol.block > div:first-child,
-.carousol.block > div:last-child {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 10;
-    cursor: pointer;
+/* Carousel wrapper */
+.section.carousol-container .carousol-wrapper {
+  width: 100%;
+  position: relative;
 }
 
-.carousol.block > div:first-child {
-    left: 20px;
+/* Arrow button containers */
+.section.carousol-container .carousol.block > div:first-child,
+.section.carousol-container .carousol.block > div:last-child {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  cursor: pointer;
 }
 
-.carousol.block > div:last-child {
-    right: 20px;
+/* Left button */
+.section.carousol-container .carousol.block > div:first-child {
+  left: 20px;
 }
 
-.carousol.block > div:first-child img,
-.carousol.block > div:last-child img {
-    margin: 31px;
-    filter: invert(3);
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: #fff;
-    box-shadow: 0 2px 6px rgb(0 0 0 / 20%);
-    padding: 8px;
-    transition: transform 0.3s ease;
+/* Right button */
+.section.carousol-container .carousol.block > div:last-child {
+  right: 20px;
 }
 
-.carousol.block > div:nth-child(2) img {
-    width: 100%;
-    position: relative;
+/* Arrow images (keep Figma style) */
+.section.carousol-container .carousol.block > div:first-child img,
+.section.carousol-container .carousol.block > div:last-child img {
+  width: 40px;   /* adjust per Figma */
+  height: 40px;
+  display: block;
+  object-fit: contain;
+  transition: transform 0.3s ease;
 }
 
-.carousol.block > div:nth-child(3) img {
-    width: 100%;
-    position: relative;
+/* Slide images full width */
+.section.carousol-container .carousol.block > div:nth-child(2) img,
+.section.carousol-container .carousol.block > div:nth-child(3) img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover; /* keeps proportion but fills width */
 }
 
-.carousol.block > div:first-child img:hover,
-.carousol.block > div:last-child img:hover {
-    transform: scale(1.1);
+/* Hover effect */
+.section.carousol-container .carousol.block > div:first-child img:hover,
+.section.carousol-container .carousol.block > div:last-child img:hover {
+  transform: scale(1.1);
 }
+
+
