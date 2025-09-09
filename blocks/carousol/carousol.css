@@ -81,10 +81,12 @@
 @media (width <= 768px) {
   .section.carousol-container .carousol.block > div:first-child {
     left: 10px;
+    display: none;
   }
 
   .section.carousol-container .carousol.block > div:last-child {
     right: 10px;
+     display: none;
   }
 
   .section.carousol-container .carousol.block > div:first-child,
@@ -97,6 +99,7 @@
   .section.carousol-container .carousol.block > div:last-child img {
     width: 35px;
     height: 35px;
+    display: none;
   }
 }
 
@@ -105,7 +108,7 @@
   .section.carousol-container .carousol-wrapper {
     max-width: 100%;
   }
-  
+
   .section.carousol-container .carousol.block > div:first-child,
   .section.carousol-container .carousol.block > div:last-child {
     width: 28px;
@@ -116,5 +119,6 @@
   .section.carousol-container .carousol.block > div:last-child img {
     width: 28px;
     height: 28px;
+    display: block;
   }
 }
