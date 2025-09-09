@@ -29,7 +29,8 @@ export default function decorate(block) {
   });
 
   setInterval(() => {
+    slides[currentIndex].style.display = 'none';
     currentIndex = (currentIndex + 1) % slides.length;
-    showSlide(currentIndex);
+    slides[currentIndex].style.display = 'block';
   }, 2000);
 }
