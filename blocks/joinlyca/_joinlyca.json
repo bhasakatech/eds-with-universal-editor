@@ -9,8 +9,8 @@
             "template": {
               "name": "Join Lyca",
               "model": "joinlyca",
+              "textContent_text": "<h2>Enter a title</h2><p>...and body text here!</p>",              
               "textContent_image":[],
-              "textContent_text": "<h2>Enter a title</h2><p>...and body text here!</p>",
               "textContent_cta": "/",
               "textContent_ctaText": "Click me!"
             }
