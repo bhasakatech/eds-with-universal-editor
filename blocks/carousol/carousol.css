@@ -1,3 +1,4 @@
+
 .section.carousol-container {
   position: relative;
   width: 100%;
@@ -8,24 +9,14 @@
   margin: 0 !important;
   padding: 0;
   position: relative;
-  width: 100%;          
+  width: 100%;          /* Full width for responsiveness */
   max-width: 1400px;    
   margin-left: auto;
   margin-right: auto;
   overflow: hidden;
 }
 
-
-.section.carousol-container .carousol.block > div:first-child {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 10;
-  cursor: pointer;
-  width: 50px;
-  height: 50px;
-}
-
+.section.carousol-container .carousol.block > div:first-child,
 .section.carousol-container .carousol.block > div:last-child {
   position: absolute;
   top: 50%;
@@ -36,13 +27,15 @@
   height: 50px;
 }
 
-.section.carousol-container .carousol.block > div:first-child img {
-  width: 55px;
-  height: 50px;
-  object-fit: contain;
-  transition: transform 0.3s ease;
+.section.carousol-container .carousol.block > div:first-child {
+  left: 20px;
 }
 
+.section.carousol-container .carousol.block > div:last-child {
+  right: 20px;
+}
+
+.section.carousol-container .carousol.block > div:first-child img,
 .section.carousol-container .carousol.block > div:last-child img {
   width: 55px;
   height: 50px;
@@ -62,31 +55,6 @@
 .section.carousol-container .carousol.block > div:last-child img:hover {
   transform: scale(1.1);
 }
-
-.carousel-dots {
-  position: absolute;
-  bottom: 15px;   
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 8px;
-  margin-top: 132px;
-}
-
-.carousel-dots .dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 5px;
-  background: #ccc;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-.carousel-dots .dot.active {
-  background: #2a2b2d;
-width: 40px;
-}
-
 
 /* Tablets (max 1024px) */
 @media (width <= 1024px) {
