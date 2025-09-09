@@ -8,8 +8,8 @@
 .section.carousol-container .carousol-wrapper {
   padding: 0;
   position: relative;
-  width: 1405px;
-  max-width: 1400px;
+  width: 100%;
+  max-width: 1405px;
   overflow: hidden;
 }
 
