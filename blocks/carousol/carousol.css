@@ -16,7 +16,7 @@
 .section.carousol-container .carousol.block > div:first-child,
 .section.carousol-container .carousol.block > div:last-child {
   position: absolute;
-  top: 26%;
+  top: 50%;
   transform: translateY(-50%);
   z-index: 10;
   cursor: pointer;
@@ -41,7 +41,8 @@
 }
 
 .section.carousol-container .carousol.block > div:nth-child(2) img,
-.section.carousol-container .carousol.block > div:nth-child(3) img {
+.section.carousol-container .carousol.block > div:nth-child(3) img,
+.section.carousol-container .carousol.block > div:nth-child(4) img {
   width: 100% !important;
   height: auto !important;
   display: block;
