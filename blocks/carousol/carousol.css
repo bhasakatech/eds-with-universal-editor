@@ -54,6 +54,35 @@
   transform: scale(1.1);
 }
 
+/* Dots container centered at bottom */
+.carousel-dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 20;
+}
+
+/* Each dot */
+.carousel-dots .dot {
+  width: 10px;
+  height: 10px;
+  background: #ccc;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+/* Active dot */
+.carousel-dots .dot.active {
+  background: #222; /* match dark active style */
+  width: 25px;
+  border-radius: 10px;
+}
+
 
 /* ✅ Responsive Breakpoints */
 
