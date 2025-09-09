@@ -3,9 +3,9 @@ export default function decorate(block) {
   const rightBtn = block.querySelector('[data-aue-prop="rightbuttonimage"]');
   const image1 = block.querySelector('[data-aue-prop="image1"]');
   const image2 = block.querySelector('[data-aue-prop="image2"]');
-
+const image3= block.querySelector('[data-aue-prop="image2"]')
   // slides
-  const slides = [image1, image2].filter(Boolean);
+  const slides = [image1, image2,image3].filter(Boolean);
   let currentIndex = 0;
 
   slides.forEach((s, i) => {
