@@ -85,6 +85,7 @@
   .section.carousol-container .carousol.block > div:last-child {
     width: 40px;
     height: 40px;
+    display: none;
   }
 
   .section.carousol-container .carousol.block > div:first-child img,
