@@ -34,7 +34,13 @@
   right: 20px;
 }
 
-.section.carousol-container .carousol.block > div:first-child img,
+.section.carousol-container .carousol.block > div:last-child img {
+  width: 55px;
+  height: 50px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
 .section.carousol-container .carousol.block > div:last-child img {
   width: 55px;
   height: 50px;
@@ -62,19 +68,21 @@
   transform: translateX(-50%);
   display: flex;
   gap: 8px;
+  margin-top: 132px;
 }
 
 .carousel-dots .dot {
   width: 10px;
   height: 10px;
-  border-radius: 50%;
+  border-radius: 5px;
   background: #ccc;
   cursor: pointer;
   transition: background 0.3s;
 }
 
 .carousel-dots .dot.active {
-  background: #000;
+  background: #2a2b2d;
+width: 40px;
 }
 
 
