@@ -14,6 +14,33 @@ export default function decorate(block) {
     s.style.display = i === 0 ? 'block' : 'none';
   });
 
+  // === Create dots container ===
+  const dotsContainer = document.createElement('div');
+  dotsContainer.classList.add('carousel-dots');
+
+  function updateDots() {
+    const dots = dotsContainer.querySelectorAll('.dot');
+    dots.forEach((dot, i) => {
+      dot.classList.toggle('active', i === currentIndex);
+    });
+  }
+
+  slides.forEach((_, i) => {
+    const dot = document.createElement('span');
+    dot.classList.add('dot');
+    if (i === 0) dot.classList.add('active'); // first dot active
+    dot.addEventListener('click', () => {
+      // show clicked slide
+      slides[currentIndex].style.display = 'none';
+      currentIndex = i;
+      slides[currentIndex].style.display = 'block';
+      updateDots();
+    });
+    dotsContainer.appendChild(dot);
+  });
+
+  block.appendChild(dotsContainer);
+
   // Left button click
   leftBtn.addEventListener('click', () => {
     slides[currentIndex].style.display = 'none';
