@@ -70,7 +70,7 @@
   width: 10px;
   height: 10px;
   background: #ccc;
-  border-radius: 50%;
+  border-radius: 50px;
   display: inline-block;
   cursor: pointer;
   transition: background 0.3s ease;
@@ -79,7 +79,7 @@
 /* Active dot */
 .carousel-dots .dot.active {
   background: #222; /* match dark active style */
-  width: 25px;
+  width: 40px;
   border-radius: 10px;
 }
 
