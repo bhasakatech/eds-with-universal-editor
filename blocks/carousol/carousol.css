@@ -34,7 +34,7 @@
   right: 20px;
 }
 
-.section.carousol-container .carousol.block > div:last-child img {
+.section.carousol-container .carousol.block > div:first-child img {
   width: 55px;
   height: 50px;
   object-fit: contain;
