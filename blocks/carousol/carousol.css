@@ -1,3 +1,6 @@
+/* =========================
+   Base Carousel Styles
+========================= */
 .section.carousol-container {
   position: relative;
   width: 100%;
@@ -5,12 +8,14 @@
 }
 
 .section.carousol-container .carousol-wrapper {
-    margin: 0 !important;
-    padding: 0;
-    position: relative;
-    width: 1400px;
-    max-width: 1400px;
-    overflow: hidden;
+  margin: 0 !important;
+  padding: 0;
+  position: relative;
+  width: 100%;          /* Full width for responsiveness */
+  max-width: 1400px;    /* Prevents too wide on large screens */
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
 }
 
 .section.carousol-container .carousol.block > div:first-child,
@@ -20,7 +25,7 @@
   transform: translateY(-50%);
   z-index: 10;
   cursor: pointer;
-   width: 50px;
+  width: 50px;
   height: 50px;
 }
 
@@ -53,4 +58,63 @@
   transform: scale(1.1);
 }
 
+/* Tablets (max 1024px) */
+@media (width <= 1024px) {
+  .section.carousol-container .carousol-wrapper {
+    max-width: 100%;
+  }
 
+  .section.carousol-container .carousol.block > div:first-child,
+  .section.carousol-container .carousol.block > div:last-child {
+    width: 40px;
+    height: 40px;
+  }
+
+  .section.carousol-container .carousol.block > div:first-child img,
+  .section.carousol-container .carousol.block > div:last-child img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* Mobile (max 768px) */
+@media (width <= 768px) {
+  .section.carousol-container .carousol.block > div:first-child {
+    left: 10px;
+  }
+
+  .section.carousol-container .carousol.block > div:last-child {
+    right: 10px;
+  }
+
+  .section.carousol-container .carousol.block > div:first-child,
+  .section.carousol-container .carousol.block > div:last-child {
+    width: 35px;
+    height: 35px;
+  }
+
+  .section.carousol-container .carousol.block > div:first-child img,
+  .section.carousol-container .carousol.block > div:last-child img {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+/* Small Mobile (max 480px) */
+@media (width <= 480px) {
+  .section.carousol-container .carousol-wrapper {
+    max-width: 100%;
+  }
+  
+  .section.carousol-container .carousol.block > div:first-child,
+  .section.carousol-container .carousol.block > div:last-child {
+    width: 28px;
+    height: 28px;
+  }
+
+  .section.carousol-container .carousol.block > div:first-child img,
+  .section.carousol-container .carousol.block > div:last-child img {
+    width: 28px;
+    height: 28px;
+  }
+}
