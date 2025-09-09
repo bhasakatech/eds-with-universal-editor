@@ -23,6 +23,12 @@
       "name": "rightbuttonimage",
       "label": "Right Button Image",
       "valueType": "string"
+    },
+     {
+      "component": "reference",
+      "name": "image3",
+      "label": "Image Three",
+      "valueType": "string"
     }
   ]
 }
