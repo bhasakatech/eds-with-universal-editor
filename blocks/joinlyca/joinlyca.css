@@ -1,0 +1,71 @@
+/* Main Section Scope */
+.section.join-lyca-container {
+  background: #1a1b4a; /* dark blue */
+  text-align: center;
+  padding: 60px 20px;
+  display: flex;
+  color: #fff;
+}
+
+/* Section heading */
+.section.join-lyca-container h2,
+.section.join-lyca-container h3 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.section.join-lyca-container p {
+  font-size: 16px;
+  margin-bottom: 40px;
+  color: #f2f2f2;
+}
+
+/* === Flex wrapper for all join-lyca blocks === */
+.section.join-lyca-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section.join-lyca-container .join-lyca-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+/* === Each join-lyca block === */
+.section.join-lyca-container .join-lyca.block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 200px;
+  text-align: center;
+}
+
+/* Image inside circle */
+.section.join-lyca-container .join-lyca.block picture img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  background: #0072ff; /* blue circle */
+  border-radius: 50%;
+  padding: 20px;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+.section.join-lyca-container .join-lyca.block picture img:hover {
+  transform: scale(1.1);
+}
+
+/* Text label */
+.section.join-lyca-container .join-lyca.block p {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: capitalize;
+  color: #fff;
+}
