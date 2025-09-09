@@ -179,6 +179,41 @@
     ]
   },
   {
+    "id": "carousol",
+    "fields": [
+      {
+        "component": "reference",
+        "name": "leftbuttonimage",
+        "label": "Left Button Image",
+        "valueType": "string"
+      },
+      {
+        "component": "reference",
+        "name": "image1",
+        "label": "Image One",
+        "valueType": "string"
+      },
+      {
+        "component": "reference",
+        "name": "image2",
+        "label": "Image Two",
+        "valueType": "string"
+      },
+      {
+        "component": "reference",
+        "name": "rightbuttonimage",
+        "label": "Right Button Image",
+        "valueType": "string"
+      },
+      {
+        "component": "reference",
+        "name": "image3",
+        "label": "Image Three",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
     "id": "columns",
     "fields": [
       {
@@ -229,6 +264,62 @@
         "name": "text",
         "value": "",
         "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "joinlyca",
+    "fields": [
+      {
+        "component": "select",
+        "name": "classes",
+        "value": "",
+        "label": "Teaser options",
+        "description": "",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Side-by-side",
+            "value": "side-by-side"
+          }
+        ]
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "imageAlt",
+        "label": "Image alt text",
+        "required": true
+      },
+      {
+        "component": "richtext",
+        "name": "textContent_text",
+        "label": "Text",
+        "valueType": "string",
+        "required": true
+      },
+      {
+        "component": "aem-content",
+        "name": "textContent_cta",
+        "label": "CTA",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "textContent_ctaText",
+        "label": "CTA label",
         "valueType": "string"
       }
     ]
