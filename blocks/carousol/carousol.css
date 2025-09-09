@@ -13,8 +13,8 @@
   overflow: hidden;
 }
 
-.section.carousol-container .carousol.block > div:first-child,
-.section.carousol-container .carousol.block > div:last-child {
+.section.carousol-container .carousol.block > div:nth-child(1),
+.section.carousol-container .carousol.block > div:nth-child(5) {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -24,16 +24,16 @@
   height: 50px;
 }
 
-.section.carousol-container .carousol.block > div:first-child {
+.section.carousol-container .carousol.block > div:nth-child(1) {
   left: 20px;
 }
 
-.section.carousol-container .carousol.block > div:last-child {
+.section.carousol-container .carousol.block > div:nth-child(5) {
   right: 20px;
 }
 
-.section.carousol-container .carousol.block > div:first-child img,
-.section.carousol-container .carousol.block > div:last-child img {
+.section.carousol-container .carousol.block > div:nth-child(1) img,
+.section.carousol-container .carousol.block > div:nth-child(5) img {
   width: 55px;
   height: 50px;
   object-fit: contain;
@@ -49,8 +49,8 @@
   object-fit: cover;
 }
 
-.section.carousol-container .carousol.block > div:first-child img:hover,
-.section.carousol-container .carousol.block > div:last-child img:hover {
+.section.carousol-container .carousol.block > div:nth-child(1) img:hover,
+.section.carousol-container .carousol.block > div:nth-child(5) img:hover {
   transform: scale(1.1);
 }
 
@@ -70,7 +70,7 @@
   width: 10px;
   height: 10px;
   background: #ccc;
-  border-radius: 50%;
+  border-radius: 50px;
   display: inline-block;
   cursor: pointer;
   transition: background 0.3s ease;
@@ -79,7 +79,7 @@
 /* Active dot */
 .carousel-dots .dot.active {
   background: #222; /* match dark active style */
-  width: 25px;
+  width: 40px;
   border-radius: 10px;
 }
 
@@ -92,14 +92,14 @@
     max-width: 1000px;
   }
 
-  .section.carousol-container .carousol.block > div:first-child,
-  .section.carousol-container .carousol.block > div:last-child {
+  .section.carousol-container .carousol.block > div:nth-child(1),
+  .section.carousol-container .carousol.block >div:nth-child(5) {
     width: 45px;
     height: 45px;
   }
 
-  .section.carousol-container .carousol.block > div:first-child img,
-  .section.carousol-container .carousol.block > div:last-child img {
+  .section.carousol-container .carousol.block > div:nth-child(1) img,
+  .section.carousol-container .carousol.block > div:nth-child(5) img {
     width: 45px;
     height: 40px;
   }
@@ -111,15 +111,15 @@
     max-width: 740px;
   }
 
-  .section.carousol-container .carousol.block > div:first-child,
-  .section.carousol-container .carousol.block > div:last-child {
+  .section.carousol-container .carousol.block > div:nth-child(1),
+  .section.carousol-container .carousol.block > div:nth-child(5) {
     width: 40px;
     height: 40px;
     display: none;
   }
 
-  .section.carousol-container .carousol.block > div:first-child img,
-  .section.carousol-container .carousol.block > div:last-child img {
+  .section.carousol-container .carousol.block > div:nth-child(1) img,
+  .section.carousol-container .carousol.block > div:nth-child(5) img {
     width: 40px;
     height: 35px;
   }
@@ -131,22 +131,22 @@
     max-width: 100%;
   }
 
-  .section.carousol-container .carousol.block > div:first-child,
-  .section.carousol-container .carousol.block > div:last-child {
+  .section.carousol-container .carousol.block > div:nth-child(1),
+  .section.carousol-container .carousol.block > div:nth-child(5) {
     width: 30px;
     height: 30px;
   }
 
-  .section.carousol-container .carousol.block > div:first-child {
+  .section.carousol-container .carousol.block > div:nth-child(1) {
     left: 10px;
   }
 
-  .section.carousol-container .carousol.block > div:last-child {
+  .section.carousol-container .carousol.block > div:nth-child(5) {
     right: 10px;
   }
 
-  .section.carousol-container .carousol.block > div:first-child img,
-  .section.carousol-container .carousol.block > div:last-child img {
+  .section.carousol-container .carousol.block > div:nth-child(1) img,
+  .section.carousol-container .carousol.block > div:nth-child(5) img {
     width: 30px;
     height: 25px;
   }
