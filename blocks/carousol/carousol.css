@@ -54,6 +54,28 @@
   transform: scale(1.1);
 }
 
+.carousel-dots {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.carousel-dots .dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-dots .dot.active {
+  background-color: #333;
+  width: 40px;
+}
+
+
 /* ✅ Responsive Breakpoints */
 
 /* Large tablets (1024px) */
