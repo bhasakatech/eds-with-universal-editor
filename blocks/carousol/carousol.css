@@ -65,13 +65,14 @@
   height: 10px;
   margin: 0 5px;
   background-color: #bbb;
-  border-radius: 50%;
+  border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 .carousel-dots .dot.active {
   background-color: #333;
+  width: 40px;
 }
 
 
