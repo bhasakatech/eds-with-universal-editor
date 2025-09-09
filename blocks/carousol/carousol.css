@@ -15,7 +15,17 @@
   overflow: hidden;
 }
 
-.section.carousol-container .carousol.block > div:first-child,
+
+.section.carousol-container .carousol.block > div:first-child {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+}
+
 .section.carousol-container .carousol.block > div:last-child {
   position: absolute;
   top: 50%;
