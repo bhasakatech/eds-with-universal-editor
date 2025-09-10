@@ -274,6 +274,34 @@
       }
     ]
   },
+ {
+  "id": "vamshi",
+  "fields": [
+    {
+      "component": "text-input",
+      "name": "titleText",
+      "label": "Title",
+      "valueType": "string"
+    },
+    {
+      "component": "text-input",
+      "name": "buttonLabel",
+      "label": "Button Label",
+      "valueType": "string"
+    },
+    {
+      "component": "reference",
+      "name": "image",
+      "label": "Banner Image"
+    },
+    {
+      "component": "text-input",
+      "name": "imageAlt",
+      "label": "Image Alt Text",
+      "valueType": "string"
+    }
+  ]
+},
   {
     "id": "joinlyca",
     "fields": [
