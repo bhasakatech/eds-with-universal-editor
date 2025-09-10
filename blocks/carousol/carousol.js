@@ -1,74 +1,106 @@
-export default function decorate(block) {
-  const carouselBolck = block.querySelector('[data-aue-resource]');
-  const leftBtn = block.querySelector('[data-aue-prop="leftbuttonimage"]');
-  const rightBtn = block.querySelector('[data-aue-prop="rightbuttonimage"]');
-  const image1 = block.querySelector('[data-aue-prop="image1"]');
-  const image2 = block.querySelector('[data-aue-prop="image2"]');
-  const image3 = block.querySelector('[data-aue-prop="image3"]');
+export default async function decorate(block) {
+  try {
+    // 1. Get resource path from block
+    const resourceUrn = block.dataset.aueResource;
+    if (!resourceUrn) {
+      console.warn("Carousel: Missing data-aue-resource on block");
+      return;
+    }
 
-  console.log('carouselBolck', carouselBolck);
+    // Extract JCR path from URN (everything after `urn:aemconnection:`)
+    const jcrPath = resourceUrn.replace("urn:aemconnection:", "");
 
-  const slides = [image1, image2, image3].filter(Boolean);
-  let currentIndex = 0;
+    // 2. Build .model.json URL
+    const url = `${jcrPath}.model.json`;
 
-  // Show first slide only
-  slides.forEach((s, i) => {
-    s.style.display = i === 0 ? 'block' : 'none';
-  });
+    // 3. Fetch JSON
+    const response = await fetch(url);
+    if (!response.ok) {
+      console.error("Carousel: Failed to fetch model", url);
+      return;
+    }
+    const data = await response.json();
 
-  // === Create dots ===
-  const dotsContainer = document.createElement('div');
-  dotsContainer.classList.add('carousel-dots');
+    // 🔑 Expecting structure like:
+    // data.slides = [{ image: "...", title: "...", description: "..." }, ...]
+    const slides = data.slides || [];
+    if (slides.length === 0) {
+      block.innerHTML = "<p>No carousel slides found.</p>";
+      return;
+    }
 
-  // === Update dots state ===
-  function updateDots() {
-    dotsContainer.querySelectorAll('.dot').forEach((dot, i) => {
-      dot.classList.toggle('active', i === currentIndex);
+    // 4. Clear existing placeholders
+    block.innerHTML = "";
+
+    // 5. Create wrapper for slides
+    const slidesWrapper = document.createElement("div");
+    slidesWrapper.className = "carousel-slides";
+
+    slides.forEach((slide, i) => {
+      const slideEl = document.createElement("div");
+      slideEl.className = "carousel-slide";
+      if (i === 0) slideEl.classList.add("active");
+
+      slideEl.innerHTML = `
+        <img src="${slide.image}" alt="${slide.title || "Carousel Image"}"/>
+        <div class="carousel-caption">
+          <h3>${slide.title || ""}</h3>
+          <p>${slide.description || ""}</p>
+        </div>
+      `;
+      slidesWrapper.appendChild(slideEl);
     });
+
+    // 6. Add navigation
+    const prevBtn = document.createElement("button");
+    prevBtn.className = "carousel-prev";
+    prevBtn.textContent = "❮";
+
+    const nextBtn = document.createElement("button");
+    nextBtn.className = "carousel-next";
+    nextBtn.textContent = "❯";
+
+    // 7. Add dots
+    const dotsWrapper = document.createElement("div");
+    dotsWrapper.className = "carousel-dots";
+    slides.forEach((_, i) => {
+      const dot = document.createElement("span");
+      dot.className = "dot" + (i === 0 ? " active" : "");
+      dotsWrapper.appendChild(dot);
+    });
+
+    // 8. Append to block
+    block.appendChild(slidesWrapper);
+    block.appendChild(prevBtn);
+    block.appendChild(nextBtn);
+    block.appendChild(dotsWrapper);
+
+    // 9. Carousel functionality
+    let currentIndex = 0;
+    const slideEls = slidesWrapper.querySelectorAll(".carousel-slide");
+    const dotEls = dotsWrapper.querySelectorAll(".dot");
+
+    function showSlide(index) {
+      slideEls.forEach((s, i) => s.classList.toggle("active", i === index));
+      dotEls.forEach((d, i) => d.classList.toggle("active", i === index));
+      currentIndex = index;
+    }
+
+    prevBtn.addEventListener("click", () => {
+      const newIndex = (currentIndex - 1 + slides.length) % slides.length;
+      showSlide(newIndex);
+    });
+
+    nextBtn.addEventListener("click", () => {
+      const newIndex = (currentIndex + 1) % slides.length;
+      showSlide(newIndex);
+    });
+
+    dotEls.forEach((dot, i) => {
+      dot.addEventListener("click", () => showSlide(i));
+    });
+
+  } catch (err) {
+    console.error("Carousel error:", err);
   }
-
-  slides.forEach((_, i) => {
-    const dot = document.createElement('span');
-    dot.classList.add('dot');
-    if (i === 0) dot.classList.add('active');
-
-    dot.addEventListener('click', () => {
-      slides[currentIndex].style.display = 'none';
-      currentIndex = i;
-      slides[currentIndex].style.display = 'block';
-      updateDots();
-    });
-
-    dotsContainer.appendChild(dot);
-  });
-
-  block.appendChild(dotsContainer);
-
-  // Left button
-  if (leftBtn) {
-    leftBtn.addEventListener('click', () => {
-      slides[currentIndex].style.display = 'none';
-      currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-      slides[currentIndex].style.display = 'block';
-      updateDots();
-    });
-  }
-
-  // Right button
-  if (rightBtn) {
-    rightBtn.addEventListener('click', () => {
-      slides[currentIndex].style.display = 'none';
-      currentIndex = (currentIndex + 1) % slides.length;
-      slides[currentIndex].style.display = 'block';
-      updateDots();
-    });
-  }
-
-  // Auto-play every 4s
-  setInterval(() => {
-    slides[currentIndex].style.display = 'none';
-    currentIndex = (currentIndex + 1) % slides.length;
-    slides[currentIndex].style.display = 'block';
-    updateDots();
-  }, 4000);
 }
