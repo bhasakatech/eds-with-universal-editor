@@ -423,5 +423,38 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "viewrates",
+    "fields": [
+      {
+        "component": "reference",
+        "name": "mobileImage",
+        "value": "",
+        "label": "Mobile Image",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "label": "view Rates Text",
+        "valueType": "string",
+        "required": true
+      },
+      {
+        "component": "reference",
+        "name": "arrowIcon",
+        "value": "",
+        "label": "Arrow Icon",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "arrowLink",
+        "label": "Arrow Link",
+        "valueType": "string",
+        "required": true
+      }
+    ]
   }
 ]
