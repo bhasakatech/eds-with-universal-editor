@@ -33,7 +33,6 @@
 
 .joinlyca-list {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
   margin-top: 20px;
@@ -84,11 +83,12 @@
 }
 
 /* Small mobile (≤375px) → Stack vertically */
-@media (width <= 375px) {
-  .joinlyca-list {
-    flex-direction: column;
-    gap: 20px;
-  }
+@media (width >= 380px) {
+ .joinlyca-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 
   .joinlyca-list-item {
     flex: 1 1 100%;
