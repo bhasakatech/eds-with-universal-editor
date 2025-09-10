@@ -229,13 +229,7 @@
         "valueType": "string",
         "required": true
       },
-      {
-        "component": "richtext",
-        "name": "description",
-        "label": "Choose a Prepaid Description",
-        "valueType": "string",
-        "required": true
-      },
+     
       {
         "component": "container",
         "name": "ChooseaPrepaidList",
@@ -251,22 +245,15 @@
           },
           {
             "component": "richtext",
-            "name": "description",
+            "name": "imageDescription",
             "label": "Choose a Prepaid Items Description",
             "valueType": "string"
           },
           {
-            "component": "reference",
-            "name": "buttonImage",
+            "component": "richtext",
+            "name": "button",
             "value": "",
-            "label": "Button Image",
-            "valueType": "string"
-          },
-          {
-            "component": "text",
-            "name": "buttonUrl",
-            "value": "",
-            "label": "Button Link URL",
+            "label": "Button",
             "valueType": "string"
           }
         ]
