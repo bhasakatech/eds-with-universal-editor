@@ -246,13 +246,13 @@
             "component": "reference",
             "name": "image",
             "value": "",
-            "label": "Sample Image",
+            "label": "Image",
             "valueType": "string"
           },
           {
-            "component": "text",
-            "name": "title",
-            "label": "Join Lyca Title",
+            "component": "richtext",
+            "name": "imageDescription",
+            "label": "Image Description",
             "valueType": "string"
           }
         ]
