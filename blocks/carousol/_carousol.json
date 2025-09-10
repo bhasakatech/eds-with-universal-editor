@@ -21,7 +21,7 @@
       "id": "carousol",
       "fields": [
         {
-          "component": "icon",
+          "component": "reference",
           "name": "leftArrow",
           "label": "Left Arrow Icon",
           "value": "",
@@ -50,7 +50,7 @@
           ]
         },
         {
-          "component": "icon",
+          "component": "reference",
           "name": "rightArrow",
           "label": "Right Arrow Icon",
           "value": "→",
