@@ -37,8 +37,8 @@ export default async function decorate(block) {
     });
 
     // === Add navigation buttons ===
-    const leftBtn = block.querySelector('[data-aue-prop="leftbuttonimage"]');
-    const rightBtn = block.querySelector('[data-aue-prop="rightbuttonimage"]');
+    const leftBtn = block.querySelector('[data-aue-prop="leftArrow"]');
+    const rightBtn = block.querySelector('[data-aue-prop="rightArrow"]');
 
     let currentIndex = 0;
 
