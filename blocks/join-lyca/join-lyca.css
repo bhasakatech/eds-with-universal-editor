@@ -1,57 +1,98 @@
 .section.join-lyca-container {
-    background: #1a1b4a;
-    text-align: center;
-    padding: 0 !important;
-    display: flex;
-    color: #fff;
-    margin: 0 !important;
+  background: #1a1b4a;
+  text-align: center;
+  padding: 0 !important;
+  display: flex;
+  color: #fff;
+  margin: 0 !important;
+  justify-content: center;
 }
 
 .section.join-lyca-container .join-lyca.block {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 200px;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1200px;
+  text-align: center;
 }
 
 .join-lyca.block > div:nth-child(1) h1 {
-    color: red;
-    text-align: center;
-    width: 300px;
-    margin-top: 0;
-    margin-bottom: 0;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-.join-lyca.block > div:nth-child(2)p {
-    width: 1000px;
-    margin-bottom: 10px;
-    font-size: 18px;
-    font-weight: 500;
-    color: #fff;
-    margin-top: 0;
+.join-lyca.block > div:nth-child(2) p {
+  max-width: 800px;
+  margin: 10px auto;
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
 }
-
 
 .joinlyca-list {
-    display: flex;
-    gap: 98px;
-    margin-top: 20px;
-    margin-bottom: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 60px;
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
 
+.joinlyca-list-item {
+  text-align: center;
+}
 
 .joinlyca-list-item img {
-    height: auto;
-    width: 100px !important;
-    max-width: 100px !important;
+  width: 100px !important;
+  height: auto;
 }
 
 .joinlyca-list-item h3 {
-    font-size: 16px;
-    font-weight: bold;
-    color: white;
-    margin-top: 10px;
-    text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  margin-top: 10px;
+  text-align: center;
 }
 
+/* -------- Responsive Breakpoints -------- */
+
+/* Large screens (Desktop ≥1024px) */
+@media (width <= 1024px) {
+  .joinlyca-list {
+    gap: 80px;
+  }
+}
+
+/* Tablet (768px – 1023px) */
+@media (width <= 1023px) and (width >= 768px) {
+  .joinlyca-list {
+    gap: 40px;
+  }
+}
+
+/* Mobile (480px – 767px) → Side by side */
+@media (width <= 767px) and (width >= 480px) {
+  .joinlyca-list {
+    gap: 20px;
+  }
+
+  .joinlyca-list-item {
+    flex: 1 1 calc(50% - 20px);
+    max-width: calc(50% - 20px);
+  }
+}
+
+/* Small mobile (≤375px & ≤320px) → Stack vertically */
+@media (width <= 479px) {
+  .joinlyca-list {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .joinlyca-list-item {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
