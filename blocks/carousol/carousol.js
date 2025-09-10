@@ -1,16 +1,25 @@
 export default function decorate(block) {
   try {
     console.log("Carousel init:", block);
-
-    // 1. Find item elements inside block (children with data-aue-resource)
     const itemEls = block.getAttribute("data-aue-resource")
+    
     console.log("Carousel: itemEls", itemEls);
-    if (!itemEls.length) {
-      console.warn("Carousel: No items found");
+    const jcrPath = resourceUrn.replace("urn:aemconnection:", "");
+    console.log("Carousel jcrPath:", jcrPath);
+
+    // 3. Build infinity.json URL
+    const url = `${jcrPath}.infinity.json`;
+    console.log("Carousel fetch URL:", url);
+
+    // 4. Fetch data
+    const response = fetch(url);
+    if (!response.ok) {
+      console.error("Carousel: Failed to fetch", url);
       return;
     }
-    console.log(`Carousel: Found ${itemEls.length} items`);
-  } catch (err) {
-    console.error("Carousel error:", err);
+    const data = response.json();
+    console.log("Carousel JSON data:", data);
+  } catch (error) {
+    console.error("Carousel: Error", error);
   }
 }
