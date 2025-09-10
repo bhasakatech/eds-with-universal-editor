@@ -14,7 +14,7 @@
 }
 
 .section.carousol-container .carousol.block > div:first-child,
-.section.carousol-container .carousol.block > div:last-child {
+.section.carousol-container .carousol.block > div:nth-child(4) {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -28,12 +28,12 @@
     left: 20px;
 }
 
-.section.carousol-container .carousol.block > div:last-child {
+.section.carousol-container .carousol.block > div:nth-child(4) {
     right: 20px;
 }
 
 .section.carousol-container .carousol.block > div:first-child img,
-.section.carousol-container .carousol.block > div:last-child img {
+.section.carousol-container .carousol.block > div:nth-child(4) img {
     width: 65px;
     height: 50px;
     object-fit: contain;
@@ -42,7 +42,6 @@
 
 .section.carousol-container .carousol.block > div:nth-child(2) img,
 .section.carousol-container .carousol.block > div:nth-child(3) img,
-.section.carousol-container .carousol.block > div:nth-child(4) img,
 .section.carousol-container .carousol.block > div:nth-child(5) img,
 .section.carousol-container .carousol.block > div:nth-child(6) img {
     width: 100% !important;
@@ -53,7 +52,7 @@
 }
 
 .section.carousol-container .carousol.block > div:first-child img:hover,
-.section.carousol-container .carousol.block > div:last-child img:hover {
+.section.carousol-container .carousol.block > div:nth-child(4) img:hover {
     transform: scale(1.1);
 }
 
@@ -96,13 +95,13 @@
     }
 
     .section.carousol-container .carousol.block > div:first-child,
-    .section.carousol-container .carousol.block > div:last-child {
+    .section.carousol-container .carousol.block > div:nth-child(4) {
         width: 45px;
         height: 45px;
     }
 
     .section.carousol-container .carousol.block > div:first-child img,
-    .section.carousol-container .carousol.block > div:last-child img {
+    .section.carousol-container .carousol.block > div:nth-child(4) img {
         width: 45px;
         height: 40px;
     }
@@ -116,14 +115,14 @@
     }
 
     .section.carousol-container .carousol.block > div:first-child,
-    .section.carousol-container .carousol.block > div:last-child {
+    .section.carousol-container .carousol.block > div:nth-child(4) {
         width: 40px;
         height: 40px;
         display: none;
     }
 
     .section.carousol-container .carousol.block > div:first-child img,
-    .section.carousol-container .carousol.block > div:last-child img {
+    .section.carousol-container .carousol.block > div:nth-child(4) img {
         width: 40px;
         height: 35px;
     }
@@ -136,7 +135,7 @@
     }
 
     .section.carousol-container .carousol.block > div:first-child,
-    .section.carousol-container .carousol.block > div:last-child {
+    .section.carousol-container .carousol.block > div:nth-child(4) {
         width: 30px;
         height: 30px;
     }
@@ -145,12 +144,12 @@
         left: 10px;
     }
 
-    .section.carousol-container .carousol.block > div:last-child {
+    .section.carousol-container .carousol.block > div:nth-child(4) {
         right: 10px;
     }
 
     .section.carousol-container .carousol.block > div:first-child img,
-    .section.carousol-container .carousol.block > div:last-child img {
+    .section.carousol-container .carousol.block > div:nth-child(4) img {
         width: 30px;
         height: 25px;
     }
