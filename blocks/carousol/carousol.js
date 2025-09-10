@@ -13,6 +13,7 @@ export default function decorate(block) {
 
     // 4. Fetch data
     const response = fetch(url);
+    console.log("Carousel fetch response:", response);
     if (!response.ok) {
       console.error("Carousel: Failed to fetch", url);
       return;
