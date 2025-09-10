@@ -2,9 +2,9 @@ export default function decorate(block) {
   try {
     console.log("Carousel init:", block);
     const itemEls = block.getAttribute("data-aue-resource")
-    
+
     console.log("Carousel: itemEls", itemEls);
-    const jcrPath = resourceUrn.replace("urn:aemconnection:", "");
+    const jcrPath = itemEls.replace("urn:aemconnection:", "");
     console.log("Carousel jcrPath:", jcrPath);
 
     // 3. Build infinity.json URL
