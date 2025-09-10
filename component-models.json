@@ -182,6 +182,13 @@
     "id": "carousol",
     "fields": [
       {
+        "component": "icon",
+        "name": "leftArrow",
+        "label": "Left Arrow Icon",
+        "value": "",
+        "valueType": "string"
+      },
+      {
         "component": "container",
         "name": "test",
         "label": "Multi Text",
@@ -202,6 +209,13 @@
             "valueType": "string"
           }
         ]
+      },
+      {
+        "component": "icon",
+        "name": "rightArrow",
+        "label": "Right Arrow Icon",
+        "value": "→",
+        "valueType": "string"
       }
     ]
   },
