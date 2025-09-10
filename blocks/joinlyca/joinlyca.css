@@ -21,13 +21,6 @@
   color: #f2f2f2;
 }
 
-/* === Flex wrapper for all join-lyca blocks === */
-.section.join-lyca-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .section.join-lyca-container .join-lyca-wrapper {
   display: flex;
   justify-content: center;

@@ -182,34 +182,30 @@
     "id": "carousol",
     "fields": [
       {
-        "component": "reference",
-        "name": "leftbuttonimage",
-        "label": "Left Button Image",
-        "valueType": "string"
-      },
-      {
-        "component": "reference",
-        "name": "image1",
-        "label": "Image One",
-        "valueType": "string"
-      },
-      {
-        "component": "reference",
-        "name": "image2",
-        "label": "Image Two",
-        "valueType": "string"
-      },
-      {
-        "component": "reference",
-        "name": "image3",
-        "label": "Image Three",
-        "valueType": "string"
-      },
-      {
-        "component": "reference",
-        "name": "rightbuttonimage",
-        "label": "Right Button Image",
-        "valueType": "string"
+        "component": "group",
+        "name": "slides",
+        "label": "Slides",
+        "multi": true,
+        "fields": [
+          {
+            "component": "reference",
+            "valueType": "string",
+            "name": "image",
+            "label": "Image"
+          },
+          {
+            "component": "text",
+            "valueType": "string",
+            "name": "altText",
+            "label": "Alt Text"
+          },
+          {
+            "component": "text",
+            "valueType": "string",
+            "name": "caption",
+            "label": "Caption"
+          }
+        ]
       }
     ]
   },
