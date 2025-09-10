@@ -161,6 +161,65 @@
     ]
   },
   {
+    "id": "carouselheader",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "text",
+        "label": "Text Label"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      }
+    ]
+  },
+  {
+    "id": "carousol",
+    "fields": [
+      {
+        "component": "reference",
+        "name": "leftArrow",
+        "label": "Left Arrow Icon",
+        "value": "",
+        "valueType": "string"
+      },
+      {
+        "component": "container",
+        "name": "test",
+        "label": "Multi Text",
+        "multi": true,
+        "fields": [
+          {
+            "component": "reference",
+            "name": "image",
+            "value": "",
+            "label": "Sample Image",
+            "valueType": "string"
+          },
+          {
+            "component": "text",
+            "name": "alt",
+            "value": "",
+            "label": "Alt Text",
+            "valueType": "string"
+          }
+        ]
+      },
+      {
+        "component": "reference",
+        "name": "rightArrow",
+        "label": "Right Arrow Icon",
+        "value": "→",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
     "id": "columns",
     "fields": [
       {
@@ -244,82 +303,99 @@
   ]
 },
   {
-    "id": "quote",
+    "id": "joinlyca",
     "fields": [
-       {
-         "component": "richtext",
-         "name": "quote",
-         "value": "",
-         "label": "Quote",
-         "valueType": "string"
-       },
-       {
-        "component": "select",
-        "name": "bgClasses",
-        "value": "",
-        "label": "Background Color",
-        "description": "The quote background color",
+      {
+        "component": "richtext",
+        "name": "heading",
+        "label": "Join Lyca Heading",
         "valueType": "string",
-        "options": [
-          {
-            "name": "Red",
-            "value": "bg-red"
-          },
-          {
-            "name": "Green",
-            "value": "bg-green"
-          },
-          {
-            "name": "Blue",
-            "value": "bg-blue"
-          }
-        ]
+        "required": true
       },
-       {
-         "component": "text",
-         "valueType": "string",
-         "name": "author",
-         "label": "Author",
-         "value": ""
-       },
-       {
-         "component": "text",
-         "valueType": "string",
-         "name": "nagi",
-         "label": "Nagi Style",
-         "value": ""
-       },
-       {
-        "component": "select",
-        "name": "titleType",
-        "label": "Title Type",
-        "options": [
+      {
+        "component": "richtext",
+        "name": "description",
+        "label": "Join Lyca Description",
+        "valueType": "string",
+        "required": true
+      },
+      {
+        "component": "container",
+        "name": "joinLycaList",
+        "label": "Join Lyca Fields",
+        "multi": true,
+        "fields": [
           {
-          "name": "h1",
-          "value": "h1"
+            "component": "reference",
+            "name": "image",
+            "value": "",
+            "label": "Sample Image",
+            "valueType": "string"
           },
           {
-          "name": "h2",
-          "value": "h2"
-          },
-          {
-          "name": "h3",
-          "value": "h3"
-          },
-          {
-          "name": "h4",
-          "value": "h4"
-          },
-          {
-          "name": "h5",
-          "value": "h5"
-          },
-          {
-          "name": "h6",
-          "value": "h6"
+            "component": "text",
+            "name": "title",
+            "label": "Join Lyca Title",
+            "valueType": "string"
           }
         ]
       }
-     ]
+    ]
+  },
+  {
+    "id": "teaser",
+    "fields": [
+      {
+        "component": "select",
+        "name": "classes",
+        "value": "",
+        "label": "Teaser options",
+        "description": "",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Side-by-side",
+            "value": "side-by-side"
+          }
+        ]
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "imageAlt",
+        "label": "Image alt text",
+        "required": true
+      },
+      {
+        "component": "richtext",
+        "name": "textContent_text",
+        "label": "Text",
+        "valueType": "string",
+        "required": true
+      },
+      {
+        "component": "aem-content",
+        "name": "textContent_cta",
+        "label": "CTA",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "textContent_ctaText",
+        "label": "CTA label",
+        "valueType": "string"
+      }
+    ]
   }
 ]

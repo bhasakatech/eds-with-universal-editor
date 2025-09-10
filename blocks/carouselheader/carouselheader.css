@@ -1,0 +1,109 @@
+/* carouselheader styles */
+.carouselheader-container {
+    width: 100%;
+    min-height: 40px;
+    margin: 0 !important;
+    padding: 0;
+    background-color: #ffeeb2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 11;
+}
+
+/* carouselheader-wrapper */
+.carouselheader-wrapper {
+    margin: 0 auto !important;
+    width:90%;
+    max-width: 1200px;
+    height: 100%;
+    padding: 0 40px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* carouselheader */
+.carouselheader {
+    /* width: 100%; */
+    width: calc(100% + 16px);
+    flex-flow: wrap;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* carouselheader-para-main-div */
+.carouselheader > div:first-child {
+    text-align: center;
+    color: #344054;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    font-weight: 300;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    flex: 1 1;
+    padding: 0 !important;
+    font-family: GTEestiLCDisplayRegular, sans-serif;
+}
+
+/* carouselheader-cancel symbol main div */
+.carouselheader > div:last-child {
+    padding: 0 !important;
+    margin-left: auto !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* carouselheader-cancel symbol inner div */
+.carouselheader > div:last-child > div {
+    padding: 7px 8px 0;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+/* carouselheader-paragraph */
+.carouselheader > div > div > p {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* carouselheader picture */
+.carouselheader picture {
+    background: transparent;
+    cursor: pointer;
+}
+
+/* carouselheader picture img */
+.carouselheader img {
+    width: 24px;
+    height: 24px;
+    aspect-ratio: auto 24/24;
+    background: transparent;
+}
+
+/* media query for tablet */
+@media (width <= 768px) {
+    /* carouselheader-wrapper */
+    .carouselheader-wrapper {
+        padding: 0 16px !important;
+    }
+
+    /* carouselheader-para-main-div */
+    .carouselheader > div:first-child p {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 16px;
+        letter-spacing: 0;
+        color: #344054;
+        text-align: left;
+        font-family: GTEestiLCDisplayBold, sans-serif;
+    }
+}

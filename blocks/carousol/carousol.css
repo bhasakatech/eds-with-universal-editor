@@ -1,0 +1,156 @@
+.section.carousol-container {
+    margin: 0 !important;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.section.carousol-container .carousol-wrapper {
+    padding: 0;
+    position: relative;
+    width: 100%;
+    max-width: 1405px;
+    overflow: hidden;
+}
+
+.section.carousol-container .carousol.block > div:first-child,
+.section.carousol-container .carousol.block > div:nth-child(4) {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+}
+
+.section.carousol-container .carousol.block > div:first-child {
+    left: 20px;
+}
+
+.section.carousol-container .carousol.block > div:nth-child(4) {
+    right: 20px;
+}
+
+.section.carousol-container .carousol.block > div:first-child img,
+.section.carousol-container .carousol.block > div:nth-child(4) img {
+    width: 65px;
+    height: 50px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.section.carousol-container .carousol.block > div:nth-child(2) img,
+.section.carousol-container .carousol.block > div:nth-child(3) img,
+.section.carousol-container .carousol.block > div:nth-child(5) img,
+.section.carousol-container .carousol.block > div:nth-child(6) img {
+    width: 100% !important;
+    height: auto !important;
+    display: block;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.section.carousol-container .carousol.block > div:first-child img:hover,
+.section.carousol-container .carousol.block > div:nth-child(4) img:hover {
+    transform: scale(1.1);
+}
+
+/* Dots container centered at bottom */
+.carousel-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 20;
+}
+
+/* Each dot */
+.carousel-dots .dot {
+    width: 10px;
+    height: 10px;
+    background: #ccc;
+    border-radius: 50px;
+    display: inline-block;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+/* Active dot */
+.carousel-dots .dot.active {
+    background: #222; /* match dark active style */
+    width: 40px;
+    border-radius: 10px;
+}
+
+/* ✅ Responsive Breakpoints */
+
+/* Large tablets (1024px) */
+@media (width<= 1024px) {
+    .section.carousol-container .carousol-wrapper {
+        width: 100%;
+        margin: 0 !important;
+    }
+
+    .section.carousol-container .carousol.block > div:first-child,
+    .section.carousol-container .carousol.block > div:nth-child(4) {
+        width: 45px;
+        height: 45px;
+    }
+
+    .section.carousol-container .carousol.block > div:first-child img,
+    .section.carousol-container .carousol.block > div:nth-child(4) img {
+        width: 45px;
+        height: 40px;
+    }
+}
+
+/* Tablets (768px) */
+@media (width<= 768px) {
+    .section.carousol-container .carousol-wrapper {
+        width: 100%;
+        margin: 0 !important;
+    }
+
+    .section.carousol-container .carousol.block > div:first-child,
+    .section.carousol-container .carousol.block > div:nth-child(4) {
+        width: 40px;
+        height: 40px;
+        display: none;
+    }
+
+    .section.carousol-container .carousol.block > div:first-child img,
+    .section.carousol-container .carousol.block > div:nth-child(4) img {
+        width: 40px;
+        height: 35px;
+    }
+}
+
+/* Mobile (480px) */
+@media (width<= 480px) {
+    .section.carousol-container .carousol-wrapper {
+        width: 100%;
+    }
+
+    .section.carousol-container .carousol.block > div:first-child,
+    .section.carousol-container .carousol.block > div:nth-child(4) {
+        width: 30px;
+        height: 30px;
+    }
+
+    .section.carousol-container .carousol.block > div:first-child {
+        left: 10px;
+    }
+
+    .section.carousol-container .carousol.block > div:nth-child(4) {
+        right: 10px;
+    }
+
+    .section.carousol-container .carousol.block > div:first-child img,
+    .section.carousol-container .carousol.block > div:nth-child(4) img {
+        width: 30px;
+        height: 25px;
+    }
+}
