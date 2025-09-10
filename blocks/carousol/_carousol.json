@@ -21,30 +21,36 @@
       "id": "carousol",
       "fields": [
         {
-          "component": "group",
+          "component": "reference",
+          "name": "leftbuttonimage",
+          "label": "Left Button Image",
+          "valueType": "string"
+        },
+        {
+          "component": "collection",
           "name": "slides",
           "label": "Slides",
-          "multi": true,
+          "repeatable": true,
           "fields": [
             {
               "component": "reference",
-              "valueType": "string",
               "name": "image",
-              "label": "Image"
+              "label": "Slide Image",
+              "valueType": "string"
             },
             {
               "component": "text",
-              "valueType": "string",
-              "name": "altText",
-              "label": "Alt Text"
-            },
-            {
-              "component": "text",
-              "valueType": "string",
               "name": "caption",
-              "label": "Caption"
+              "label": "Caption",
+              "valueType": "string"
             }
           ]
+        },
+        {
+          "component": "reference",
+          "name": "rightbuttonimage",
+          "label": "Right Button Image",
+          "valueType": "string"
         }
       ]
     }
