@@ -229,7 +229,13 @@
         "valueType": "string",
         "required": true
       },
-     
+      {
+        "component": "richtext",
+        "name": "description",
+        "label": "Choose a Prepaid Description",
+        "valueType": "string",
+        "required": true
+      },
       {
         "component": "container",
         "name": "ChooseaPrepaidList",
