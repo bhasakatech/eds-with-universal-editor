@@ -182,28 +182,24 @@
     "id": "carousol",
     "fields": [
       {
-        "component": "group",
-        "name": "slides",
-        "label": "Slides",
+        "component": "container",
+        "name": "test",
+        "label": "Multi Text",
         "multi": true,
         "fields": [
           {
             "component": "reference",
-            "valueType": "string",
             "name": "image",
-            "label": "Image"
+            "value": "",
+            "label": "Sample Image",
+            "valueType": "string"
           },
           {
             "component": "text",
-            "valueType": "string",
-            "name": "altText",
-            "label": "Alt Text"
-          },
-          {
-            "component": "text",
-            "valueType": "string",
-            "name": "caption",
-            "label": "Caption"
+            "name": "alt",
+            "value": "",
+            "label": "Alt Text",
+            "valueType": "string"
           }
         ]
       }
