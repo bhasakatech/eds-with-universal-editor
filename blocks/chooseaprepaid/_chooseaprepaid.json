@@ -48,7 +48,7 @@
                             "valueType": "string"
                         },
                         {
-                            "component": "text",
+                            "component": "richtext",
                             "name": "description",
                             "label": "Choose a Prepaid Items Description",
                             "valueType": "string"
