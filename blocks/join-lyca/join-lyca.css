@@ -33,6 +33,7 @@
 
 .joinlyca-list {
   display: flex;
+  flex-wrap: nowrap;
   justify-content: center;
   gap: 30px;
   margin-top: 20px;
@@ -82,16 +83,18 @@
   }
 }
 
-/* Small mobile (≤375px) → Stack vertically */
-@media (width >= 380px) {
- .joinlyca-list {
+@media (width<= 320px) and (width >= 375px) {
+  .joinlyca-list {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
+    flex-direction: column; /* stacked */
+    gap: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
 
   .joinlyca-list-item {
     flex: 1 1 100%;
     max-width: 100%;
   }
 }
+
