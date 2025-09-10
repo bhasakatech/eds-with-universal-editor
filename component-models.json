@@ -224,42 +224,35 @@
     "fields": [
       {
         "component": "richtext",
-        "name": "heading",
-        "label": "Choose a Prepaid Heading",
+        "name": "chooseHeading",
+        "label": "CHoose a Prepaid Heading",
         "valueType": "string",
         "required": true
       },
       {
         "component": "richtext",
-        "name": "description",
-        "label": "Choose a Prepaid Description",
+        "name": "choosdescription",
+        "label": "Choose A Prepaid Description",
         "valueType": "string",
         "required": true
       },
       {
         "component": "container",
-        "name": "ChooseaPrepaidList",
-        "label": "Choose a Prepaid Items",
+        "name": "choosePrepaidList",
+        "label": "Choose A Prepaid Fields",
         "multi": true,
         "fields": [
           {
             "component": "reference",
             "name": "image",
             "value": "",
-            "label": "Image",
+            "label": "Sample Image",
             "valueType": "string"
           },
           {
-            "component": "richtext",
-            "name": "imageDescription",
-            "label": "Choose a Prepaid Items Description",
-            "valueType": "string"
-          },
-          {
-            "component": "richtext",
-            "name": "button",
-            "value": "",
-            "label": "Button",
+            "component": "text",
+            "name": "title",
+            "label": "Join Lyca Title",
             "valueType": "string"
           }
         ]
