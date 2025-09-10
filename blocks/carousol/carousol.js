@@ -7,8 +7,8 @@ export default function decorate(block) {
     const jcrPath = itemEls.replace("urn:aemconnection:", "");
     console.log("Carousel jcrPath:", jcrPath);
 
-    // 3. Build infinity.json URL
-    const url = `${jcrPath}.infinity.json`;
+     const domain = window.location.origin;
+    const url = `${domain}${jcrPath}.infinity.json`;
     console.log("Carousel fetch URL:", url);
 
     // 4. Fetch data
