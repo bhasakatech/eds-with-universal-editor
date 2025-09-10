@@ -25,10 +25,10 @@
             "id": "joinlyca",
             "fields": [
                 {
-                    "component": "text",
-                    "valueType": "string",
+                    "component": "richtext",
                     "name": "heading",
                     "label": "Join Lyca Heading",
+                    "valueType": "string",
                     "required": true
                 },
                 {
