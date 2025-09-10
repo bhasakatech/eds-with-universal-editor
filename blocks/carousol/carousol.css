@@ -49,6 +49,7 @@
     height: auto !important;
     display: block;
     object-fit: cover;
+    border-radius: 10px;
 }
 
 .section.carousol-container .carousol.block > div:first-child img:hover,
