@@ -104,6 +104,7 @@ export default async function decorate(block) {
       }
     }, 4000);
   } catch (error) {
+    // eslint-disable-next-line no-console
     console.error('Carousel error:', error);
   }
 }
