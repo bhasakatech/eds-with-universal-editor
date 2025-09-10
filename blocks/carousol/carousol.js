@@ -2,6 +2,7 @@ export default async function decorate(block) {
   try {
     // 1. Get resource path from block
     const resourceUrn = block.dataset.aueResource;
+    console.log("Carousel resourceUrn:", resourceUrn);
     if (!resourceUrn) {
       console.warn("Carousel: Missing data-aue-resource on block");
       return;
