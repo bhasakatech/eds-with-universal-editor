@@ -1,9 +1,12 @@
 export default function decorate(block) {
+  const carouselBolck = block.querySelector('[data-aue-resource]');
   const leftBtn = block.querySelector('[data-aue-prop="leftbuttonimage"]');
   const rightBtn = block.querySelector('[data-aue-prop="rightbuttonimage"]');
   const image1 = block.querySelector('[data-aue-prop="image1"]');
   const image2 = block.querySelector('[data-aue-prop="image2"]');
   const image3 = block.querySelector('[data-aue-prop="image3"]');
+
+  console.log('carouselBolck', carouselBolck);
 
   const slides = [image1, image2, image3].filter(Boolean);
   let currentIndex = 0;
