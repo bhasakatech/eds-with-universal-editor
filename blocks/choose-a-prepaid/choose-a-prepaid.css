@@ -60,7 +60,7 @@
     line-height: 1.2;
 }
 
-.prepaid-list .prepaid-list-item:nth-child(1) div p:nth-child(1) {
+.prepaid-list .prepaid-list-item:nth-child(1) div > p:nth-child(1) {
     font-size: 30px;
     font-weight: 500;
     width: 201px;
@@ -68,7 +68,7 @@
     text-align: start;
 }
 
-.prepaid-list .prepaid-list-item:nth-child(1) div p:nth-child(2) {
+.prepaid-list .prepaid-list-item:nth-child(1) div > p:nth-child(2) {
     color: #fff;
     font-weight: 500;
     font-size: 20px;
@@ -83,7 +83,7 @@
     line-height: 1.2;
 }
 
-.prepaid-list .prepaid-list-item:nth-child(2) div p:nth-child(1) {
+.prepaid-list .prepaid-list-item:nth-child(2) div > p:nth-child(1) {
     font-size: 30px;
     font-weight: 500;
     color: #fff;
@@ -91,7 +91,7 @@
     text-align: start;
 }
 
-.prepaid-list .prepaid-list-item:nth-child(2) div p:nth-child(2) {
+.prepaid-list .prepaid-list-item:nth-child(2) div > p:nth-child(2) {
     color: #fff;
     font-weight: 500;
     font-size: 20px;
@@ -106,7 +106,7 @@
     top: 44px;
 }
 
-.prepaid-list .prepaid-list-item:nth-child(3) div p:nth-child(1) {
+.prepaid-list .prepaid-list-item:nth-child(3) div > p:nth-child(1) {
     font-size: 30px;
     text-align: start;
     font-weight: 500;
@@ -114,25 +114,37 @@
     width: 360px;
 }
 
-.prepaid-list .prepaid-list-item:nth-child(3) div p:nth-child(2) {
+.prepaid-list .prepaid-list-item:nth-child(3) div > p:nth-child(2) {
     text-align: start;
     color: #fff;
     font-weight: 500;
     font-size: 20px;
-    width: 400px;
+    width: 400px !important;
 }
 
 @media (width <= 1024px) {
     .prepaid-list .prepaid-list-item:nth-child(1) div {
-        line-height: 1.5;
+        line-height: 1.6;
     }
 
     .prepaid-list .prepaid-list-item:nth-child(2) div {
-        line-height: 1.5;
+        line-height: 1.6;
     }
 
     .prepaid-list .prepaid-list-item:nth-child(3) div {
-        line-height: 1.5;
+        line-height: 1.6;
+    }
+
+.prepaid-list .prepaid-list-item:nth-child(2) div > p:nth-child(2) {
+    width: 250px;
+}
+
+    .prepaid-list .prepaid-list-item:nth-child(3) div > p:nth-child(1) {
+        width: 300px;
+    }
+
+    .prepaid-list .prepaid-list-item:nth-child(3) div > p:nth-child(2) {
+        width: 350px;
     }
 }
 
@@ -154,27 +166,27 @@
         width: 100%;
     }
 
-    .prepaid-list .prepaid-list-item:nth-child(1) div p:nth-child(1) {
+    .prepaid-list .prepaid-list-item:nth-child(1) div > p:nth-child(1) {
         font-size: 22px;
     }
 
-    .prepaid-list .prepaid-list-item:nth-child(1) div p:nth-child(2) {
+    .prepaid-list .prepaid-list-item:nth-child(1) div > p:nth-child(2) {
         font-size: 17px;
     }
 
-    .prepaid-list .prepaid-list-item:nth-child(2) div p:nth-child(1) {
+    .prepaid-list .prepaid-list-item:nth-child(2) div > p:nth-child(1) {
         font-size: 22px;
     }
 
-    .prepaid-list .prepaid-list-item:nth-child(2) div p:nth-child(2) {
+    .prepaid-list .prepaid-list-item:nth-child(2) div > p:nth-child(2) {
         font-size: 17px;
     }
 
-    .prepaid-list .prepaid-list-item:nth-child(3) div p:nth-child(1) {
+    .prepaid-list .prepaid-list-item:nth-child(3) div > p:nth-child(1) {
         font-size: 22px;
     }
 
-    .prepaid-list .prepaid-list-item:nth-child(3) div p:nth-child(2) {
+    .prepaid-list .prepaid-list-item:nth-child(3) div > p:nth-child(2) {
         font-size: 17px;
     }
 
@@ -190,22 +202,22 @@
     .prepaid-list .prepaid-list-item:nth-child(1) div {
         position: absolute;
         top: 0;
-        line-height: 1.5;
-        margin-left: 14px;
+        line-height: 1.6;
+        margin-left: 25px;
     }
 
     .prepaid-list .prepaid-list-item:nth-child(2) div {
         position: absolute;
         top: 0;
-        line-height: 1.5;
-        margin-left: 14px;
+        line-height: 1.6;
+        margin-left: 20px;
     }
 
     .prepaid-list .prepaid-list-item:nth-child(3) div {
         position: absolute;
         top: 0;
-        line-height: 1.5;
-        margin-left: 14px;
+        line-height: 1.6;
+        margin-left: 20px;
     }
 
     .prepaid-list-item:nth-child(1) img {
@@ -241,20 +253,25 @@
         flex-direction: column;
         align-items: center;
     }
+
     .prepaid-list .prepaid-list-item:nth-child(1) div {
         top: 0;
-        line-height: 1.5;
+        line-height: 1.6;
         margin-left: 14px;
     }
+
     .prepaid-list .prepaid-list-item:nth-child(2) div {
         top: 0;
-        line-height: 1.5;
+        line-height: 1.6;
         margin-left: 14px;
+        width: 200px !important;
     }
+
     .prepaid-list .prepaid-list-item:nth-child(3) div {
         top: 0;
-        line-height: 1.5;
+        line-height: 1.6;
         margin-left: 14px;
+        width: 100%;
     }
 
     .choose-prepaid-dynamic h1 {
@@ -266,6 +283,32 @@
         margin: 0;
         font-size: 13px;
     }
+
+    .prepaid-list .prepaid-list-item:nth-child(1) div > p:nth-child(2) {
+        font-size: 15px;
+    }
+
+    .prepaid-list .prepaid-list-item:nth-child(2) div > p:nth-child(2) {
+        font-size: 15px;
+    }
+    
+    .prepaid-list .prepaid-list-item:nth-child(3) div > p:nth-child(2) {
+        font-size: 14px;
+        width: 240px;
+    }
+    .prepaid-list .prepaid-list-item:nth-child(1) div > p:nth-child(1) {
+        font-size: 22px;
+    }
+
+    .prepaid-list .prepaid-list-item:nth-child(2) div > p:nth-child(1) {
+        font-size: 22px;
+    }
+
+    .prepaid-list .prepaid-list-item:nth-child(3) div > p:nth-child(1) {
+        font-size: 22px;
+        width: 190px;
+    }
+
     .prepaid-list-item:nth-child(1) img {
         border-radius: 5px !important;
         height: 100%;
