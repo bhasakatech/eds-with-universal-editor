@@ -1,58 +1,64 @@
 .section.choose-a-prepaid-container {
-    width: 100%;
-    margin: 0;
-    padding: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .choose-a-prepaid-wrapper {
-    width: 100%;
-    max-width: 1400px !important;
-    padding: 0 !important;
-    margin: 0 !important;
+  width: 100%;
+  max-width: 1400px !important;
+  padding: 0 !important;
+  margin: 0 auto !important;
 }
 
 .choose-prepaid-dynamic {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 16px;
-  background-color: #06c; /* same blue */
-  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  background-color: #06c;
+  padding: 40px 20px;
   color: #fff;
-  flex-wrap: wrap; /* allows wrapping on smaller devices */
+  text-align: center;
 }
 
-/* Prepaid item image */
+/* Individual card */
+.prepaid-list-item {
+  background-color: rgb(255 255 255 / 10%);
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Image */
 .prepaid-list-item img {
-    width: 54px;
-    height: auto;
-    flex-shrink: 0;
-    display: block;
-    border-radius: 4px;
-    object-fit: cover;
+  width: 64px;
+  height: auto;
+  border-radius: 4px;
+  object-fit: cover;
+  margin-bottom: 12px;
 }
 
-/* Text */
+/* Headings and text */
 .choose-prepaid-dynamic h1,
 .prepaid-list-item h3 {
-    margin: 0;
-    font-weight: 600;
-    text-align: center;
+  margin: 0 0 8px;
+  font-weight: 600;
 }
 
 .choose-prepaid-dynamic p,
 .prepaid-list-item p {
-    margin: 0;
-    font-size: 1.25rem;
-    font-weight: 500;
-    text-align: center;
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 500;
 }
 
-/* Responsive Adjustments */
+/* Responsive tweaks */
 @media (width <= 1024px) {
   .choose-prepaid-dynamic {
-    padding: 15px;
-    gap: 12px;
+    gap: 16px;
+    padding: 30px 15px;
   }
 
   .choose-prepaid-dynamic p,
@@ -63,13 +69,11 @@
 
 @media (width <= 768px) {
   .choose-prepaid-dynamic {
-    text-align: center;
-    flex-direction: column;
+    grid-template-columns: 1fr;
   }
 
   .prepaid-list-item img {
     width: 50px;
-    height: auto;
   }
 
   .choose-prepaid-dynamic p,
@@ -79,17 +83,12 @@
 }
 
 @media (width <= 430px) {
-  .choose-prepaid-dynamic {
-    text-align: center;
-  }
-
   .prepaid-list-item img {
     width: 40px;
-    height: auto;
   }
 
   .choose-prepaid-dynamic p,
   .prepaid-list-item p {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
   }
 }
