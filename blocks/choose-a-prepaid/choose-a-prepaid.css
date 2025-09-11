@@ -43,35 +43,28 @@
 .prepaid-list .prepaid-list-item:nth-child(1) div {
     background: aqua;
     position: absolute;
-    top: 257%;
+    top: 314%;
     left: 14%;
 }
 
 .prepaid-list .prepaid-list-item:nth-child(1) div p:nth-child(1) {
-    bottom: 0;
     font-size: 34px;
     font-weight: 500;
     width: 201px;
-    top: -12px;
     color: #fff;
-    position: absolute;
-    left: 4px;
 }
 
 .prepaid-list .prepaid-list-item:nth-child(1) div p:nth-child(2) {
-        color: #fff;
-    position: absolute;
+    color: #fff;
     font-weight: 500;
     font-size: 22px;
-    width: 300px;
-    top: 43px;
 }
 
 /* 2nd image  */
 .prepaid-list .prepaid-list-item:nth-child(2) div {
     background: aqua;
     position: absolute;
-    top: 313%;
+    top: 316%;
 }
 
 .prepaid-list .prepaid-list-item:nth-child(2) div p:nth-child(1) {
@@ -79,16 +72,11 @@
     font-weight: 500;
     color: #fff;
     width: 300px;
-    top: 311%;
-    position: absolute;
-    background: red;
 }
 
-.prepaid-list .prepaid-list-item:nth-child(2) div p:nth-child(2) { 
-    color:#fff;
-    position: absolute;
+.prepaid-list .prepaid-list-item:nth-child(2) div p:nth-child(2) {
+    color: #fff;
     font-weight: 500;
     font-size: 22px;
     width: 300px;
-    bottom: -129px;
 }
