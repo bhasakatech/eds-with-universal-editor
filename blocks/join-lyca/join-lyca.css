@@ -20,7 +20,7 @@
   text-align: center;
   max-width: 800px;
   margin: 20px 1px 1px;
-  font-size: 48px; /* default desktop */
+  font-size: 48px; /* Default desktop */
 }
 
 .join-lyca.block > div:nth-child(2) p {
@@ -34,9 +34,8 @@
 
 .joinlyca-list {
   display: flex;
-  flex-wrap: nowrap;
   justify-content: center;
-  gap: 30px;
+  gap: 70px;
   margin-top: 20px;
   margin-bottom: 20px;
 }
@@ -62,96 +61,75 @@
 
 /* -------- Responsive Breakpoints -------- */
 
-/* Large desktop (≥1440px) */
-@media (width >= 1440px) {
+/* Tablet & small desktops (≤1024px) */
+@media (width <= 1024px) {
   .join-lyca.block > div:nth-child(1) h1 {
-    font-size: 52px;
+    font-size: 40px;
   }
-
-  .join-lyca.block > div:nth-child(2) p {
-    font-size: 20px;
-  }
-
-  .joinlyca-list-item h3 {
-    font-size: 18px;
-  }
-}
-
-/* Desktop (1024px – 1439px) */
-@media (width >= 1024px) and (width < 1440px) {
-  .join-lyca.block > div:nth-child(1) h1 {
-    font-size: 46px;
-  }
-
-  .join-lyca.block > div:nth-child(2) p {
-    font-size: 18px;
-  }
-
-  .joinlyca-list-item h3 {
-    font-size: 16px;
-  }
-}
-
-/* Tablet (768px – 1023px) */
-@media (width >= 768px) and (width < 1024px) {
-  .join-lyca.block > div:nth-child(1) h1 {
-    font-size: 36px;
-  }
-
   .join-lyca.block > div:nth-child(2) p {
     font-size: 16px;
   }
-
-  .joinlyca-list-item h3 {
-    font-size: 15px;
-  }
-}
-
-/* Mobile (476px – 767px) → side by side */
-@media (width >= 476px) and (width < 768px) {
-  .join-lyca.block > div:nth-child(1) h1 {
-    font-size: 28px;
-  }
-
-  .join-lyca.block > div:nth-child(2) p {
-    font-size: 15px;
-  }
-
-  .joinlyca-list-item h3 {
-    font-size: 14px;
-  }
-
   .joinlyca-list-item img {
     width: 70px !important;
   }
+  .joinlyca-list-item h3 {
+    font-size: 15px;
+  }
 }
 
-/* Small mobile (≤375px) → stack vertically */
+/* Tablets portrait (≤768px) */
+@media (width <= 768px) {
+  .join-lyca.block > div:nth-child(1) h1 {
+    font-size: 32px;
+  }
+  .join-lyca.block > div:nth-child(2) p {
+    font-size: 15px;
+  }
+  .joinlyca-list-item img {
+    width: 65px !important;
+  }
+  .joinlyca-list-item h3 {
+    font-size: 14px;
+  }
+}
+
+/* Small phones (≤430px) → still side by side, just smaller fonts */
+@media (width <= 430px) {
+  .join-lyca.block > div:nth-child(1) h1 {
+    font-size: 26px;
+  }
+  .join-lyca.block > div:nth-child(2) p {
+    font-size: 14px;
+  }
+  .joinlyca-list-item img {
+    width: 60px !important;
+  }
+  .joinlyca-list-item h3 {
+    font-size: 13px;
+  }
+}
+
+/* Extra small phones (≤380px) → stack vertically */
 @media (width <= 380px) {
   .joinlyca-list {
-    flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
     gap: 20px;
   }
-
   .joinlyca-list-item {
     flex: 1 1 100%;
     max-width: 100%;
   }
-
   .join-lyca.block > div:nth-child(1) h1 {
     font-size: 22px;
   }
-
   .join-lyca.block > div:nth-child(2) p {
     font-size: 13px;
   }
-
-  .joinlyca-list-item h3 {
-    font-size: 13px;
-  }
-
   .joinlyca-list-item img {
     width: 55px !important;
+  }
+  .joinlyca-list-item h3 {
+    font-size: 12px;
   }
 }
