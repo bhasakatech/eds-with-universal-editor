@@ -1,7 +1,7 @@
 .choose-prepaid-dynamic {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 4px 120px;
+    padding: 4px 60px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -36,30 +36,28 @@
 }
 
 /* first image  */
-.prepaid-list-item:nth-child(1){
+.prepaid-list-item:nth-child(1) {
     position: relative;
 }
 
-
-.prepaid-list-item:nth-child(2){
+.prepaid-list-item:nth-child(2) {
     position: relative;
 }
 
-.prepaid-list-item:nth-child(3){
+.prepaid-list-item:nth-child(3) {
     position: relative;
 }
-
 
 .prepaid-list .prepaid-list-item:nth-child(1) {
     grid-row: 1 / 2 span;
 }
-
 
 /* 1st dive list-item */
 .prepaid-list .prepaid-list-item:nth-child(1) div {
     position: absolute;
     margin-left: 32px;
     background-color: red;
+    top: 44px;
 }
 
 .prepaid-list .prepaid-list-item:nth-child(1) div p:nth-child(1) {
@@ -80,8 +78,9 @@
 /* 2nd image  */
 .prepaid-list .prepaid-list-item:nth-child(2) div {
     position: absolute;
-    margin-left: 32px;    
+    margin-left: 32px;
     background-color: red;
+    top: 44px;
 }
 
 .prepaid-list .prepaid-list-item:nth-child(2) div p:nth-child(1) {
@@ -103,8 +102,9 @@
 /* 3rd image  */
 .prepaid-list .prepaid-list-item:nth-child(3) div {
     position: absolute;
-    margin-left: 32px;    
+    margin-left: 32px;
     background-color: red;
+    top: 44px;
 }
 
 .prepaid-list .prepaid-list-item:nth-child(3) div p:nth-child(1) {
@@ -123,64 +123,86 @@
     width: 300px;
 }
 
-
 @media (width <= 786px) {
-  .choose-prepaid-dynamic {
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+    .choose-prepaid-dynamic {
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
-  /* Make grid single column */
-  .prepaid-list {
-    display: grid;
-    grid-template-columns: 1fr; /* 1 item per row */
-    gap: 20px;
-    width: 100%;
-  }
+    /* Make grid single column */
+    .prepaid-list {
+        display: grid;
+        grid-template-columns: 1fr; /* 1 item per row */
+        gap: 20px;
+        width: 100%;
+    }
 
-  .prepaid-list-item {
-    width: 100%;
-  }
- 
-  .prepaid-list-item div {
-    margin-top: 10px;
-    text-align: center;
-  }
+    .prepaid-list .prepaid-list-item:nth-child(1) div p:nth-child(1) {
+        font-size: 21px;
+    }
 
-.prepaid-list .prepaid-list-item:nth-child(1) div {
-    position: absolute;
+    .prepaid-list .prepaid-list-item:nth-child(1) div p:nth-child(2) {
+        font-size: 17px;
+    }
+
+    .prepaid-list .prepaid-list-item:nth-child(2) div p:nth-child(1) {
+        font-size: 21px;
+    }
+
+    .prepaid-list .prepaid-list-item:nth-child(2) div p:nth-child(2) {
+        font-size: 17px;
+    }
+
+    .prepaid-list .prepaid-list-item:nth-child(3) div p:nth-child(1) {
+        font-size: 21px;
+    }
+
+    .prepaid-list .prepaid-list-item:nth-child(3) div p:nth-child(2) {
+        font-size: 17px;
+    }
+
+    .prepaid-list-item {
+        width: 100%;
+    }
+
+    .prepaid-list-item div {
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    .prepaid-list .prepaid-list-item:nth-child(1) div {
+        position: absolute;
+    }
+
+    .prepaid-list .prepaid-list-item:nth-child(2) div {
+        position: absolute;
+        margin-left: 32px;
+    }
+
+    .prepaid-list .prepaid-list-item:nth-child(3) div {
+        position: absolute;
+        top: 10px;
+        background: aqua;
+        margin-left: 15px;
+    }
+
+    /* accesing each image directly image 2 */
+    .prepaid-list-item:nth-child(2) img {
+        border-radius: 5px !important;
+        height: 243px;
+        width: 1000px;
+        object-fit: cover;
+    }
+
+    /* accesing each image directly image 3 */
+    .prepaid-list-item:nth-child(3) img {
+        border-radius: 5px !important;
+        height: 243px;
+        width: 1000px;
+        object-fit: cover;
+    }
 }
-
-.prepaid-list .prepaid-list-item:nth-child(2) div {
-    position: absolute;
-    margin-left: 32px;  
-}
-
-.prepaid-list .prepaid-list-item:nth-child(3) div {
-    position: absolute;
-    background: aqua;  
-}
-
-/* accesing each image directly image 2 */
-.prepaid-list-item:nth-child(2) img {
-    border-radius: 5px !important;
-    height: 243px;
-    width: 1000px;
-    object-fit: cover;
-}
-
-/* accesing each image directly image 3 */
-.prepaid-list-item:nth-child(3) img {
-    border-radius: 5px !important;
-    height: 243px;
-    width: 1000px;
-    object-fit: cover;
-}
-
-  
-}
-
