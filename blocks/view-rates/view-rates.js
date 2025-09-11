@@ -26,11 +26,11 @@ export default async function decorate(block) {
       viewRatesWrapper.appendChild(img);
     }
 
-    // Text
+    // === Text ===
     if (data.text) {
-      const text = document.createElement('p');
-      text.textContent = data.text;
-      viewRatesWrapper.appendChild(text);
+      const textWrapper = document.createElement('div');
+      textWrapper.innerHTML = data.text;
+      viewRatesWrapper.appendChild(textWrapper);
     }
 
     // Arrow Icon with Link
