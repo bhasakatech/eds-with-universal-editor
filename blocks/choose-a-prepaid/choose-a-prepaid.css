@@ -56,11 +56,12 @@
 .prepaid-list .prepaid-list-item:nth-child(1) div {
     position: absolute;
     margin-left: 32px;
-    top: 44px;
+    top: 21px;
+    line-height: 1.2;
 }
 
 .prepaid-list .prepaid-list-item:nth-child(1) div p:nth-child(1) {
-    font-size: 34px;
+    font-size: 30px;
     font-weight: 500;
     width: 201px;
     color: #fff;
@@ -70,7 +71,7 @@
 .prepaid-list .prepaid-list-item:nth-child(1) div p:nth-child(2) {
     color: #fff;
     font-weight: 500;
-    font-size: 22px;
+    font-size: 20px;
     text-align: start;
 }
 
@@ -79,10 +80,11 @@
     position: absolute;
     margin-left: 32px;
     top: 44px;
+    line-height: 1.2;
 }
 
 .prepaid-list .prepaid-list-item:nth-child(2) div p:nth-child(1) {
-    font-size: 31px;
+    font-size: 30px;
     font-weight: 500;
     color: #fff;
     width: 300px;
@@ -92,7 +94,7 @@
 .prepaid-list .prepaid-list-item:nth-child(2) div p:nth-child(2) {
     color: #fff;
     font-weight: 500;
-    font-size: 22px;
+    font-size: 20px;
     width: 300px;
     text-align: start;
 }
@@ -105,7 +107,7 @@
 }
 
 .prepaid-list .prepaid-list-item:nth-child(3) div p:nth-child(1) {
-    font-size: 31px;
+    font-size: 30px;
     text-align: start;
     font-weight: 500;
     color: #fff;
@@ -116,9 +118,25 @@
     text-align: start;
     color: #fff;
     font-weight: 500;
-    font-size: 22px;
-    width: 300px;
+    font-size: 20px;
+    width: 400px;
 }
+
+@media (width <= 1024px) {
+   .prepaid-list .prepaid-list-item:nth-child(1) div {
+    line-height: 1.1;
+}
+
+ .prepaid-list .prepaid-list-item:nth-child(2) div {
+    line-height: 1.1;
+}
+
+ .prepaid-list .prepaid-list-item:nth-child(3) div {
+    line-height: 1.1;
+}
+
+}
+
 
 @media (width <= 786px) {
     .choose-prepaid-dynamic {
@@ -231,4 +249,23 @@
         margin: 0;
         font-size: 13px;
     }
+    
+    /* accesing each image directly image 1 */
+     .prepaid-list-item:nth-child(1) img {
+        border-radius: 5px !important;
+        object-fit: cover;
+    }
+
+    /* accesing each image directly image 2 */
+    .prepaid-list-item:nth-child(2) img {
+        border-radius: 5px !important;
+        object-fit: cover;
+    }
+
+    /* accesing each image directly image 3 */
+    .prepaid-list-item:nth-child(3) img {
+        border-radius: 5px !important;
+        object-fit: cover;
+    }
+
 }
