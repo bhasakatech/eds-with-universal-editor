@@ -291,11 +291,12 @@
     .prepaid-list .prepaid-list-item:nth-child(2) div > p:nth-child(2) {
         font-size: 15px;
     }
-    
+
     .prepaid-list .prepaid-list-item:nth-child(3) div > p:nth-child(2) {
         font-size: 14px;
         width: 240px;
     }
+    
     .prepaid-list .prepaid-list-item:nth-child(1) div > p:nth-child(1) {
         font-size: 22px;
     }
