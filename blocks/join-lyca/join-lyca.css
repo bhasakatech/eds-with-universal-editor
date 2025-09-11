@@ -66,12 +66,15 @@
   .join-lyca.block > div:nth-child(1) h1 {
     font-size: 40px;
   }
+
   .join-lyca.block > div:nth-child(2) p {
     font-size: 16px;
   }
+
   .joinlyca-list-item img {
     width: 70px !important;
   }
+
   .joinlyca-list-item h3 {
     font-size: 15px;
   }
@@ -82,12 +85,15 @@
   .join-lyca.block > div:nth-child(1) h1 {
     font-size: 32px;
   }
+
   .join-lyca.block > div:nth-child(2) p {
     font-size: 15px;
   }
+
   .joinlyca-list-item img {
     width: 65px !important;
   }
+
   .joinlyca-list-item h3 {
     font-size: 14px;
   }
@@ -98,12 +104,15 @@
   .join-lyca.block > div:nth-child(1) h1 {
     font-size: 26px;
   }
+
   .join-lyca.block > div:nth-child(2) p {
     font-size: 14px;
   }
+
   .joinlyca-list-item img {
     width: 60px !important;
   }
+
   .joinlyca-list-item h3 {
     font-size: 13px;
   }
@@ -116,19 +125,24 @@
     align-items: center;
     gap: 20px;
   }
+
   .joinlyca-list-item {
     flex: 1 1 100%;
     max-width: 100%;
   }
+
   .join-lyca.block > div:nth-child(1) h1 {
     font-size: 22px;
   }
+
   .join-lyca.block > div:nth-child(2) p {
     font-size: 13px;
   }
+
   .joinlyca-list-item img {
     width: 55px !important;
   }
+
   .joinlyca-list-item h3 {
     font-size: 12px;
   }
