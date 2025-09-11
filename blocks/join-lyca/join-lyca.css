@@ -33,7 +33,7 @@
 
 .joinlyca-list {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
   margin-top: 20px;
@@ -65,15 +65,13 @@
 @media (width >= 1024px) {
   .joinlyca-list {
     gap: 80px;
-    flex-wrap: nowrap;
   }
 }
 
 /* Tablet (768px – 1023px) */
-@media (width >= 768px) and (width <= 1023px) {
+@media (width <= 1023px) and (width >= 768px) {
   .joinlyca-list {
     gap: 40px;
-    flex-wrap: nowrap;
   }
 
   .join-lyca.block > div:nth-child(2) p {
@@ -85,33 +83,11 @@
   }
 }
 
-/* Mobile (480px – 767px) → Side by side */
-@media (width >= 480px) and (width <= 767px) {
+/* Small mobile (≤375px) → Stack vertically */
+@media (width <= 375px) {
   .joinlyca-list {
-    display: flex;
-    gap: 30px;
-  }
-
-  .joinlyca-list-item {
-    flex: 1 1 100%;
-    max-width: 100%;
-  }
-}
-
-/* Small mobile (320px – 375px) → Stack vertically */
-@media (width >= 320px) and (width <= 375px) {
-  .joinlyca-list {
-    display: flex;
-    flex-direction: column; /* stack items vertically */
+    flex-direction: column;
     gap: 20px;
-  }
-
-  .join-lyca.block > div:nth-child(1) h1 {
-    font-size: 25px !important;
-  }
-
-  .join-lyca.block > div:nth-child(2) p {
-    font-size: 13px !important;
   }
 
   .joinlyca-list-item {
