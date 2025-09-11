@@ -43,7 +43,7 @@
 .prepaid-list .prepaid-list-item:nth-child(1) div {
     background: aqua;
     position: absolute;
-    top: 314%;
+    top: 170%;
     left: 14%;
 }
 
@@ -64,7 +64,7 @@
 .prepaid-list .prepaid-list-item:nth-child(2) div {
     background: aqua;
     position: absolute;
-    top: 316%;
+    top: 170%;
 }
 
 .prepaid-list .prepaid-list-item:nth-child(2) div p:nth-child(1) {
@@ -75,6 +75,27 @@
 }
 
 .prepaid-list .prepaid-list-item:nth-child(2) div p:nth-child(2) {
+    color: #fff;
+    font-weight: 500;
+    font-size: 22px;
+    width: 300px;
+}
+
+/* 3rd image  */
+.prepaid-list .prepaid-list-item:nth-child(3) div {
+    background: aqua;
+    position: absolute;
+    top: 170%;
+}
+
+.prepaid-list .prepaid-list-item:nth-child(3) div p:nth-child(1) {
+    font-size: 31px;
+    font-weight: 500;
+    color: #fff;
+    width: 300px;
+}
+
+.prepaid-list .prepaid-list-item:nth-child(3) div p:nth-child(2) {
     color: #fff;
     font-weight: 500;
     font-size: 22px;
