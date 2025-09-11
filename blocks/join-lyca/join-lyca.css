@@ -20,6 +20,7 @@
   text-align: center;
   max-width: 800px;
   margin: 20px 1px 1px;
+  font-size: 48px; /* default desktop */
 }
 
 .join-lyca.block > div:nth-child(2) p {
@@ -33,7 +34,7 @@
 
 .joinlyca-list {
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
   margin-top: 20px;
@@ -61,48 +62,115 @@
 
 /* -------- Responsive Breakpoints -------- */
 
-/* Large screens (Desktop ≥1024px) */
-@media (width >= 1024px) {
-  .joinlyca-list {
-    gap: 80px !important;
-      flex-flow: row nowrap !important;
+/* Large desktop (≥1440px) */
+@media (width >= 1440px) {
+  .join-lyca.block > div:nth-child(1) h1 {
+    font-size: 52px;
+  }
+
+  .join-lyca.block > div:nth-child(2) p {
+    font-size: 20px;
+  }
+
+  .joinlyca-list-item h3 {
+    font-size: 18px;
   }
 }
 
-/* Tablet (768px – 1023px) */
-@media (width >= 768px) {
-  .joinlyca-list {
-    gap: 40px !important;
-      flex-flow: row nowrap !important ;
+/* Desktop (1024px – 1439px) */
+@media (width >= 1024px) and (width < 1440px) {
+  .join-lyca.block > div:nth-child(1) h1 {
+    font-size: 46px;
   }
 
   .join-lyca.block > div:nth-child(2) p {
     font-size: 18px;
   }
 
-  .join-lyca.block > div:nth-child(1) h1 {
-    font-size: 40px;
+  .joinlyca-list-item h3 {
+    font-size: 16px;
   }
 }
 
-/* Small mobile (≤375px) → Stack vertically */
-@media (width >= 380px) {
+/* Tablet (768px – 1023px) */
+@media (width >= 768px) and (width < 1024px) {
+  .join-lyca.block > div:nth-child(1) h1 {
+    font-size: 36px;
+  }
+
+  .join-lyca.block > div:nth-child(2) p {
+    font-size: 16px;
+  }
+
+  .joinlyca-list-item h3 {
+    font-size: 15px;
+  }
+}
+
+/* Mobile (476px – 767px) → side by side */
+@media (width >= 476px) and (width < 768px) {
+  .join-lyca.block > div:nth-child(1) h1 {
+    font-size: 28px;
+  }
+
+  .join-lyca.block > div:nth-child(2) p {
+    font-size: 15px;
+  }
+
+  .joinlyca-list-item h3 {
+    font-size: 14px;
+  }
+
+  .joinlyca-list-item img {
+    width: 70px !important;
+  }
+}
+
+/* Small mobile (≤375px) → stack vertically */
+@media (width <= 375px) {
   .joinlyca-list {
-    flex-direction: column !important;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
     gap: 20px;
   }
 
+  .joinlyca-list-item {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
   .join-lyca.block > div:nth-child(1) h1 {
-    font-size: 25px;
+    font-size: 22px;
   }
 
   .join-lyca.block > div:nth-child(2) p {
     font-size: 13px;
   }
 
-  .joinlyca-list-item {
-    flex: 1 1 100%;
-    max-width: 100%;
+  .joinlyca-list-item h3 {
+    font-size: 13px;
+  }
+
+  .joinlyca-list-item img {
+    width: 55px !important;
+  }
+}
+
+/* Extra small (≤320px) → stack vertically, even smaller fonts */
+@media (width <= 320px) {
+  .join-lyca.block > div:nth-child(1) h1 {
+    font-size: 20px;
+  }
+
+  .join-lyca.block > div:nth-child(2) p {
+    font-size: 12px;
+  }
+
+  .joinlyca-list-item h3 {
+    font-size: 12px;
+  }
+
+  .joinlyca-list-item img {
+    width: 50px !important;
   }
 }
