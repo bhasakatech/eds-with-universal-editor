@@ -1,11 +1,31 @@
+.choose-a-prepaid-container {
+  width: 100%;
+  background-color: #06c;
+  color: #fff;
+  padding: 40px 20px;
+}
+
+.choose-a-prepaid-wrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.choose-a-prepaid-wrapper h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.choose-a-prepaid-wrapper p {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-bottom: 32px;
+}
+
 .prepaid-list {
   display: flex;
   gap: 32px;
-  background-color: #06c;
-  padding: 40px 20px;
   flex-wrap: wrap;
-  justify-content: center;
-  color: #fff;
 }
 
 .prepaid-list-item {
@@ -30,6 +50,29 @@
 
 .prepaid-list-item img:hover {
   opacity: 1;
+}
+
+.prepaid-list-item h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.prepaid-list-item p {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.prepaid-list-item ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.prepaid-list-item ul li {
+  font-size: 1rem;
+  margin-bottom: 6px;
 }
 
 /* Layout control */
@@ -63,12 +106,28 @@
 }
 
 @media (width <= 768px) {
+  .choose-a-prepaid-wrapper h1 {
+    font-size: 2rem;
+  }
+
+  .choose-a-prepaid-wrapper p {
+    font-size: 1rem;
+  }
+
   .prepaid-list-item img {
     max-width: 180px;
   }
 }
 
 @media (width <= 430px) {
+  .choose-a-prepaid-wrapper h1 {
+    font-size: 1.5rem;
+  }
+
+  .choose-a-prepaid-wrapper p {
+    font-size: 0.9rem;
+  }
+
   .prepaid-list-item img {
     max-width: 140px;
   }
