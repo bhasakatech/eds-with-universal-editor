@@ -282,6 +282,21 @@
           }
         },
         {
+          "title": "Sign Up",
+          "id": "signup",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Sign Up",
+                  "model": "signup"
+                }
+              }
+            }
+          }
+        },
+        {
           "title": "Teaser",
           "id": "teaser",
           "plugins": {

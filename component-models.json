@@ -522,6 +522,36 @@
     ]
   },
   {
+    "id": "signup",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "heading",
+        "label": "Sign Up Heading",
+        "valueType": "string",
+        "required": true
+      },
+      {
+        "component": "richtext",
+        "name": "emailPrompt",
+        "label": "Email Placeholder",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "emailDesctiption",
+        "label": "Email Description",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "signUpButtonText",
+        "label": "Sign Up Button Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
     "id": "teaser",
     "fields": [
       {
