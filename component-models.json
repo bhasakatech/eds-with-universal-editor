@@ -142,6 +142,39 @@
     ]
   },
   {
+    "id": "blogList",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "heading",
+        "label": "Bolg Heading",
+        "valueType": "string",
+        "required": true
+      },
+      {
+        "component": "container",
+        "name": "blogList",
+        "label": "Blog List",
+        "multi": true,
+        "fields": [
+          {
+            "component": "reference",
+            "name": "blogImage",
+            "value": "",
+            "label": "Blog Image",
+            "valueType": "string"
+          },
+          {
+            "component": "richtext",
+            "name": "blogDescription",
+            "label": "Blog Description",
+            "valueType": "string"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "card",
     "fields": [
       {
