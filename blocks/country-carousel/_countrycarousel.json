@@ -1,0 +1,68 @@
+{
+    "definitions": [
+        {
+            "title": "Country Carousel",
+            "id": "countryCarousel",
+            "plugins": {
+                "xwalk": {
+                    "page": {
+                        "resourceType": "core/franklin/components/block/v1/block",
+                        "template": {
+                            "name": "Country Carousel",
+                            "model": "countryCarousel"
+                        }
+                    }
+                }
+            }
+        }
+    ],
+    "models": [
+        {
+            "id": "countryCarousel",
+            "fields": [ {
+                    "component": "text",
+                    "name": "title",
+                    "label": "Title",
+                    "value": "",
+                    "valueType": "string"
+              }, 
+               {
+                    "component": "reference",
+                    "name": "rightArrowImage",
+                    "value": "",
+                    "label": "Right Arrow Image",
+                    "valueType": "string"
+                },    
+                {
+                    "component": "container",
+                    "name": "countryCarouselList",
+                    "label": "Country Carousel List",
+                    "multi": true,
+                    "fields": [
+                        {
+                            "component": "reference",
+                            "name": "countryImage",
+                            "value": "",
+                            "label": "Country Image",
+                            "valueType": "string"
+                        },
+                        {
+                            "component": "text",
+                            "name": "countryTitle",
+                            "label": "Country Title",
+                            "valueType": "string"
+                        }
+                    ]
+                },
+                {
+                    "component": "reference",
+                    "name": "leftArrowImage",
+                    "value": "",
+                    "label": "Left Arrow Image",
+                    "valueType": "string"
+                }
+            ]
+        }
+    ],
+    "filters": []
+}

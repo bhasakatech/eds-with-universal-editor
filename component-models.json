@@ -279,6 +279,53 @@
     ]
   },
   {
+    "id": "countryCarousel",
+    "fields": [
+      {
+        "component": "text",
+        "name": "title",
+        "label": "Title",
+        "value": "",
+        "valueType": "string"
+      },
+      {
+        "component": "reference",
+        "name": "rightArrowImage",
+        "value": "",
+        "label": "Right Arrow Image",
+        "valueType": "string"
+      },
+      {
+        "component": "container",
+        "name": "countryCarouselList",
+        "label": "Country Carousel List",
+        "multi": true,
+        "fields": [
+          {
+            "component": "reference",
+            "name": "countryImage",
+            "value": "",
+            "label": "Country Image",
+            "valueType": "string"
+          },
+          {
+            "component": "text",
+            "name": "countryTitle",
+            "label": "Country Title",
+            "valueType": "string"
+          }
+        ]
+      },
+      {
+        "component": "reference",
+        "name": "leftArrowImage",
+        "value": "",
+        "label": "Left Arrow Image",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
     "id": "doownloadapp",
     "fields": [
       {
