@@ -124,7 +124,7 @@
 }
 
 @media (width <= 786px) {
-    .choose-prepaid-dynamic {
+       .choose-prepaid-dynamic {
         max-width: 100%;
         margin: 0 auto;
         padding: 20px;
@@ -142,27 +142,27 @@
     }
 
     .prepaid-list .prepaid-list-item:nth-child(1) div p:nth-child(1) {
-        font-size: 21px;
+        font-size: 19px;
     }
 
     .prepaid-list .prepaid-list-item:nth-child(1) div p:nth-child(2) {
-        font-size: 17px;
+        font-size: 14px;
     }
 
     .prepaid-list .prepaid-list-item:nth-child(2) div p:nth-child(1) {
-        font-size: 21px;
+        font-size: 19px;
     }
 
     .prepaid-list .prepaid-list-item:nth-child(2) div p:nth-child(2) {
-        font-size: 17px;
+        font-size: 14px;
     }
 
     .prepaid-list .prepaid-list-item:nth-child(3) div p:nth-child(1) {
-        font-size: 21px;
+        font-size: 19px;
     }
 
     .prepaid-list .prepaid-list-item:nth-child(3) div p:nth-child(2) {
-        font-size: 17px;
+        font-size: 14px;
     }
 
     .prepaid-list-item {
@@ -176,18 +176,26 @@
 
     .prepaid-list .prepaid-list-item:nth-child(1) div {
         position: absolute;
+        top: 0;
+        margin-left: 14px;
     }
 
     .prepaid-list .prepaid-list-item:nth-child(2) div {
         position: absolute;
-        margin-left: 32px;
+        top: 0;
+        margin-left: 14px;
     }
 
     .prepaid-list .prepaid-list-item:nth-child(3) div {
-        position: absolute;
-        top: 10px;
-        background: aqua;
-        margin-left: 15px;
+        top: 0;
+        margin-left: 14px;
+    }
+
+        .prepaid-list-item:nth-child(1) img {
+        border-radius: 5px !important;
+        height: 350px;
+        width: 1000px;
+        object-fit: cover;
     }
 
     /* accesing each image directly image 2 */
@@ -202,6 +210,33 @@
     .prepaid-list-item:nth-child(3) img {
         border-radius: 5px !important;
         height: 243px;
+        width: 1000px;
+        object-fit: cover;
+    }
+}
+
+
+
+@media (width <= 430px) {
+       .prepaid-list-item:nth-child(1) img {
+        border-radius: 5px !important;
+        height: 650px;
+        width: 1000px;
+        object-fit: cover;
+    }
+    
+    /* accesing each image directly image 2 */
+    .prepaid-list-item:nth-child(2) img {
+        border-radius: 5px !important;
+        height: 400px;
+        width: 1000px;
+        object-fit: cover;
+    }
+
+    /* accesing each image directly image 3 */
+    .prepaid-list-item:nth-child(3) img {
+        border-radius: 5px !important;
+        height: 400px;
         width: 1000px;
         object-fit: cover;
     }
