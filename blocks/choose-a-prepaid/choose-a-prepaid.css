@@ -48,7 +48,7 @@
 }
 
 .prepaid-list .prepaid-list-item:nth-child(1) div p:nth-child(1) {
-    bottom: 0px;
+    bottom: 0;
     font-size: 34px;
     font-weight: 500;
     width: 201px;
@@ -61,12 +61,12 @@
 .prepaid-list .prepaid-list-item:nth-child(1) div p:nth-child(2) {
         color: #fff;
     position: absolute;
-    font-family: GTEestiLCDisplayLight;
     font-weight: 500;
     font-size: 22px;
     width: 300px;
     top: 43px;
 }
+
 /* 2nd image  */
 .prepaid-list .prepaid-list-item:nth-child(2) div {
     background: aqua;
@@ -77,7 +77,6 @@
 .prepaid-list .prepaid-list-item:nth-child(2) div p:nth-child(1) {
     font-size: 31px;
     font-weight: 500;
-    width: 201px;
     color: #fff;
     width: 300px;
     top: 311%;
@@ -88,7 +87,6 @@
 .prepaid-list .prepaid-list-item:nth-child(2) div p:nth-child(2) { 
     color:#fff;
     position: absolute;
-    font-family: GTEestiLCDisplayLight;
     font-weight: 500;
     font-size: 22px;
     width: 300px;
