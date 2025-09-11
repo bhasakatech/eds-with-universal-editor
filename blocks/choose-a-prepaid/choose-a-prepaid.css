@@ -2,93 +2,116 @@
   width: 100%;
   margin: 0;
   padding: 0;
+  background-color: #06c;
+  color: #fff;
 }
 
 .choose-a-prepaid-wrapper {
   width: 100%;
   max-width: 1400px !important;
-  padding: 0 !important;
   margin: 0 auto !important;
-}
-
-.choose-prepaid-dynamic {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 24px;
-  background-color: #06c;
   padding: 40px 20px;
-  color: #fff;
-  text-align: center;
 }
 
-/* Individual card */
-.prepaid-list-item {
+.choose-prepaid-grid {
+  display: grid;
+  grid-template-areas:
+    "card1 card2"
+    "card1 card3";
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+.prepaid-card {
   background-color: rgb(255 255 255 / 10%);
-  border-radius: 8px;
+  border-radius: 12px;
   padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 }
 
-/* Image */
-.prepaid-list-item img {
-  width: 64px;
-  height: auto;
-  border-radius: 4px;
+.best-value {
+  grid-area: card1;
+}
+
+.long-term {
+  grid-area: card2;
+}
+
+.international {
+  grid-area: card3;
+}
+
+.prepaid-card img {
+  width: 100%;
+  max-width: 240px;
+  border-radius: 8px;
   object-fit: cover;
+  margin-bottom: 16px;
+}
+
+.prepaid-card h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.prepaid-card p {
+  font-size: 1.1rem;
+  font-weight: 500;
   margin-bottom: 12px;
 }
 
-/* Headings and text */
-.choose-prepaid-dynamic h1,
-.prepaid-list-item h3 {
-  margin: 0 0 8px;
-  font-weight: 600;
-}
-
-.choose-prepaid-dynamic p,
-.prepaid-list-item p {
+.prepaid-card ul {
+  list-style: none;
+  padding: 0;
   margin: 0;
-  font-size: 1.25rem;
-  font-weight: 500;
 }
 
-/* Responsive tweaks */
+.prepaid-card ul li {
+  font-size: 1rem;
+  margin-bottom: 6px;
+}
+
+/* Responsive */
 @media (width <= 1024px) {
-  .choose-prepaid-dynamic {
-    gap: 16px;
-    padding: 30px 15px;
+  .choose-prepaid-grid {
+    grid-template-areas:
+      "card1"
+      "card2"
+      "card3";
+    grid-template-columns: 1fr;
   }
 
-  .choose-prepaid-dynamic p,
-  .prepaid-list-item p {
-    font-size: 1rem;
+  .prepaid-card img {
+    max-width: 200px;
   }
 }
 
 @media (width <= 768px) {
-  .choose-prepaid-dynamic {
-    grid-template-columns: 1fr;
+  .prepaid-card h3 {
+    font-size: 1.25rem;
   }
 
-  .prepaid-list-item img {
-    width: 50px;
-  }
-
-  .choose-prepaid-dynamic p,
-  .prepaid-list-item p {
+  .prepaid-card p,
+  .prepaid-card ul li {
     font-size: 1rem;
   }
 }
 
 @media (width <= 430px) {
-  .prepaid-list-item img {
-    width: 40px;
+  .prepaid-card img {
+    max-width: 160px;
   }
 
-  .choose-prepaid-dynamic p,
-  .prepaid-list-item p {
-    font-size: 0.8rem;
+  .prepaid-card h3 {
+    font-size: 1rem;
+  }
+
+  .prepaid-card p,
+  .prepaid-card ul li {
+    font-size: 0.85rem;
   }
 }
