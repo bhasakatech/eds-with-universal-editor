@@ -64,7 +64,7 @@
 /* Large screens (Desktop ≥1024px) */
 @media (width >= 1024px) {
   .joinlyca-list {
-    gap: 80px;
+    gap: 80px;flex-flow: row nowrap;
   }
 }
 
@@ -72,6 +72,7 @@
 @media (width <= 1023px) and (width >= 768px) {
   .joinlyca-list {
     gap: 40px;
+    flex-flow: row nowrap;
   }
 
   .join-lyca.block > div:nth-child(2) p {
@@ -84,10 +85,18 @@
 }
 
 /* Small mobile (≤375px) → Stack vertically */
-@media (width <= 375px) {
+@media (width >= 380px) {
   .joinlyca-list {
     flex-direction: column;
     gap: 20px;
+  }
+
+  .join-lyca.block > div:nth-child(1) h1 {
+    font-size: 25px;
+  }
+
+  .join-lyca.block > div:nth-child(2) p {
+    font-size: 13px;
   }
 
   .joinlyca-list-item {
