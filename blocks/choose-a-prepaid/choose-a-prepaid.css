@@ -1,57 +1,75 @@
- .prepaid-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      grid-auto-rows: minmax(150px, auto);
-      gap: 18px;
-      padding: 20px 10px;
-      max-width: 1200px;
-      margin: auto;
-    }
+.prepaid-list {
+  display: flex;
+  gap: 32px;
+  background-color: #06c;
+  padding: 40px 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  color: #fff;
+}
 
-    .prepaid-list-item {
-      position: relative;
-      overflow: hidden;
-      border-radius: 12px;
-    }
+.prepaid-list-item {
+  background-color: rgb(255 255 255 / 10%);
+  border-radius: 12px;
+  padding: 24px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-    .prepaid-list-item img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 12px;
-      display: block;
-    }
+.prepaid-list-item img {
+  width: 100%;
+  max-width: 240px;
+  border-radius: 8px;
+  object-fit: cover;
+  margin-bottom: 16px;
+  opacity: 0.85;
+  transition: opacity 0.3s ease;
+}
 
-    .item-1 {
-      grid-row: span 2;
-    }
+.prepaid-list-item img:hover {
+  opacity: 1;
+}
 
-    .text-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      padding: 20px;
-      color: white;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(
-        to bottom,
-        rgb(0 0 0 / 50%),
-        rgb(0 0 0 / 20%)
-      );
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      border-radius: 12px;
-    }
+/* Layout control */
+.best-value {
+  flex: 1 1 50%;
+}
 
-    .text-overlay h3 {
-      margin: 0;
-      font-size: 1.5rem;
-      font-weight: bold;
-    }
+.prepaid-right-column {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  flex: 1 1 50%;
+}
 
-    .text-overlay p {
-      margin-top: 5px;
-      font-size: 1rem;
-    }
+/* Responsive */
+@media (width <= 1024px) {
+  .prepaid-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .prepaid-right-column {
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+
+  .prepaid-list-item {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+@media (width <= 768px) {
+  .prepaid-list-item img {
+    max-width: 180px;
+  }
+}
+
+@media (width <= 430px) {
+  .prepaid-list-item img {
+    max-width: 140px;
+  }
+}
