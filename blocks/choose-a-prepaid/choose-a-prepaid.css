@@ -123,20 +123,18 @@
 }
 
 @media (width <= 1024px) {
-   .prepaid-list .prepaid-list-item:nth-child(1) div {
-    line-height: 1.1;
-}
+    .prepaid-list .prepaid-list-item:nth-child(1) div {
+        line-height: 1.5;
+    }
 
- .prepaid-list .prepaid-list-item:nth-child(2) div {
-    line-height: 1.1;
-}
+    .prepaid-list .prepaid-list-item:nth-child(2) div {
+        line-height: 1.5;
+    }
 
- .prepaid-list .prepaid-list-item:nth-child(3) div {
-    line-height: 1.1;
+    .prepaid-list .prepaid-list-item:nth-child(3) div {
+        line-height: 1.5;
+    }
 }
-
-}
-
 
 @media (width <= 786px) {
     .choose-prepaid-dynamic {
@@ -157,27 +155,27 @@
     }
 
     .prepaid-list .prepaid-list-item:nth-child(1) div p:nth-child(1) {
-        font-size: 19px;
+        font-size: 22px;
     }
 
     .prepaid-list .prepaid-list-item:nth-child(1) div p:nth-child(2) {
-        font-size: 14px;
+        font-size: 17px;
     }
 
     .prepaid-list .prepaid-list-item:nth-child(2) div p:nth-child(1) {
-        font-size: 19px;
+        font-size: 22px;
     }
 
     .prepaid-list .prepaid-list-item:nth-child(2) div p:nth-child(2) {
-        font-size: 14px;
+        font-size: 17px;
     }
 
     .prepaid-list .prepaid-list-item:nth-child(3) div p:nth-child(1) {
-        font-size: 19px;
+        font-size: 22px;
     }
 
     .prepaid-list .prepaid-list-item:nth-child(3) div p:nth-child(2) {
-        font-size: 14px;
+        font-size: 17px;
     }
 
     .prepaid-list-item {
@@ -192,17 +190,21 @@
     .prepaid-list .prepaid-list-item:nth-child(1) div {
         position: absolute;
         top: 0;
+        line-height: 1.5;
         margin-left: 14px;
     }
 
     .prepaid-list .prepaid-list-item:nth-child(2) div {
         position: absolute;
         top: 0;
+        line-height: 1.5;
         margin-left: 14px;
     }
 
     .prepaid-list .prepaid-list-item:nth-child(3) div {
+        position: absolute;
         top: 0;
+        line-height: 1.5;
         margin-left: 14px;
     }
 
@@ -239,6 +241,21 @@
         flex-direction: column;
         align-items: center;
     }
+    .prepaid-list .prepaid-list-item:nth-child(1) div {
+        top: 0;
+        line-height: 1.5;
+        margin-left: 14px;
+    }
+    .prepaid-list .prepaid-list-item:nth-child(2) div {
+        top: 0;
+        line-height: 1.5;
+        margin-left: 14px;
+    }
+    .prepaid-list .prepaid-list-item:nth-child(3) div {
+        top: 0;
+        line-height: 1.5;
+        margin-left: 14px;
+    }
 
     .choose-prepaid-dynamic h1 {
         margin: 0;
@@ -249,23 +266,20 @@
         margin: 0;
         font-size: 13px;
     }
-    
-    /* accesing each image directly image 1 */
-     .prepaid-list-item:nth-child(1) img {
+    .prepaid-list-item:nth-child(1) img {
         border-radius: 5px !important;
-        object-fit: cover;
+        height: 100%;
     }
 
     /* accesing each image directly image 2 */
     .prepaid-list-item:nth-child(2) img {
         border-radius: 5px !important;
-        object-fit: cover;
+        height: 100%;
     }
 
     /* accesing each image directly image 3 */
     .prepaid-list-item:nth-child(3) img {
         border-radius: 5px !important;
-        object-fit: cover;
+        height: 100%;
     }
-
 }
