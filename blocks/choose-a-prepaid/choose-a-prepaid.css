@@ -1,22 +1,19 @@
-.choose-a-prepaid-container {
-  width: 100%;
-  background-color: #06c;
-  color: #fff;
-  padding: 40px 20px;
-}
-
-.choose-a-prepaid-wrapper {
+.choose-prepaid-dynamic {
   max-width: 1400px;
   margin: 0 auto;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
-.choose-a-prepaid-wrapper h1 {
+.choose-prepaid-dynamic h1 {
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 12px;
 }
 
-.choose-a-prepaid-wrapper p {
+.choose-prepaid-dynamic p {
   font-size: 1.25rem;
   font-weight: 500;
   margin-bottom: 32px;
@@ -25,66 +22,44 @@
 .prepaid-list {
   display: flex;
   gap: 32px;
+  width: 100%;
   flex-wrap: wrap;
 }
 
+/* Card styling */
 .prepaid-list-item {
-  background-color: rgb(255 255 255 / 10%);
   border-radius: 12px;
-  padding: 24px;
-  text-align: center;
+  padding: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.prepaid-list-item img {
-  width: 100%;
-  max-width: 240px;
-  border-radius: 8px;
-  object-fit: cover;
-  margin-bottom: 16px;
-  opacity: 0.85;
-  transition: opacity 0.3s ease;
-}
-
-.prepaid-list-item img:hover {
-  opacity: 1;
-}
-
-.prepaid-list-item h3 {
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-bottom: 8px;
-}
-
-.prepaid-list-item p {
-  font-size: 1.1rem;
-  font-weight: 500;
-  margin-bottom: 12px;
-}
-
-.prepaid-list-item ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.prepaid-list-item ul li {
-  font-size: 1rem;
-  margin-bottom: 6px;
-}
-
-/* Layout control */
-.best-value {
+/* Left column: tall card */
+.prepaid-list-item:first-child {
   flex: 1 1 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.prepaid-right-column {
+/* Right column: stacked cards */
+.prepaid-list-item:nth-child(2),
+.prepaid-list-item:nth-child(3) {
+  flex: 1 1 50%;
   display: flex;
   flex-direction: column;
   gap: 32px;
-  flex: 1 1 50%;
+}
+
+
+
+.prepaid-list-item img {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+  display: block;
 }
 
 /* Responsive */
@@ -94,41 +69,32 @@
     align-items: center;
   }
 
-  .prepaid-right-column {
-    flex-flow: row wrap;
-    justify-content: center;
+  .prepaid-list-item {
+    max-width: 600px;
   }
 
-  .prepaid-list-item {
-    width: 100%;
-    max-width: 300px;
+  .prepaid-list-item:nth-child(2),
+  .prepaid-list-item:nth-child(3) {
+    gap: 0;
   }
 }
 
 @media (width <= 768px) {
-  .choose-a-prepaid-wrapper h1 {
+  .choose-prepaid-dynamic h1 {
     font-size: 2rem;
   }
 
-  .choose-a-prepaid-wrapper p {
+  .choose-prepaid-dynamic p {
     font-size: 1rem;
-  }
-
-  .prepaid-list-item img {
-    max-width: 180px;
   }
 }
 
 @media (width <= 430px) {
-  .choose-a-prepaid-wrapper h1 {
+  .choose-prepaid-dynamic h1 {
     font-size: 1.5rem;
   }
 
-  .choose-a-prepaid-wrapper p {
+  .choose-prepaid-dynamic p {
     font-size: 0.9rem;
-  }
-
-  .prepaid-list-item img {
-    max-width: 140px;
   }
 }
