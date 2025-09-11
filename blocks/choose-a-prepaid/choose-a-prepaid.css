@@ -85,19 +85,19 @@
 .prepaid-list .prepaid-list-item:nth-child(3) div {
     background: aqua;
     position: absolute;
-    top: 170%;
+    top: 225%;
 }
 
 .prepaid-list .prepaid-list-item:nth-child(3) div p:nth-child(1) {
     font-size: 31px;
     font-weight: 500;
     color: #fff;
-    width: 300px;
+    width: 500px;
 }
 
 .prepaid-list .prepaid-list-item:nth-child(3) div p:nth-child(2) {
     color: #fff;
     font-weight: 500;
     font-size: 22px;
-    width: 300px;
+    width: 500px;
 }
