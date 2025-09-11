@@ -442,5 +442,38 @@
         "required": true
       }
     ]
+  },
+  {
+    "id": "whylyca",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "heading",
+        "label": "Why Lyca Heading",
+        "valueType": "string",
+        "required": true
+      },
+      {
+        "component": "container",
+        "name": "whyLycaList",
+        "label": "Why Lyca List",
+        "multi": true,
+        "fields": [
+          {
+            "component": "reference",
+            "name": "image",
+            "value": "",
+            "label": "Why Lyca Image",
+            "valueType": "string"
+          },
+          {
+            "component": "richtext",
+            "name": "whyLycaDescription",
+            "label": "Why Lyca Description",
+            "valueType": "string"
+          }
+        ]
+      }
+    ]
   }
 ]
