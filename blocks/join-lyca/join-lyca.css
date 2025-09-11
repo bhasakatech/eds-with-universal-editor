@@ -70,7 +70,7 @@
 }
 
 /* Tablet (768px – 1023px) */
-@media (width <= 1023px) and (width >= 768px) {
+@media (width >= 768px) {
   .joinlyca-list {
     gap: 40px !important;
       flex-flow: row nowrap !important ;
@@ -88,7 +88,8 @@
 /* Small mobile (≤375px) → Stack vertically */
 @media (width >= 380px) {
   .joinlyca-list {
-    flex-direction: column;
+    flex-direction: column !important;
+    flex-wrap: wrap;
     gap: 20px;
   }
 
