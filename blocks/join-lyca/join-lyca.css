@@ -33,7 +33,7 @@
 
 .joinlyca-list {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
   justify-content: center;
   gap: 30px;
   margin-top: 20px;
@@ -64,15 +64,16 @@
 /* Large screens (Desktop ≥1024px) */
 @media (width >= 1024px) {
   .joinlyca-list {
-    gap: 80px;flex-flow: row nowrap;
+    gap: 80px !important;
+      flex-flow: row nowrap !important;
   }
 }
 
 /* Tablet (768px – 1023px) */
 @media (width <= 1023px) and (width >= 768px) {
   .joinlyca-list {
-    gap: 40px;
-    flex-flow: row nowrap;
+    gap: 40px !important;
+      flex-flow: row nowrap !important ;
   }
 
   .join-lyca.block > div:nth-child(2) p {
