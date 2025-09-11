@@ -37,34 +37,37 @@ export default async function decorate(block) {
       const listContainer = document.createElement('div');
       listContainer.className = 'prepaid-list';
 
-      Object.keys(data.choosePrepaidList)
-        .filter((key) => key.startsWith('item'))
-        .forEach((key) => {
-          const item = data.choosePrepaidList[key];
-          const itemEl = document.createElement('div');
-          itemEl.className = 'prepaid-list-item';
+      const items = Array.isArray(data.choosePrepaidList)
+        ? data.choosePrepaidList
+        : Object.keys(data.choosePrepaidList)
+          .filter((key) => key.startsWith('item'))
+          .map((key) => data.choosePrepaidList[key]);
 
-          if (item.image) {
-            const img = document.createElement('img');
-            img.src = item.image;
-            img.alt = item.title || '';
-            itemEl.appendChild(img);
-          }
+      items.forEach((item) => {
+        const itemEl = document.createElement('div');
+        itemEl.className = 'prepaid-list-item';
 
-          if (item.title) {
-            const title = document.createElement('h3');
-            title.textContent = item.title;
-            itemEl.appendChild(title);
-          }
+        if (item.image) {
+          const img = document.createElement('img');
+          img.src = item.image;
+          img.alt = item.title || '';
+          itemEl.appendChild(img);
+        }
 
-          if (item.description) {
-            const desc = document.createElement('p');
-            desc.textContent = item.description;
-            itemEl.appendChild(desc);
-          }
+        if (item.title) {
+          const title = document.createElement('h3');
+          title.textContent = item.title;
+          itemEl.appendChild(title);
+        }
 
-          listContainer.appendChild(itemEl);
-        });
+        if (item.description) {
+          const desc = document.createElement('p');
+          desc.textContent = item.description;
+          itemEl.appendChild(desc);
+        }
+
+        listContainer.appendChild(itemEl);
+      });
 
       prepaidWrapper.appendChild(listContainer);
     }
