@@ -26,13 +26,13 @@
                     "value": "",
                     "valueType": "string"
               }, 
-               {
+              {
                     "component": "reference",
-                    "name": "rightArrowImage",
+                    "name": "leftArrowImage",
                     "value": "",
-                    "label": "Right Arrow Image",
+                    "label": "Left Arrow Image",
                     "valueType": "string"
-                },    
+                },  
                 {
                     "component": "container",
                     "name": "countryCarouselList",
@@ -53,14 +53,14 @@
                             "valueType": "string"
                         }
                     ]
-                },
-                {
+                }, {
                     "component": "reference",
-                    "name": "leftArrowImage",
+                    "name": "rightArrowImage",
                     "value": "",
-                    "label": "Left Arrow Image",
+                    "label": "Right Arrow Image",
                     "valueType": "string"
                 }
+                
             ]
         }
     ],
