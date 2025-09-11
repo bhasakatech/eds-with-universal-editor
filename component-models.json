@@ -289,6 +289,39 @@
     ]
   },
   {
+    "id": "help",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "heading",
+        "label": "Help Heading",
+        "valueType": "string",
+        "required": true
+      },
+      {
+        "component": "container",
+        "name": "helpList",
+        "label": "Help List",
+        "multi": true,
+        "fields": [
+          {
+            "component": "reference",
+            "name": "helpImage",
+            "value": "",
+            "label": "Help Image",
+            "valueType": "string"
+          },
+          {
+            "component": "richtext",
+            "name": "helpDescription",
+            "label": "Help Description",
+            "valueType": "string"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "hero",
     "fields": [
       {
