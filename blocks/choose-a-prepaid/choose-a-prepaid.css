@@ -8,7 +8,7 @@
 }
 
 .choose-prepaid-dynamic p {
- margin-bottom: 8px;
+ margin: 0;
     font-size: 16px;
     padding: 1px;
     color: #667085;
@@ -20,8 +20,7 @@
 }
 
 .choose-prepaid-dynamic h1 {
-    margin-top: 30px;
-    margin-bottom: 10px;
+    margin: 0;
     font-size: 48px;
     color: #384c72;
     text-align: center;
@@ -32,6 +31,7 @@
     padding: 20px 0;
     grid-template-columns: 1fr 1fr;
     gap: 18px;
+    margin-top: 10px;
 }
 
 .prepaid-list .prepaid-list-item:nth-child(1) {

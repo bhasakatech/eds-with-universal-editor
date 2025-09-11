@@ -54,15 +54,9 @@ export default async function decorate(block) {
           itemEl.appendChild(img);
         }
 
-        if (item.title) {
-          const title = document.createElement('h3');
-          title.textContent = item.title;
-          itemEl.appendChild(title);
-        }
-
-        if (item.description) {
-          const desc = document.createElement('p');
-          desc.textContent = item.description;
+        if (item.imageDescription) {
+          const desc = document.createElement('div');
+          desc.innerHTML = item.imageDescription; // richtext from AEM
           itemEl.appendChild(desc);
         }
 
