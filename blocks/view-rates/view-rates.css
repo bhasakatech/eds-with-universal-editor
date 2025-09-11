@@ -24,7 +24,7 @@
 }
 
 .view-rates-wrapper-dynamic a img {
-    width: 40px;
+    width: 22px;
     height: auto;
     flex-shrink: 0;
     filter: brightness(0) invert(1);
@@ -64,7 +64,7 @@
   }
 
   .view-rates-wrapper-dynamic p {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 }
 
