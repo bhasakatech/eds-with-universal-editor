@@ -1,9 +1,9 @@
 export default async function decorate(block) {
   try {
-    const itemEls = block.getAttribute('data-aue-resource');
-    if (!itemEls) return;
+    const resource = block.getAttribute('data-aue-resource');
+    if (!resource) return;
 
-    const jcrPath = itemEls.replace('urn:aemconnection:', '');
+    const jcrPath = resource.replace('urn:aemconnection:', '');
     const domain = window.location.origin;
     const url = `${domain}${jcrPath}.infinity.json`;
 
@@ -13,43 +13,53 @@ export default async function decorate(block) {
     const data = await response.json();
 
     // eslint-disable-next-line no-console
-    console.log('whylycadata from json', data);
+    console.log('whylyca data:', data);
 
-    // === Render whyLycaList ===
     const wrapper = document.createElement('div');
-    wrapper.className = 'why-lyca-list-dynamic';
+    wrapper.className = 'whylyca-dynamic';
 
-    // Loop through JSON items (item0, item1, etc.)
-    Object.keys(data)
-      .filter((key) => key.startsWith('item'))
-      .forEach((key) => {
-        const item = data[key];
-        const itemEl = document.createElement('div');
-        itemEl.className = 'why-lyca-list-item';
+    // Heading
+    if (data.heading) {
+      const heading = document.createElement('div');
+      heading.innerHTML = data.heading; // keep <h1>
+      wrapper.appendChild(heading);
+    }
 
-        // Image
-        if (item.image) {
-          const img = document.createElement('img');
-          img.src = item.image;
-          img.alt = 'Why Lyca Feature';
-          itemEl.appendChild(img);
-        }
+    // List
+    if (data.whyLycaList) {
+      const list = document.createElement('div');
+      list.className = 'whylyca-list';
 
-        // Description (richtext from AEM)
-        if (item.whyLycaDescription) {
-          const desc = document.createElement('div');
-          desc.innerHTML = item.whyLycaDescription;
-          itemEl.appendChild(desc);
-        }
+      Object.keys(data.whyLycaList)
+        .filter((k) => k.startsWith('item'))
+        .forEach((key) => {
+          const item = data.whyLycaList[key];
 
-        wrapper.appendChild(itemEl);
-      });
+          const card = document.createElement('div');
+          card.className = 'whylyca-item';
 
-    // Clear authored markup & append rendered content
+          if (item.image) {
+            const img = document.createElement('img');
+            img.src = item.image;
+            card.appendChild(img);
+          }
+
+          if (item.whyLycaDescription) {
+            const desc = document.createElement('div');
+            desc.innerHTML = item.whyLycaDescription; // keep <p>, <strong>
+            card.appendChild(desc);
+          }
+
+          list.appendChild(card);
+        });
+
+      wrapper.appendChild(list);
+    }
+
     block.innerHTML = '';
     block.appendChild(wrapper);
-  } catch (error) {
+  } catch (err) {
     // eslint-disable-next-line no-console
-    console.error('whyLycaList:', error);
+    console.error('whylyca block error:', err);
   }
 }
