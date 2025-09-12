@@ -12,28 +12,39 @@ export default async function decorate(block) {
 
     const data = await response.json();
     // eslint-disable-next-line no-console
-    console.log('appdownlaod data from json', data);
+    console.log('appdownload data from json', data);
 
     // Create wrapper
     const wrapper = document.createElement('div');
     wrapper.className = 'download-app-wrapper';
 
-    // Heading
-    if (data.downloadAppTitle) {
-      const heading = document.createElement('div');
-      heading.innerHTML = data.downloadAppTitle; // keep rich text (<br>, <h2>)
-      wrapper.appendChild(heading);
-    }
+    // Create layout container
+    const layout = document.createElement('div');
+    layout.className = 'download-app-layout';
 
-    // Main Image
+    // Left container (Main Image)
+    const leftContainer = document.createElement('div');
+    leftContainer.className = 'download-app-left';
+
     if (data.appDownloadImage) {
       const mainImg = document.createElement('img');
       mainImg.src = data.appDownloadImage;
       mainImg.alt = 'App Download';
-      wrapper.appendChild(mainImg);
+      mainImg.className = 'download-app-main-img'; // ✅ Scoped class for styling
+      leftContainer.appendChild(mainImg);
     }
 
-    // Icon List
+    // Right container (Heading + Icon List + Download Badges)
+    const rightContainer = document.createElement('div');
+    rightContainer.className = 'download-app-right';
+
+    if (data.downloadAppTitle) {
+      const heading = document.createElement('div');
+      heading.className = 'download-app-heading';
+      heading.innerHTML = data.downloadAppTitle;
+      rightContainer.appendChild(heading);
+    }
+
     if (data.downloadAppList) {
       const listContainer = document.createElement('div');
       listContainer.className = 'download-app-list';
@@ -45,7 +56,6 @@ export default async function decorate(block) {
           const itemEl = document.createElement('div');
           itemEl.className = 'download-app-item';
 
-          // Icon
           if (item.iconImage) {
             const icon = document.createElement('img');
             icon.src = item.iconImage;
@@ -53,7 +63,6 @@ export default async function decorate(block) {
             itemEl.appendChild(icon);
           }
 
-          // Text
           if (item.iconText) {
             const text = document.createElement('p');
             text.textContent = item.iconText;
@@ -63,10 +72,9 @@ export default async function decorate(block) {
           listContainer.appendChild(itemEl);
         });
 
-      wrapper.appendChild(listContainer);
+      rightContainer.appendChild(listContainer);
     }
 
-    // Additional Images
     if (data.imageList) {
       const imagesContainer = document.createElement('div');
       imagesContainer.className = 'download-app-images';
@@ -83,8 +91,13 @@ export default async function decorate(block) {
           }
         });
 
-      wrapper.appendChild(imagesContainer);
+      rightContainer.appendChild(imagesContainer);
     }
+
+    // Assemble layout
+    layout.appendChild(leftContainer);
+    layout.appendChild(rightContainer);
+    wrapper.appendChild(layout);
 
     block.innerHTML = '';
     block.appendChild(wrapper);

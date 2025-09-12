@@ -33,6 +33,7 @@
 
 .download-app-item {
   display: flex;
+  gap: 34px;
   align-items: center;
   max-width: 350px;
   text-align: start;
