@@ -413,6 +413,145 @@
     ]
   },
   {
+    "id": "footer",
+    "fields": [
+      {
+        "component": "text",
+        "name": "column1",
+        "label": "Column 1 Heading",
+        "valueType": "string",
+        "required": true
+      },
+      {
+        "component": "container",
+        "name": "column1List",
+        "label": "Column 1 List",
+        "multi": true,
+        "fields": [
+          {
+            "component": "text",
+            "name": "title",
+            "value": "",
+            "label": "Title",
+            "valueType": "string"
+          },
+          {
+            "component": "text",
+            "name": "link",
+            "label": "Link",
+            "valueType": "string"
+          }
+        ]
+      },
+      {
+        "component": "text",
+        "name": "column2",
+        "label": "Column 2 Heading",
+        "valueType": "string",
+        "required": true
+      },
+      {
+        "component": "container",
+        "name": "column2List",
+        "label": "Column 2 List",
+        "multi": true,
+        "fields": [
+          {
+            "component": "text",
+            "name": "title",
+            "value": "",
+            "label": "Title",
+            "valueType": "string"
+          },
+          {
+            "component": "text",
+            "name": "link",
+            "label": "Link",
+            "valueType": "string"
+          }
+        ]
+      },
+      {
+        "component": "text",
+        "name": "column3",
+        "label": "Column 3 Heading",
+        "valueType": "string",
+        "required": true
+      },
+      {
+        "component": "container",
+        "name": "column3List",
+        "label": "Column 3 List",
+        "multi": true,
+        "fields": [
+          {
+            "component": "text",
+            "name": "title",
+            "value": "",
+            "label": "Title",
+            "valueType": "string"
+          },
+          {
+            "component": "text",
+            "name": "link",
+            "label": "Link",
+            "valueType": "string"
+          }
+        ]
+      },
+      {
+        "component": "text",
+        "name": "column4",
+        "label": "Column 4 Heading",
+        "valueType": "string",
+        "required": true
+      },
+      {
+        "component": "container",
+        "name": "column4List",
+        "label": "Column 4 List",
+        "multi": true,
+        "fields": [
+          {
+            "component": "text",
+            "name": "title",
+            "value": "",
+            "label": "Title",
+            "valueType": "string"
+          },
+          {
+            "component": "text",
+            "name": "link",
+            "label": "Link",
+            "valueType": "string"
+          }
+        ]
+      },
+      {
+        "component": "text",
+        "name": "column5",
+        "label": "Column 5 Heading",
+        "valueType": "string",
+        "required": true
+      },
+      {
+        "component": "container",
+        "name": "column5List",
+        "label": "Column 5 List",
+        "multi": true,
+        "fields": [
+          {
+            "component": "reference",
+            "name": "socialImages",
+            "value": "",
+            "label": "Social Images",
+            "valueType": "string"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "fragment",
     "fields": [
       {
