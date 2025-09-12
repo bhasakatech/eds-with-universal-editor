@@ -1,0 +1,95 @@
+export default async function decorate(block) {
+  try {
+    const itemEls = block.getAttribute('data-aue-resource');
+    if (!itemEls) return;
+
+    const jcrPath = itemEls.replace('urn:aemconnection:', '');
+    const domain = window.location.origin;
+    const url = `${domain}${jcrPath}.infinity.json`;
+
+    const response = await fetch(url);
+    if (!response.ok) return;
+
+    const data = await response.json();
+    // eslint-disable-next-line no-console
+    console.log('appdownlaod data from json', data);
+
+    // Create wrapper
+    const wrapper = document.createElement('div');
+    wrapper.className = 'download-app-wrapper';
+
+    // Heading
+    if (data.downloadAppTitle) {
+      const heading = document.createElement('div');
+      heading.innerHTML = data.downloadAppTitle; // keep rich text (<br>, <h2>)
+      wrapper.appendChild(heading);
+    }
+
+    // Main Image
+    if (data.appDownloadImage) {
+      const mainImg = document.createElement('img');
+      mainImg.src = data.appDownloadImage;
+      mainImg.alt = 'App Download';
+      wrapper.appendChild(mainImg);
+    }
+
+    // Icon List
+    if (data.downloadAppList) {
+      const listContainer = document.createElement('div');
+      listContainer.className = 'download-app-list';
+
+      Object.keys(data.downloadAppList)
+        .filter((key) => key.startsWith('item'))
+        .forEach((key) => {
+          const item = data.downloadAppList[key];
+          const itemEl = document.createElement('div');
+          itemEl.className = 'download-app-item';
+
+          // Icon
+          if (item.iconImage) {
+            const icon = document.createElement('img');
+            icon.src = item.iconImage;
+            icon.alt = item.iconText || '';
+            itemEl.appendChild(icon);
+          }
+
+          // Text
+          if (item.iconText) {
+            const text = document.createElement('p');
+            text.textContent = item.iconText;
+            itemEl.appendChild(text);
+          }
+
+          listContainer.appendChild(itemEl);
+        });
+
+      wrapper.appendChild(listContainer);
+    }
+
+    // Additional Images
+    if (data.imageList) {
+      const imagesContainer = document.createElement('div');
+      imagesContainer.className = 'download-app-images';
+
+      Object.keys(data.imageList)
+        .filter((key) => key.startsWith('item'))
+        .forEach((key) => {
+          const imgData = data.imageList[key];
+          if (imgData.image) {
+            const img = document.createElement('img');
+            img.src = imgData.image;
+            img.alt = '';
+            imagesContainer.appendChild(img);
+          }
+        });
+
+      wrapper.appendChild(imagesContainer);
+    }
+
+    block.innerHTML = '';
+    block.appendChild(wrapper);
+  } catch (error) {
+    // eslint-disable-next-line no-console
+    console.error('download-app block error:', error);
+  }
+}
