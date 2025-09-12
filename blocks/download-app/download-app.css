@@ -25,7 +25,7 @@
 }
 
 .download-app-main-img {
-  width: 100%;
+  width: 86%;
   max-width: 100%;
   height: auto;
   object-fit: contain;
@@ -40,16 +40,16 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  gap: 32px;
+  gap: 24px;
   box-sizing: border-box;
 }
 
 /* Heading */
 .download-app-heading h2 {
-  font-size: 32px;
-  line-height: 40px;
+  font-size: 25px;
   font-weight: 600;
   margin: 0;
+      line-height: 1.5;
   color: #667085;
   text-align: left;
 }
@@ -58,7 +58,7 @@
 .download-app-list {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 15px;
   width: 100%;
 }
 
@@ -66,20 +66,14 @@
   display: flex;
   align-items: center;
   gap: 20px;
-  width: 100%;
-}
-
-.download-app-item img {
-  width: 48px;
-  height: 48px;
-  object-fit: contain;
+  width: 60%;
 }
 
 .download-app-item p {
   font-size: 16px;
   line-height: 24px;
-  color: #344054;
   margin: 0;
+      color: #344054;
 }
 
 /* Download Badges */
@@ -91,7 +85,7 @@
 }
 
 .download-app-images img {
-  width: 120px;
+  width: 170px;
   height: auto;
   object-fit: contain;
 }
