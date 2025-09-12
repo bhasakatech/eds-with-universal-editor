@@ -1,0 +1,75 @@
+.download-app-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  max-width: 1280px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.download-app-wrapper > div {
+  width: 100%;
+  margin-bottom: 32px;
+}
+
+.download-app-wrapper h2 {
+  font-size: 32px;
+  line-height: 1.2;
+  text-align: center;
+  font-weight: 600;
+  margin: 0;
+  color: #667085;
+}
+
+.download-app-wrapper img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Icon List */
+.download-app-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.download-app-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 200px;
+  text-align: center;
+}
+
+.download-app-item img {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 12px;
+}
+
+.download-app-item p {
+  font-size: 16px;
+  line-height: 1.4;
+  color: #344054;
+  margin: 0;
+}
+
+/* Additional Images */
+.download-app-images {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 32px;
+}
+
+.download-app-images img {
+  width: 120px;
+  height: auto;
+  object-fit: contain;
+}

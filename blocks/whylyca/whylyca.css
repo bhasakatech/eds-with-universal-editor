@@ -1,8 +1,8 @@
 .whylyca-wrapper {
-   margin: 0 !important;
+    margin: 0 !important;
     max-width: 100% !important;
     background: #f2f9ff;
-    padding: 1px 20px !important;
+    padding: 16px 20px !important;
     text-align: center;
 }
 
@@ -15,16 +15,16 @@
 .whylyca-wrapper h1 {
     font-size: 48px;
     font-weight: 700;
-    margin-bottom: 30px;
-    margin-top: 10px;
-    color: #344054;
+    margin-bottom: 17px;
+    margin-top: 0;
+    color: #384c72;
 }
 
 /* List Container */
 .whylyca-list {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 11px;
+    gap: 6px;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -49,31 +49,39 @@
 .whylyca-list .whylyca-item:nth-child(1) {
     line-height: 1;
     font-weight: 500;
-    color: #344054;
+    color: #384c72;
 }
 
 .whylyca-list .whylyca-item:nth-child(2) {
     line-height: 1;
     font-weight: 500;
-    color: #344054;
+    color: #384c72;
 }
 
 .whylyca-list .whylyca-item:nth-child(3) {
     line-height: 1;
     font-weight: 500;
-    color: #344054;
+    color: #384c72;
 }
 
 .whylyca-list .whylyca-item:nth-child(4) {
     line-height: 1;
     font-weight: 500;
-    color: #344054;
+    color: #384c72;
 }
 
 /* Text */
+.whylyca-item p strong {
+    font-size: 156x;
+    color: #384c72;
+    line-height: 1.6;
+    margin: 0;
+    font-weight: 700;
+}
+
 .whylyca-item p {
     font-size: 16px;
-   color: #344054;
+    color: #384c72;
     line-height: 1.6;
     margin: 0;
     font-weight: 500;
@@ -81,17 +89,25 @@
 
 .whylyca-item p strong {
     display: block;
-    font-size: 17px;
-    font-weight: 700;
-    color: #344054;
+    font-size: 18px;
+    font-weight: bolder;
+    color: #384c72;
     margin-bottom: -20px;
 }
-
 
 /* Responsive: 786px and below → 2 columns (top 2, bottom 2) */
 @media (width <= 786px) {
     .whylyca-list {
         grid-template-columns: repeat(2, 1fr);
+        width: 80%;
+    }
+
+    .whylyca-wrapper h1 {
+        font-size: 29px;
+    }
+
+    .whylyca-item p {
+        font-size: 15px;
     }
 }
 
@@ -99,5 +115,13 @@
 @media (width <= 430px) {
     .whylyca-list {
         grid-template-columns: 1fr;
+    }
+
+    .whylyca-wrapper h1 {
+        font-size: 25px;
+    }
+
+    .whylyca-item p {
+        font-size: 13px;
     }
 }
