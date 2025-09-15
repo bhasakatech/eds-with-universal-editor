@@ -1,3 +1,7 @@
+.section.help-container {
+    margin: 0;
+    padding: 0;
+}
 /* === Help Section Styles === */
 .help-wrapper {
   max-width: 1200px;
@@ -13,30 +17,26 @@
 }
 
 .help-heading h1 {
-  font-size: 32px;
+  font-size: 48px;
   font-weight: 700;
-  color: #222;
+  color: #344054;
   margin: 0;
   line-height: 1.3;
 }
 
 /* Help List Grid */
 .help-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 30px;
-  justify-items: center;
+    width: 60%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    /* gap: 32px; */
+    justify-items: center;
+    margin: auto;
 }
 
 /* Individual Help Item */
 .help-item {
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgb(0 0 0 / 8%);
-  padding: 20px;
-  width: 240px;         /* fixed width for pixel-perfect cards */
   text-align: center;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .help-item:hover {
@@ -46,15 +46,14 @@
 
 /* Help Item Image */
 .help-item img {
-  width: 200px;        /* fixed image width */
-  height: 140px;       /* fixed image height */
-  object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 16px;
+    width: 112px;
+    height: auto;
+    object-fit: cover;
 }
 
 /* Description Area */
 .help-desc p {
+  width: 107px;
   font-size: 16px;
   color: #444;
   margin: 0;
@@ -65,11 +64,28 @@
   display: inline-block;
   margin: 0 4px;
   text-decoration: none;
-  color: #0072ce; /* Lyca blue */
-  font-weight: 600;
+  color: #344054; /* Lyca blue */
+  font-weight: 500;
   transition: color 0.2s ease;
 }
 
 .help-desc a:hover {
-  color: #005aa3;
+  color: #344054;
+}
+
+
+@media (width <= 768px){
+  .help-list {
+    width: 75%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    justify-items: center;
+    margin: auto;
+}
+
+.help-item img {
+    width: 100px !important;
+    height: auto;
+    object-fit: cover;
+}
 }
