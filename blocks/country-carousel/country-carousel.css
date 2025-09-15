@@ -3,11 +3,14 @@
     padding: 0;
 }
 
+.country-carousel-wrapper {
+    padding: 0 ;
+    margin: 0 ;
+}
+
 .country-carousel {
     padding: 10px;
     text-align: center;
-    margin: 40px auto;
-    max-width: 1200px;
     overflow: hidden;
     position: relative;
 }
@@ -63,7 +66,7 @@
 }
 
 .country-name {
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 500;
     color: #344054;
 }
@@ -91,8 +94,26 @@
     font-size: 25px;
 }
 
-.carousel-row {
+.countries-wrapper {
     display: none;
+}
+
+.carousel-arrow.left-arrow {
+    width: 32px;
+    height: 32px;
+    transform: rotate(90deg);
+    cursor: pointer;
+    flex-shrink: 0;
+    z-index: 2;
+}
+
+.carousel-arrow.right-arrow {
+    width: 28px;
+    height: auto;
+    transform: rotate(90deg);
+    cursor: pointer;
+    flex-shrink: 0;
+    z-index: 2;
 }
 }
 
