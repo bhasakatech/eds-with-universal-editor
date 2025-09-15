@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
 }
+
 /* === Help Section Styles === */
 .help-wrapper {
   max-width: 1200px;
@@ -29,7 +30,6 @@
     width: 60%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    /* gap: 32px; */
     justify-items: center;
     margin: auto;
 }
