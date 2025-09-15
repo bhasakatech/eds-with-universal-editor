@@ -94,17 +94,16 @@
     font-size: 25px;
 }
 
+.country-carousel {
+    display: flex;
+}
+
 .countries-wrapper {
     display: none;
 }
 
 .carousel-arrow.left-arrow {
-    width: 32px;
-    height: 32px;
-    transform: rotate(90deg);
-    cursor: pointer;
-    flex-shrink: 0;
-    z-index: 2;
+   display: none;
 }
 
 .carousel-arrow.right-arrow {
