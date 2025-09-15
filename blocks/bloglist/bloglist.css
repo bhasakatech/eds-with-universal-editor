@@ -82,7 +82,7 @@
 
 /* Date + Author */
 .blog-card-content p:last-child {
-    font-size: 17px;
+    font-size: .875rem;
     color: #87909f;
     margin-top: 8px;
 }
@@ -119,6 +119,6 @@
     }
 
     .bloglist-wrapper h1 {
-        font-size: 32px;
+        font-size: 26px;
     }
 }

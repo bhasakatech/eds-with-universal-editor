@@ -107,6 +107,7 @@
 @media (width <= 430px) {
     .whylyca-list {
         grid-template-columns: 1fr;
+                width: 100%;
     }
 
     .whylyca-wrapper h1 {
@@ -116,4 +117,12 @@
     .whylyca-item p {
         font-size: 13px;
     }
+    
+    .whylyca-item p strong {
+    font-size: 18px;
+    color: #384c72;
+    line-height: 1.6;
+    margin: 0;
+    font-weight: 700;
+}
 }
