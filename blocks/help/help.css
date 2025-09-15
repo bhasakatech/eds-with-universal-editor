@@ -75,8 +75,40 @@
 
 
 @media (width <= 768px){
+  .help-heading h1 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #344054;
+    margin: 0;
+    line-height: 1.3;
+}
+
   .help-list {
-    width: 75%;
+    width: 85%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    justify-items: center;
+    margin: auto;
+}
+
+.help-item img {
+    width: 100px !important;
+    height: auto;
+    object-fit: cover;
+}
+}
+
+@media (width <= 430px){
+  .help-heading h1 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #344054;
+    margin: 0;
+    line-height: 1.3;
+}
+
+  .help-list {
+    width: 85%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     justify-items: center;
