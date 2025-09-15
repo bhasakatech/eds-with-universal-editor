@@ -5,25 +5,26 @@
 
 /* === Help Section Styles === */
 .help-wrapper {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 60px 20px;
-  box-sizing: border-box;
-  background-color: #eff8ff;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto;
+    padding: 60px 0;
+    box-sizing: border-box;
+    background-color: #eff8ff;
 }
 
 /* Heading */
 .help-heading {
-  text-align: center;
-  margin-bottom: 40px;
+    text-align: center;
+    margin-bottom: 40px;
 }
 
 .help-heading h1 {
-  font-size: 48px;
-  font-weight: 700;
-  color: #344054;
-  margin: 0;
-  line-height: 1.3;
+    font-size: 48px;
+    font-weight: 700;
+    color: #344054;
+    margin: 0;
+    line-height: 1.3;
 }
 
 /* Help List Grid */
@@ -37,8 +38,8 @@
 
 /* Individual Help Item */
 .help-item {
-  text-align: center;
-      margin-bottom: 20px;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 /* Help Item Image */
@@ -50,66 +51,41 @@
 
 /* Description Area */
 .help-desc p {
-  width: 107px;
-  font-size: 16px;
-  color: #444;
-  margin: 0;
-  line-height: 1.4;
+    width: 107px;
+    font-size: 16px;
+    color: #444;
+    margin: 0;
+    line-height: 1.4;
 }
 
 .help-desc a {
-  display: inline-block;
-  margin: 0 4px;
-  text-decoration: none;
-  color: #344054; /* Lyca blue */
-  font-weight: 500;
+    display: inline-block;
+    margin: 0 4px;
+    text-decoration: none;
+    color: #344054; /* Lyca blue */
+    font-weight: 500;
 }
 
 .help-desc a:hover {
-  color: #344054;
-}
-
-
-@media (width <= 768px){
-  .help-heading h1 {
-    font-size: 32px;
-    font-weight: 700;
     color: #344054;
-    margin: 0;
-    line-height: 1.3;
 }
 
-  .help-list {
-    width: 85%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    justify-items: center;
-    margin: auto;
-}
+@media (width <= 768px) {
+    .help-heading h1 {
+        font-size: 32px;
+        font-weight: 700;
+        color: #344054;
+        margin: 0;
+        line-height: 1.3;
+    }
 
-.help-item img {
-    width: 100px !important;
-    height: auto;
-    object-fit: cover;
-}
-}
-
-@media (width <= 430px){
-  .help-heading h1 {
-    font-size: 32px;
-    font-weight: 700;
-    color: #344054;
-    margin: 0;
-    line-height: 1.3;
-}
-
-  .help-list {
-    width: 85%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    justify-items: center;
-    margin: auto;
-}
+    .help-list {
+        width: 85%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        justify-items: center;
+        margin: auto;
+    }
 
     .help-item img {
         width: 90px !important;
@@ -118,27 +94,55 @@
     }
 }
 
-/* @media (width <= 330px){
-  .help-heading h1 {
-    font-size: 32px;
-    font-weight: 700;
-    color: #344054;
-    margin: 0;
-    line-height: 1.3;
-}
+@media (width <= 430px) {
+    .help-heading h1 {
+        font-size: 32px;
+        font-weight: 700;
+        color: #344054;
+        margin: 0;
+        line-height: 1.3;
+    }
 
-  .help-list {
-    width: 85%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    justify-items: center;
-    margin: auto;
-     column-gap: 30px;
-}
+    .help-list {
+        width: 85%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        justify-items: center;
+        margin: auto;
+    }
 
     .help-item img {
         width: 90px !important;
         height: auto;
         object-fit: cover;
     }
-} */
+}
+
+@media (width <= 330px) {
+    .help-wrapper {
+        padding: 10px 10px;
+    }
+
+    .help-heading h1 {
+        font-size: 30px;
+        font-weight: 700;
+        color: #344054;
+        margin: 0;
+        line-height: 1.3;
+    }
+
+    .help-list {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        justify-items: center;
+        margin: auto;
+        column-gap: 30px;
+    }
+
+    .help-item img {
+        width: 90px !important;
+        height: auto;
+        object-fit: cover;
+    }
+}
