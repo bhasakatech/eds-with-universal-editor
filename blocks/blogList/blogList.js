@@ -74,6 +74,6 @@ export default async function decorate(block) {
     block.appendChild(wrapper);
   } catch (err) {
     // eslint-disable-next-line no-console
-    console.error('Error rendering blog list block:', err);
+    console.error('Error rendering for blog list block:', err);
   }
 }
