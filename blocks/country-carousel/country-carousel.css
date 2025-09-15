@@ -1,19 +1,21 @@
 .country-carousel {
   text-align: center;
-  margin: 20px auto;
+  margin: 40px auto;
+  max-width: 1200px;
 }
 
 .carousel-title {
   font-size: 24px;
   font-weight: 600;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  color: #00174f; /* adjust to brand */
 }
 
 .carousel-row {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 15px;
+  gap: 20px;
 }
 
 .carousel-arrow {
@@ -23,26 +25,45 @@
 }
 
 .countries-wrapper {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* default 5 per row */
   gap: 40px;
+  flex: 1;
 }
 
 .country-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 6px;
+  justify-content: center;
 }
 
 .country-flag {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%; /* circular */
   object-fit: cover;
+  margin-bottom: 10px;
 }
 
 .country-name {
   font-size: 14px;
   font-weight: 500;
-  color: #1a1a1a;
+  color: #00174f; /* adjust as per design */
+}
+
+/* Medium screens (3 per row) */
+@media (width <= 1124px) {
+  .countries-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+}
+
+/* Small screens (2 per row) */
+@media (width <= 786px) {
+  .countries-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
 }
