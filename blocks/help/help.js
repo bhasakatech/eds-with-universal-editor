@@ -1,73 +1,74 @@
 export default async function decorate(block) {
   try {
-    // Get JCR Path from data-aue-resource
-    const resourceAttr = block.getAttribute('data-aue-resource');
-    if (!resourceAttr) return;
+    // Get resource path from block attribute
+    const resource = block.getAttribute('data-aue-resource');
+    if (!resource) return;
 
-    const jcrPath = resourceAttr.replace('urn:aemconnection:', '');
+    const jcrPath = resource.replace('urn:aemconnection:', '');
     const domain = window.location.origin;
     const url = `${domain}${jcrPath}.infinity.json`;
 
-    // Fetch JSON
     const response = await fetch(url);
     if (!response.ok) return;
-    const data = await response.json();
 
+    const data = await response.json();
     // eslint-disable-next-line no-console
-    console.log('Fetched JSON:', data);
+    console.log('help block data', data);
+
+    // Clear existing content
+    block.innerHTML = '';
 
     // Wrapper
     const wrapper = document.createElement('div');
-    wrapper.className = 'your-component-wrapper';
+    wrapper.className = 'help-wrapper';
 
-    // Example: Heading
-    if (data.title) {
-      const heading = document.createElement('h2');
-      heading.className = 'your-component-heading';
-      heading.innerHTML = data.title;
-      wrapper.appendChild(heading);
+    // Heading
+    if (data.heading) {
+      const headingEl = document.createElement('div');
+      headingEl.className = 'help-heading';
+      headingEl.innerHTML = data.heading; // already contains <h1>
+      wrapper.appendChild(headingEl);
     }
 
-    // Example: Description
-    if (data.description) {
-      const desc = document.createElement('p');
-      desc.className = 'your-component-desc';
-      desc.innerHTML = data.description;
-      wrapper.appendChild(desc);
-    }
+    // Help List
+    if (data.helpList) {
+      const listEl = document.createElement('div');
+      listEl.className = 'help-list';
 
-    // Example: Image
-    if (data.image) {
-      const img = document.createElement('img');
-      img.src = data.image;
-      img.alt = data.alt || 'Image';
-      img.className = 'your-component-image';
-      wrapper.appendChild(img);
-    }
-
-    // Example: Multifield List
-    if (data.itemList) {
-      const listContainer = document.createElement('div');
-      listContainer.className = 'your-component-list';
-
-      Object.keys(data.itemList)
+      Object.keys(data.helpList)
         .filter((key) => key.startsWith('item'))
         .forEach((key) => {
-          const item = data.itemList[key];
-          const el = document.createElement('div');
-          el.className = 'your-component-item';
-          el.innerHTML = `<span>${item.text}</span>`;
-          listContainer.appendChild(el);
+          const item = data.helpList[key];
+          if (!item) return;
+
+          const itemEl = document.createElement('div');
+          itemEl.className = 'help-item';
+
+          // Image
+          if (item.helpImage) {
+            const img = document.createElement('img');
+            img.src = item.helpImage;
+            img.alt = 'help icon';
+            itemEl.appendChild(img);
+          }
+
+          // Description (text with link)
+          if (item.helpDescription) {
+            const desc = document.createElement('div');
+            desc.className = 'help-desc';
+            desc.innerHTML = item.helpDescription; // contains <a> tags
+            itemEl.appendChild(desc);
+          }
+
+          listEl.appendChild(itemEl);
         });
 
-      wrapper.appendChild(listContainer);
+      wrapper.appendChild(listEl);
     }
 
-    // Replace block content
-    block.innerHTML = '';
     block.appendChild(wrapper);
   } catch (err) {
     // eslint-disable-next-line no-console
-    console.error('Error rendering block:', err);
+    console.error('Error rendering help block:', err);
   }
 }
