@@ -120,7 +120,7 @@
 
 @media (width <= 330px) {
     .help-wrapper {
-        padding: 10px 10px;
+        padding:10px;
     }
 
     .help-heading h1 {
