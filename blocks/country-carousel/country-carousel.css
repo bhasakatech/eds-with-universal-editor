@@ -6,8 +6,6 @@
 .country-carousel {
     padding: 10px;
     text-align: center;
-    margin: 40px auto;
-    max-width: 1200px;
     overflow: hidden;
     position: relative;
 }
