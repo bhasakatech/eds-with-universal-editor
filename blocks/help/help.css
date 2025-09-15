@@ -1,82 +1,82 @@
-/* Wrapper */
-.help-wrapper {
-  max-width: 1200px;         
-  margin: 0 auto;
+/* === Help Section Styles === */
+.section.help-container {
+  width: 100%;
   padding: 60px 20px;
+  background-color: #f9f9f9;
+  box-sizing: border-box;
+}
+
+.help-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
   text-align: center;
+}
+
+.help.block {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 
 /* Heading */
-.help-wrapper h1 {
-  font-size: 40px;
+.help.block h1 {
+  font-size: 32px;
   font-weight: 700;
-  color: #2a2a2a;             
-  margin-bottom: 50px;
+  color: #222;
+  margin: 0;
   line-height: 1.2;
 }
 
-/* Help list container */
+/* Grid for Help Cards */
 .help-list {
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
-  flex-wrap: wrap;
-  gap: 50px;                 
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  justify-items: center;
+  margin-top: 20px;
 }
 
-/* Help Item */
-.help-item {
-  flex: 0 1 220px;            
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 20px;
-}
-
-/* Circle Icon */
-.help-item img {
-  width: 90px;
-  height: 90px;
-  object-fit: contain;
-  border-radius: 50%;
-  background-color: #005eb8;  
+/* Individual Help Card */
+.help-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgb(0 0 0 / 8%);
   padding: 20px;
-  box-shadow: 0 4px 10px rgb(0 0 0 / 10%);
-  transition: transform 0.2s ease;
+  max-width: 260px;
+  width: 100%;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-align: center;
 }
 
-.help-item img:hover {
-  transform: scale(1.05);     
+.help-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgb(0 0 0 / 15%);
 }
 
-/* Item Text */
-.help-item p {
-  font-size: 18px;
-  font-weight: 600;
-  color: #2a2a2a;
+/* Help Image */
+.help-card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+/* Help Description (links) */
+.help-card p {
+  font-size: 16px;
+  color: #444;
   margin: 0;
   line-height: 1.4;
 }
 
-/* Responsive */
-@media (width <= 991px) {
-  .help-wrapper h1 {
-    font-size: 32px;
-    margin-bottom: 40px;
-  }
-
-  .help-item {
-    flex: 0 1 45%;            
-  }
+.help-card a {
+  text-decoration: none;
+  color: #0072ce; /* Lyca Blue */
+  font-weight: 600;
+  transition: color 0.2s ease;
 }
 
-@media (width <= 600px) {
-  .help-wrapper h1 {
-    font-size: 26px;
-  }
-
-  .help-item {
-    flex: 0 1 100%;            
-  }
+.help-card a:hover {
+  color: #005aa3;
 }
