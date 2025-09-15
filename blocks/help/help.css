@@ -1,82 +1,75 @@
 /* === Help Section Styles === */
-.section.help-container {
-  width: 100%;
-  padding: 60px 20px;
-  background-color: #f9f9f9;
-  box-sizing: border-box;
-}
-
 .help-wrapper {
   max-width: 1200px;
   margin: 0 auto;
-  text-align: center;
-}
-
-.help.block {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
+  padding: 60px 20px;
+  box-sizing: border-box;
 }
 
 /* Heading */
-.help.block h1 {
+.help-heading {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.help-heading h1 {
   font-size: 32px;
   font-weight: 700;
   color: #222;
   margin: 0;
-  line-height: 1.2;
+  line-height: 1.3;
 }
 
-/* Grid for Help Cards */
+/* Help List Grid */
 .help-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 24px;
+  gap: 30px;
   justify-items: center;
-  margin-top: 20px;
 }
 
-/* Individual Help Card */
-.help-card {
+/* Individual Help Item */
+.help-item {
   background: #fff;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgb(0 0 0 / 8%);
   padding: 20px;
-  max-width: 260px;
-  width: 100%;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  width: 240px;         /* fixed width for pixel-perfect cards */
   text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.help-card:hover {
+.help-item:hover {
   transform: translateY(-4px);
   box-shadow: 0 8px 18px rgb(0 0 0 / 15%);
 }
 
-/* Help Image */
-.help-card img {
-  width: 100%;
-  height: 140px;
+/* Help Item Image */
+.help-item img {
+  width: 200px;        /* fixed image width */
+  height: 140px;       /* fixed image height */
   object-fit: cover;
   border-radius: 8px;
   margin-bottom: 16px;
 }
 
-/* Help Description (links) */
-.help-card p {
+/* Description Area */
+.help-desc p {
   font-size: 16px;
   color: #444;
   margin: 0;
   line-height: 1.4;
 }
 
-.help-card a {
+.help-desc a {
+  display: inline-block;
+  margin: 0 4px;
   text-decoration: none;
-  color: #0072ce; /* Lyca Blue */
+  color: #0072ce; /* Lyca blue */
   font-weight: 600;
   transition: color 0.2s ease;
 }
 
-.help-card a:hover {
+.help-desc a:hover {
   color: #005aa3;
 }
