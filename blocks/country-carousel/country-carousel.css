@@ -2,13 +2,15 @@
   text-align: center;
   margin: 40px auto;
   max-width: 1200px;
+  overflow: hidden;
+  position: relative;
 }
 
 .carousel-title {
   font-size: 24px;
   font-weight: 600;
   margin-bottom: 30px;
-  color: #00174f; /* adjust to brand */
+  color: #00174f;
 }
 
 .carousel-row {
@@ -22,16 +24,24 @@
   width: 32px;
   height: 32px;
   cursor: pointer;
+  flex-shrink: 0;
+  z-index: 2;
 }
 
 .countries-wrapper {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr); /* default 5 per row */
-  gap: 40px;
+  display: flex;
+  overflow: hidden;
   flex: 1;
 }
 
+.countries-track {
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+  gap: 40px;
+}
+
 .country-item {
+  flex: 0 0 calc(20% - 32px); /* 5 items on desktop */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -41,7 +51,7 @@
 .country-flag {
   width: 60px;
   height: 60px;
-  border-radius: 50%; /* circular */
+  border-radius: 50%;
   object-fit: cover;
   margin-bottom: 10px;
 }
@@ -49,21 +59,19 @@
 .country-name {
   font-size: 14px;
   font-weight: 500;
-  color: #00174f; /* adjust as per design */
+  color: #00174f;
 }
 
-/* Medium screens (3 per row) */
-@media (width <= 1124px) {
-  .countries-wrapper {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+/* Medium (3 visible) */
+@media (max-width: 1124px) {
+  .country-item {
+    flex: 0 0 calc(33.33% - 20px);
   }
 }
 
-/* Small screens (2 per row) */
-@media (width <= 786px) {
-  .countries-wrapper {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+/* Small (2 visible) */
+@media (max-width: 786px) {
+  .country-item {
+    flex: 0 0 calc(50% - 20px);
   }
 }
