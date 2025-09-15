@@ -32,7 +32,7 @@
 .help-item {
   background: #fff;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 12px rgb(0 0 0 / 8%);
   padding: 20px;
   width: 240px;         /* fixed width for pixel-perfect cards */
   text-align: center;
@@ -41,7 +41,7 @@
 
 .help-item:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 18px rgb(0 0 0 / 15%);
 }
 
 /* Help Item Image */
