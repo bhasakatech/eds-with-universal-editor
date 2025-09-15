@@ -4,8 +4,8 @@
 }
 
 .country-carousel-wrapper {
-    padding: 0 ;
-    margin: 0 ;
+       padding: 0 !important;
+    margin: 0;
 }
 
 .country-carousel {
@@ -90,31 +90,32 @@
 }
 
 @media (width <= 430px) {
-   .carousel-title {
-    font-size: 25px;
+    .carousel-title {
+        font-size: 20px;
+        margin: 0;
+    }
+
+    .country-carousel {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .countries-wrapper {
+        display: none;
+    }
+
+    .carousel-arrow.left-arrow {
+        display: none;
+    }
+
+    .carousel-arrow.right-arrow {
+        width: 28px;
+        height: auto;
+        transform: rotate(90deg);
+        cursor: pointer;
+        flex-shrink: 0;
+        z-index: 2;
+    }
 }
-
-.country-carousel {
-    display: flex;
-}
-
-.countries-wrapper {
-    display: none;
-}
-
-.carousel-arrow.left-arrow {
-   display: none;
-}
-
-.carousel-arrow.right-arrow {
-    width: 28px;
-    height: auto;
-    transform: rotate(90deg);
-    cursor: pointer;
-    flex-shrink: 0;
-    z-index: 2;
-}
-}
-
-
-
