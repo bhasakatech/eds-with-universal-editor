@@ -29,7 +29,7 @@
 
 /* Help List Grid */
 .help-list {
-    width: 60%;
+    width: 55%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     justify-items: center;
@@ -44,7 +44,7 @@
 
 /* Help Item Image */
 .help-item img {
-    width: 112px;
+    width: 106px;
     height: auto;
     object-fit: cover;
 }
@@ -80,7 +80,7 @@
     }
 
     .help-list {
-        width: 85%;
+        width: 80%;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
         justify-items: center;
