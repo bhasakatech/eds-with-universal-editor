@@ -78,6 +78,7 @@ export default async function decorate(block) {
     block.appendChild(wrapper);
   } catch (err) {
     // eslint-disable-next-line no-console
-    console.error('Error rendering footer block:', err);
+    console.error('Err or rendering footer block:', err);
   }
 }
+ 
