@@ -11,13 +11,19 @@ function renderColumn(title, listKey, data) {
   }
 
   const ul = document.createElement('ul');
-  data[listKey].forEach((item) => {
-    const li = document.createElement('li');
-    const a = document.createElement('a');
-    a.href = item.link || '#';
-    a.textContent = item.text || '';
-    li.appendChild(a);
-    ul.appendChild(li);
+
+  // Convert object {item0, item1, ...} → array
+  const items = Object.values(data[listKey]);
+
+  items.forEach((item) => {
+    if (item.title && item.link) {
+      const li = document.createElement('li');
+      const a = document.createElement('a');
+      a.href = item.link;
+      a.textContent = item.title;
+      li.appendChild(a);
+      ul.appendChild(li);
+    }
   });
 
   col.appendChild(ul);
@@ -37,8 +43,6 @@ export default async function decorate(block) {
     if (!response.ok) return;
 
     const data = await response.json();
-
-    // eslint-disable-next-line no-console
     console.log('footer block data', data);
 
     block.innerHTML = '';
@@ -53,6 +57,7 @@ export default async function decorate(block) {
 
     [col1, col2, col3, col4].forEach((c) => c && wrapper.appendChild(c));
 
+    // Social icons (column5List)
     if (data.column5List) {
       const col5 = document.createElement('div');
       col5.className = 'footer-column footer-social';
@@ -64,11 +69,15 @@ export default async function decorate(block) {
       const iconsWrapper = document.createElement('div');
       iconsWrapper.className = 'social-icons';
 
-      data.column5List.forEach((item) => {
-        const img = document.createElement('img');
-        img.src = item.image || '';
-        img.alt = item.alt || '';
-        iconsWrapper.appendChild(img);
+      const items = Object.values(data.column5List);
+
+      items.forEach((item) => {
+        if (item.socialImages) {
+          const img = document.createElement('img');
+          img.src = item.socialImages;
+          img.alt = 'social icon';
+          iconsWrapper.appendChild(img);
+        }
       });
 
       col5.appendChild(iconsWrapper);
@@ -77,7 +86,6 @@ export default async function decorate(block) {
 
     block.appendChild(wrapper);
   } catch (err) {
-    // eslint-disable-next-line no-console
-    console.error('Err or rendering footer block:', err);
+    console.error('Error rendering footer block:', err);
   }
 }
