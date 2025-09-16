@@ -35,6 +35,7 @@ footer .footer p {
     width: 100% !important;
     margin: 0 !important;
     padding: 0 !important;
+    background: var(--footer-bg);
 }
 
 /* Container */
