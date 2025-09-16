@@ -1,11 +1,33 @@
-:root{
-  --footer-bg: #13173a;
-  --col-gap: 36px;            
-  --text: #e6eefc;             
-  --muted: #bfc9e0;            
-  --heading: #fff;
-  --accent: #2fb6ff;           
-  --font-stack: "Helvetica Neue", arial, "Segoe UI", roboto, sans-serif;
+/* footer {
+  background-color: var(--light-color);
+  font-size: var(--body-font-size-xs);
+}
+
+footer .footer > div {
+  margin: auto;
+  max-width: 1200px;
+  padding: 40px 24px 24px;
+}
+
+footer .footer p {
+  margin: 0;
+}
+
+@media (width >= 900px) {
+  footer .footer > div {
+    padding: 40px 32px 24px;
+  }
+} */
+
+/* ---------- Footer - pixel tuned ---------- */
+:root {
+    --footer-bg: #13173a;
+    --col-gap: 36px;
+    --text: #fff;
+    --muted: #bfc9e0;
+    --heading: #fff;
+    --accent: #2fb6ff;
+    --font-stack: "Helvetica Neue", arial, "Segoe UI", roboto, sans-serif;
 }
 
 .footer-wrapper {
@@ -17,22 +39,22 @@
 
 /* Container */
 .footer {
-  background: var(--footer-bg);
-  color: var(--text);
-  padding: 48px 20px;           
-  font-family: var(--font-stack);
-  box-sizing: border-box;
+    background: var(--footer-bg);
+    color: var(--text);
+    padding: 48px 20px;
+    font-family: var(--font-stack);
+    box-sizing: border-box;
 }
 
 /* Center container and columns */
 .footer-container {
-  max-width: var(--footer-max);
-  margin: 0 auto;
-  display: flex;
-  gap: var(--col-gap);
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: wrap;
+    max-width: var(--footer-max);
+    margin: 0 auto;
+    display: flex;
+    gap: var(--col-gap);
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-wrap: wrap;
 }
 
 /* Each column
@@ -44,215 +66,173 @@
 
 /* Column heading */
 .footer-column h4 {
-  font-size: 18px;              
-  line-height: 1.1;
-  color: var(--heading);
-  margin: 0 0 18px;
-  font-weight: 700;
-  letter-spacing: 0.2px;
+    font-size: 20px;
+    line-height: 1.1;
+    color: var(--heading);
+    margin: 0 0 18px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
 }
 
 /* List + items */
 .footer-column ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .footer-column ul li {
-  margin: 8px 0;
+    margin: 8px 0;
 }
 
 .footer-column ul li a {
-  color: var(--text);
-  text-decoration: none;
-  font-size: 15px;             
-  line-height: 1.6;
-  display: inline-block;
-  transition: color .16s ease;
+    color: var(--text);
+    text-decoration: none;
+    font-size: 15px;
+    line-height: 1.6;
+    display: inline-block;
+    transition: color 0.16s ease;
 }
 
 /* subtle hover */
 .footer-column ul li a:hover,
 .footer-column ul li a:focus {
-  color: var(--accent);
-  text-decoration: none;
-  outline: none;
+    color: var(--accent);
+    text-decoration: none;
+    outline: none;
 }
 
 /* small caps / helper link style (if used) */
 .footer-column .muted {
-  color: var(--muted);
-  font-size: 13px;
+    color: var(--muted);
+    font-size: 13px;
 }
 
 /* Social / download column */
 .footer-social {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
 }
 
 /* Stack download badges vertically and right-align on desktop */
 .footer-social .social-icons {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
 }
 
 .footer-social .social-icons img {
-  width: 140px;                 
-  height: auto;
-  display: block;
-  border-radius: 6px;
-  box-shadow: none;
-  object-fit: contain;
+    width: 140px;
+    height: auto;
+    display: block;
+    border-radius: 6px;
+    box-shadow: none;
+    object-fit: contain;
 }
 
 /* If you want badges centered in small columns */
 .footer-social .social-icons.centered {
-  align-items: center;
+    align-items: center;
 }
 
 /* Small visual tidy for list headings (optional) */
 .footer-column .list-heading {
-  font-weight: 600;
-  margin-bottom: 8px;
-  color: var(--text);
-  font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--text);
+    font-size: 14px;
 }
 
 /* Divider line above legal/footer bottom area (if needed) */
 .footer .footer-bottom {
-  border-top: 1px solid rgb(255 255 255 / 4%);
-  margin-top: 28px;
-  padding-top: 18px;
-  font-size: 13px;
-  color: rgb(255 255 255 / 60%);
+    border-top: 1px solid rgb(255 255 255 / 4%);
+    margin-top: 28px;
+    padding-top: 18px;
+    font-size: 13px;
+    color: rgb(255 255 255 / 60%);
 }
 
 /* Accessibility: focus styles */
 .footer-column ul li a:focus {
-  outline: 3px solid rgb(47 182 255 / 18%);
-  outline-offset: 3px;
-  border-radius: 3px;
+    outline: 3px solid rgb(47 182 255 / 18%);
+    outline-offset: 3px;
+    border-radius: 3px;
 }
 
 /* <= 1024px: keep 2 columns per row if container narrows */
 @media (width <= 1024px) {
-     .footer-container {
+    .footer-container {
         gap: 40px;
         justify-content: center;
     }
 
-  /* allow columns to sit two-per-row visually */
+    /* allow columns to sit two-per-row visually */
 
-  /* .footer-column {
+    /* .footer-column {
     flex: 1 1 45%;
     min-width: 220px;
   } */
 
-  .footer-social .social-icons img {
-    width: 130px;
-  }
+    .footer-social .social-icons img {
+        width: 130px;
+    }
 }
 
 /* <= 786px: 2 columns per row (top 2 bottom 3) — but we keep two-per-row for readability */
 @media (width <= 786px) {
-  .footer {
-    padding: 36px 18px;
-  }
+    .footer {
+        padding: 36px 18px;
+    }
 
-  .footer-container {
-    gap: 20px;
-  }
+    .footer-container {
+        gap: 40px;
+        justify-content: center;
+    }
 
-  .footer-column {
+    /* .footer-column {
     flex: 1 1 48%;
     min-width: 48%;
-  }
+  } */
 
-  .footer-column h4 {
-    font-size: 16px;
-  }
+    .footer-column h4 {
+        font-size: 16px;
+    }
 
-  .footer-column ul li a {
-    font-size: 14px;
-  }
+    .footer-column ul li a {
+        font-size: 14px;
+    }
 
-  .footer-social .social-icons img {
-    width: 120px;
-  }
+    .footer-social .social-icons img {
+        width: 120px;
+    }
 }
 
 /* <= 430px: single column stack */
 @media (width <= 430px) {
- /* Footer Base */
-.footer-container {
-  background-color: #0D1B4C; /* adjust to figma navy */
-  color: #fff;
-  padding: 32px 16px;
-  display: grid;
-  gap: 24px;
-}
+    .footer-social {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-top: 1px solid #e6eefc;
+    }
 
-/* Column */
-.footer-column h4 {
-  font-size: 16px;
-  font-weight: 600;
-  margin-bottom: 12px;
-  color: #fff;
-}
+    .footer-social .social-icons {
+        flex-direction: row;
+        gap: 10px;
+        justify-content: center;
+    }
 
-.footer-column ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
+    .footer-column ul {
+        display: none;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
 
-.footer-column ul li a {
-  font-size: 14px;
-  font-weight: 400;
-  color: #d1d5db; /* light grayish text */
-  text-decoration: none;
-  transition: color 0.2s ease;
+    .footer-social h4 {
+        margin-top: 30px;
+    }
 }
-
-.footer-column ul li a:hover {
-  color: #fff;
-}
-
-/* Social section */
-.footer-social {
-  text-align: center;
-}
-
-.footer-social h4 {
-  margin-bottom: 16px;
-}
-
-.social-icons {
-  display: flex;
-  justify-content: center;
-  gap: 16px;
-}
-
-.social-icons img {
-  width: 32px;
-  height: 32px;
-  object-fit: contain;
-  cursor: pointer;
-  transition: transform 0.2s ease;
-}
-
-.social-icons img:hover {
-  transform: scale(1.1);
-}
-}
-
-
