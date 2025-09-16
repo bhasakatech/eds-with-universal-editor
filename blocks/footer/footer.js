@@ -1,91 +1,95 @@
-function renderColumn(title, listKey, data) {
-  if (!data[listKey]) return null;
+import { getMetadata } from '../../scripts/aem.js';
+import { loadFragment } from '../fragment/fragment.js';
 
+function buildColumn(title, list = {}) {
   const col = document.createElement('div');
-  col.className = 'footer-column';
+  col.classList.add('footer-column');
 
   if (title) {
     const h4 = document.createElement('h4');
     h4.textContent = title;
-    col.appendChild(h4);
+    col.append(h4);
   }
 
   const ul = document.createElement('ul');
-
-  // Convert object {item0, item1, ...} → array
-  const items = Object.values(data[listKey]);
-
-  items.forEach((item) => {
-    if (item.title && item.link) {
+  Object.values(list).forEach((item) => {
+    if (item.link && item.title) {
       const li = document.createElement('li');
       const a = document.createElement('a');
       a.href = item.link;
       a.textContent = item.title;
-      li.appendChild(a);
-      ul.appendChild(li);
+      li.append(a);
+      ul.append(li);
     }
   });
 
-  col.appendChild(ul);
+  col.append(ul);
   return col;
 }
 
-export default async function decorate(block) {
-  try {
-    const resource = block.getAttribute('data-aue-resource');
-    if (!resource) return;
+function buildSocialColumn(title, list = {}) {
+  const col = document.createElement('div');
+  col.classList.add('footer-column', 'footer-social');
 
-    const jcrPath = resource.replace('urn:aemconnection:', '');
-    const domain = window.location.origin;
-    const url = `${domain}${jcrPath}.infinity.json`;
-
-    const response = await fetch(url);
-    if (!response.ok) return;
-
-    const data = await response.json();
-    console.log('footer block data', data);
-
-    block.innerHTML = '';
-
-    const wrapper = document.createElement('div');
-    wrapper.className = 'footer-container';
-
-    const col1 = renderColumn('Join Lyca Mobile', 'column1List', data);
-    const col2 = renderColumn('Quick links', 'column2List', data);
-    const col3 = renderColumn('Help & support', 'column3List', data);
-    const col4 = renderColumn('Lyca Mobile US', 'column4List', data);
-
-    [col1, col2, col3, col4].forEach((c) => c && wrapper.appendChild(c));
-
-    // Social icons (column5List)
-    if (data.column5List) {
-      const col5 = document.createElement('div');
-      col5.className = 'footer-column footer-social';
-
-      const h4 = document.createElement('h4');
-      h4.textContent = 'Lyca on the go';
-      col5.appendChild(h4);
-
-      const iconsWrapper = document.createElement('div');
-      iconsWrapper.className = 'social-icons';
-
-      const items = Object.values(data.column5List);
-
-      items.forEach((item) => {
-        if (item.socialImages) {
-          const img = document.createElement('img');
-          img.src = item.socialImages;
-          img.alt = 'social icon';
-          iconsWrapper.appendChild(img);
-        }
-      });
-
-      col5.appendChild(iconsWrapper);
-      wrapper.appendChild(col5);
-    }
-
-    block.appendChild(wrapper);
-  } catch (err) {
-    console.error('Error rendering footer block:', err);
+  if (title) {
+    const h4 = document.createElement('h4');
+    h4.textContent = title;
+    col.append(h4);
   }
+
+  const wrapper = document.createElement('div');
+  wrapper.classList.add('social-icons');
+
+  Object.values(list).forEach((item) => {
+    if (item.socialImages) {
+      const img = document.createElement('img');
+      img.src = item.socialImages;
+      wrapper.append(img);
+    }
+  });
+
+  col.append(wrapper);
+  return col;
+}
+
+/**
+ * loads and decorates the footer
+ * @param {Element} block The footer block element
+ */
+export default async function decorate(block) {
+  // load footer as fragment (same as your code)
+  const footerMeta = getMetadata('footer');
+  const footerPath = footerMeta ? new URL(footerMeta, window.location).pathname : '/footer';
+  const fragment = await loadFragment(footerPath);
+
+  // clear block
+  block.textContent = '';
+
+  // parse JSON inside fragment (if present)
+  const dataEl = fragment.querySelector('script[type="application/json"]');
+  if (!dataEl) {
+    console.error('No footer JSON found inside fragment');
+    return;
+  }
+  const data = JSON.parse(dataEl.textContent);
+
+  // wrapper container
+  const container = document.createElement('div');
+  container.classList.add('footer-container');
+
+  // build columns 1–4
+  container.append(buildColumn(data.column1, data.column1List));
+  container.append(buildColumn(data.column2, data.column2List));
+  container.append(buildColumn(data.column3, data.column3List));
+  container.append(buildColumn(data.column4, data.column4List));
+
+  // build social column
+  container.append(buildSocialColumn(data.column5, data.column5List));
+
+  // final footer wrapper
+  const footer = document.createElement('div');
+  footer.classList.add('footer');
+  footer.append(container);
+
+  block.append(footer);
 }
