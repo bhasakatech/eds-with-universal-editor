@@ -81,4 +81,3 @@ export default async function decorate(block) {
     console.error('Err or rendering footer block:', err);
   }
 }
- 
