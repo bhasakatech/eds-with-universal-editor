@@ -171,6 +171,7 @@ footer .footer p {
     }
 
   /* allow columns to sit two-per-row visually */
+
   /* .footer-column {
     flex: 1 1 45%;
     min-width: 220px;
@@ -225,7 +226,7 @@ footer .footer p {
   font-size: 16px;
   font-weight: 600;
   margin-bottom: 12px;
-  color: #ffffff;
+  color: #fff;
 }
 
 .footer-column ul {
@@ -246,7 +247,7 @@ footer .footer p {
 }
 
 .footer-column ul li a:hover {
-  color: #ffffff;
+  color: #fff;
 }
 
 /* Social section */
