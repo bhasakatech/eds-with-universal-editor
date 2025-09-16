@@ -33,6 +33,7 @@
     border: 1px solid #ddd;
     border-radius: 6px;
     flex: 1;
+    width: 520px;
 }
 
 .signup-button {
@@ -49,16 +50,16 @@
     white-space: nowrap;
 }
 
-.signup-button:hover {
-    background: #08dc7d;
+button.signup-button p {
     color: #21254f;
+    margin: 0;
 }
 
 .signup-description {
     font-size: 15px;
     text-align: left;
     color: #667085;
-    width: 870px;
+    width: 800px;
     margin: 0 auto;
     line-height: 1.6;
 }
@@ -87,6 +88,7 @@
     .signup-button {
         width: 100%;
         margin: auto;
+        padding: 3px;
     }
 
     .signup-description {
