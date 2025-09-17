@@ -14,6 +14,7 @@
     text-align: center;
     font-size: 42px;
     font-weight: 600;
+    margin-top: 10px;
     color: #35445c;
     margin-bottom: 30px;
 }
@@ -33,7 +34,7 @@
     border: 1px solid #ddd;
     border-radius: 6px;
     flex: 1;
-    width: 520px;
+    width: 600px;
 }
 
 .signup-button {
@@ -59,7 +60,7 @@ button.signup-button p {
     font-size: 15px;
     text-align: left;
     color: #667085;
-    width: 800px;
+    width: 875px;
     margin: 0 auto;
     line-height: 1.6;
 }
@@ -77,7 +78,7 @@ button.signup-button p {
     }
 
     .signup-input {
-        padding: 12px 0;
+        padding: 12px 20px;
         font-size: 16px;
         border: 1px solid #ddd;
         border-radius: 6px;
@@ -85,10 +86,10 @@ button.signup-button p {
         width: 100%;
     }
 
-    .signup-button {
+    .signup-button p {
         width: 100%;
-        margin: auto;
-        padding: 3px;
+        padding: 15px;
+        margin: 0 !important;
     }
 
     .signup-description {

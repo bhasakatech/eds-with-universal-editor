@@ -1,21 +1,13 @@
-function renderColumn(title, listKey, data) {
-  if (!data[listKey]) return null;
+import { getMetadata } from '../../scripts/aem.js';
+import { loadFragment } from '../fragment/fragment.js';
 
-  const col = document.createElement('div');
-  col.className = 'footer-column';
-
-  if (title) {
-    const h4 = document.createElement('h4');
-    h4.textContent = title;
-    col.appendChild(h4);
-  }
-
+/**
+ * Helper: create list items from a JSON column list
+ */
+function createList(listData = {}) {
   const ul = document.createElement('ul');
-
-  // Convert object {item0, item1, ...} → array
-  const items = Object.values(data[listKey]);
-
-  items.forEach((item) => {
+  Object.keys(listData).forEach((key) => {
+    const item = listData[key];
     if (item.title && item.link) {
       const li = document.createElement('li');
       const a = document.createElement('a');
@@ -23,71 +15,107 @@ function renderColumn(title, listKey, data) {
       a.textContent = item.title;
       li.appendChild(a);
       ul.appendChild(li);
+    } else if (item.socialImages) {
+      const li = document.createElement('li');
+      const img = document.createElement('img');
+      img.src = item.socialImages;
+      img.alt = 'app-icon';
+      li.appendChild(img);
+      ul.appendChild(li);
     }
   });
-
-  col.appendChild(ul);
-  return col;
+  return ul;
 }
 
+/**
+ * loads and decorates the footer
+ * @param {Element} block The footer block element
+ */
 export default async function decorate(block) {
-  try {
-    const resource = block.getAttribute('data-aue-resource');
-    if (!resource) return;
+  // load footer as fragment (default Franklin behavior)
+  const footerMeta = getMetadata('footer');
+  const footerPath = footerMeta
+    ? new URL(footerMeta, window.location).pathname
+    : '/footer';
+  const fragment = await loadFragment(footerPath);
 
-    const jcrPath = resource.replace('urn:aemconnection:', '');
-    const domain = window.location.origin;
-    const url = `${domain}${jcrPath}.infinity.json`;
+  // clear block before decorating
+  block.textContent = '';
 
-    const response = await fetch(url);
-    if (!response.ok) return;
+  // Build footer wrapper
+  const footer = document.createElement('div');
+  footer.classList.add('footer-container');
 
-    const data = await response.json();
-    // eslint-disable-next-line no-console
-    console.log('footer block data', data);
+  // Loop through fragment children OR JSON data
+  while (fragment.firstElementChild) {
+    footer.append(fragment.firstElementChild);
+  }
 
-    block.innerHTML = '';
+  // Example: if your JSON is exposed on window.footerModel
+  if (window.footerModel && window.footerModel.block) {
+    const {
+      column1,
+      column2,
+      column3,
+      column4,
+      column5,
+      column1List,
+      column2List,
+      column3List,
+      column4List,
+      column5List,
+    } = window.footerModel.block;
 
     const wrapper = document.createElement('div');
-    wrapper.className = 'footer-container';
+    wrapper.classList.add('footer-columns');
 
-    const col1 = renderColumn('Join Lyca Mobile', 'column1List', data);
-    const col2 = renderColumn('Quick links', 'column2List', data);
-    const col3 = renderColumn('Help & support', 'column3List', data);
-    const col4 = renderColumn('Lyca Mobile US', 'column4List', data);
-
-    [col1, col2, col3, col4].forEach((c) => c && wrapper.appendChild(c));
-
-    // Social icons (column5List)
-    if (data.column5List) {
-      const col5 = document.createElement('div');
-      col5.className = 'footer-column footer-social';
-
-      const h4 = document.createElement('h4');
-      h4.textContent = 'Lyca on the go';
-      col5.appendChild(h4);
-
-      const iconsWrapper = document.createElement('div');
-      iconsWrapper.className = 'social-icons';
-
-      const items = Object.values(data.column5List);
-
-      items.forEach((item) => {
-        if (item.socialImages) {
-          const img = document.createElement('img');
-          img.src = item.socialImages;
-          img.alt = 'social icon';
-          iconsWrapper.appendChild(img);
-        }
-      });
-
-      col5.appendChild(iconsWrapper);
-      wrapper.appendChild(col5);
+    // Column 1
+    if (column1) {
+      const col = document.createElement('div');
+      col.classList.add('footer-col');
+      col.innerHTML = `<h4>${column1}</h4>`;
+      col.appendChild(createList(column1List));
+      wrapper.appendChild(col);
     }
 
-    block.appendChild(wrapper);
-  } catch (err) {
-    // eslint-disable-next-line no-console
-    console.error('Error rendering footer block:', err);
+    // Column 2
+    if (column2) {
+      const col = document.createElement('div');
+      col.classList.add('footer-col');
+      col.innerHTML = `<h4>${column2}</h4>`;
+      col.appendChild(createList(column2List));
+      wrapper.appendChild(col);
+    }
+
+    // Column 3
+    if (column3) {
+      const col = document.createElement('div');
+      col.classList.add('footer-col');
+      col.innerHTML = `<h4>${column3}</h4>`;
+      col.appendChild(createList(column3List));
+      wrapper.appendChild(col);
+    }
+
+    // Column 4
+    if (column4) {
+      const col = document.createElement('div');
+      col.classList.add('footer-col');
+      col.innerHTML = `<h4>${column4}</h4>`;
+      col.appendChild(createList(column4List));
+      wrapper.appendChild(col);
+    }
+
+    // Column 5 (social images)
+    if (column5) {
+      const col = document.createElement('div');
+      col.classList.add('footer-col');
+      col.innerHTML = `<h4>${column5}</h4>`;
+      col.appendChild(createList(column5List));
+      wrapper.appendChild(col);
+    }
+
+    footer.appendChild(wrapper);
   }
+
+  block.append(footer);
 }

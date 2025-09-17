@@ -123,12 +123,11 @@
   .joinlyca-list {
     flex-wrap: wrap;
     align-items: center;
-    gap: 20px;
+    gap: 40px;
   }
 
   .joinlyca-list-item {
     flex: 1 1 100%;
-    max-width: 100%;
   }
 
   .join-lyca.block > div:nth-child(1) h1 {
