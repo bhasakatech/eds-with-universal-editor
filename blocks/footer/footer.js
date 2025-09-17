@@ -2,75 +2,106 @@ import { getMetadata } from '../../scripts/aem.js';
 import { loadFragment } from '../fragment/fragment.js';
 
 /**
- * loads and decorates the footer
- * @param {Element} block The footer block element
+ * Renders a single footer column from JSON
+ */
+function renderColumn(title, listKey, data) {
+  if (!data[listKey]) return null;
+
+  const col = document.createElement('div');
+  col.className = 'footer-column';
+
+  if (title) {
+    const h4 = document.createElement('h4');
+    h4.textContent = title;
+    col.appendChild(h4);
+  }
+
+  const ul = document.createElement('ul');
+  const items = Object.values(data[listKey]);
+
+  items.forEach((item) => {
+    if (item.title && item.link) {
+      const li = document.createElement('li');
+      const a = document.createElement('a');
+      a.href = item.link;
+      a.textContent = item.title;
+      li.appendChild(a);
+      ul.appendChild(li);
+    }
+  });
+
+  col.appendChild(ul);
+  return col;
+}
+
+/**
+ * Loads and decorates the footer
  */
 export default async function decorate(block) {
-  const footerMeta = getMetadata('footer');
-  const footerPath = footerMeta
-    ? new URL(footerMeta, window.location).pathname
-    : '/footer';
-
   try {
-    // try JSON first
-    if (footerPath.endsWith('.json') || footerPath === '/footer') {
-      const res = await fetch('/footer.json');
-      if (res.ok) {
-        const data = await res.json();
+    // 1️⃣ Try JSON first
+    const footerMeta = getMetadata('footer');
+    const footerPath = footerMeta ? new URL(footerMeta, window.location).pathname : '/footer';
+    const jsonUrl = `${footerPath}.infinity.json`;
 
-        // eslint-disable-next-line no-console
-        console.log('Footer JSON data:', data);
-        const model = data.models.find((m) => m.id === 'footer');
+    const response = await fetch(jsonUrl);
+    if (response.ok) {
+      const data = await response.json();
+      // eslint-disable-next-line no-console
+      console.log('Footer JSON data:', data);
 
-        // eslint-disable-next-line no-console
-        console.log('Footer model:', model);
-        block.textContent = '';
-        const wrapper = document.createElement('div');
-        wrapper.classList.add('footer-columns');
+      block.innerHTML = '';
 
-        // Loop through each column
-        // eslint-disable-next-line no-plusplus
-        for (let i = 1; i <= 5; i++) {
-          const heading = model.fields.find((f) => f.name === `column${i}`);
-          const list = model.fields.find((f) => f.name === `column${i}List`);
+      const wrapper = document.createElement('div');
+      wrapper.className = 'footer-container';
 
-          const col = document.createElement('div');
-          col.classList.add('footer-col');
+      const col1 = renderColumn('Join Lyca Mobile', 'column1List', data);
+      const col2 = renderColumn('Quick links', 'column2List', data);
+      const col3 = renderColumn('Help & support', 'column3List', data);
+      const col4 = renderColumn('Lyca Mobile US', 'column4List', data);
 
-          if (heading?.value) {
-            col.innerHTML = `<h4>${heading.value}</h4>`;
+      [col1, col2, col3, col4].forEach((c) => c && wrapper.appendChild(c));
+
+      // Social icons (column5List)
+      if (data.column5List) {
+        const col5 = document.createElement('div');
+        col5.className = 'footer-column footer-social';
+
+        const h4 = document.createElement('h4');
+        h4.textContent = 'Lyca on the go';
+        col5.appendChild(h4);
+
+        const iconsWrapper = document.createElement('div');
+        iconsWrapper.className = 'social-icons';
+
+        const items = Object.values(data.column5List);
+
+        items.forEach((item) => {
+          if (item.socialImages) {
+            const img = document.createElement('img');
+            img.src = item.socialImages;
+            img.alt = 'social icon';
+            iconsWrapper.appendChild(img);
           }
+        });
 
-          if (list?.value && Array.isArray(list.value)) {
-            const ul = document.createElement('ul');
-            list.value.forEach((item) => {
-              if (item.title) {
-                const li = document.createElement('li');
-                li.innerHTML = `<a href="${item.link || '#'}">${
-                  item.title
-                }</a>`;
-                ul.appendChild(li);
-              }
-            });
-            col.appendChild(ul);
-          }
-
-          wrapper.appendChild(col);
-        }
-
-        block.append(wrapper);
-        return; // Stop here, no need for fragment
+        col5.appendChild(iconsWrapper);
+        wrapper.appendChild(col5);
       }
+
+      block.appendChild(wrapper);
+      return; // ✅ Stop here, JSON succeeded
     }
 
-    // fallback: load fragment as usual
+    // 2️⃣ Fallback: load footer as fragment
     const fragment = await loadFragment(footerPath);
     block.textContent = '';
-    const footer = document.createElement('div');
-    while (fragment.firstElementChild) footer.append(fragment.firstElementChild);
-    block.append(footer);
+    const footerEl = document.createElement('div');
+    while (fragment.firstElementChild) footerEl.append(fragment.firstElementChild);
+    block.appendChild(footerEl);
+
   } catch (err) {
     // eslint-disable-next-line no-console
-    console.error('Footer render failed:', err);
+    console.error('Error rendering footer block:', err);
   }
 }
