@@ -74,3 +74,32 @@
         margin-top: 30px;
     }
 }
+
+@media (width <= 430px) {
+    .default-content-wrapper p {
+        display: none;
+    }
+
+    .footer-wrapper .footer h4 {
+        font-size: 16px;
+    }
+    .footer.block > div .section:last-child {
+        border-top: 1px solid green;
+    }
+    
+    .default-content-wrapper h4 {
+        text-align: center; /* Heading centered */
+        margin-bottom: 20px;
+    }
+
+    .default-content-wrapper p {
+        display: inline-block; /* Make images inline */
+        margin: 0 10px; /* Space between images */
+    }
+
+    .default-content-wrapper img {
+        display: block;
+        width: 200px; /* Adjust as needed */
+        height: auto;
+    }
+}
