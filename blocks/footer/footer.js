@@ -15,8 +15,7 @@ export default async function decorate(block) {
     console.log('Fragment loaded:', fragment);
   } catch (e) {
     console.error('Error loading fragment:', e);
-    fragment = document.createElement('div');
-    fragment.textContent = 'Footer fragment not found.';
+    return;
   }
 
   // Clear block
@@ -26,10 +25,11 @@ export default async function decorate(block) {
   const footer = document.createElement('div');
   footer.classList.add('footer-container');
 
-  // Add fragment content if available
-  while (fragment.firstElementChild) {
-    footer.append(fragment.firstElementChild);
-  }
+  // 👉 Instead of moving the original children (which causes recursion),
+  // clone them safely
+  [...fragment.children].forEach((child) => {
+    footer.append(child.cloneNode(true));
+  });
 
   block.append(footer);
 
