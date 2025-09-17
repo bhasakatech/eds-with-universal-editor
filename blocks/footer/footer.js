@@ -7,7 +7,9 @@ import { loadFragment } from '../fragment/fragment.js';
  */
 export default async function decorate(block) {
   const footerMeta = getMetadata('footer');
-  const footerPath = footerMeta ? new URL(footerMeta, window.location).pathname : '/footer';
+  const footerPath = footerMeta
+    ? new URL(footerMeta, window.location).pathname
+    : '/footer';
 
   try {
     // try JSON first
@@ -15,8 +17,13 @@ export default async function decorate(block) {
       const res = await fetch('/footer.json');
       if (res.ok) {
         const data = await res.json();
+
+        // eslint-disable-next-line no-console
+        console.log('Footer JSON data:', data);
         const model = data.models.find((m) => m.id === 'footer');
 
+        // eslint-disable-next-line no-console
+        console.log('Footer model:', model);
         block.textContent = '';
         const wrapper = document.createElement('div');
         wrapper.classList.add('footer-columns');
@@ -39,7 +46,9 @@ export default async function decorate(block) {
             list.value.forEach((item) => {
               if (item.title) {
                 const li = document.createElement('li');
-                li.innerHTML = `<a href="${item.link || '#'}">${item.title}</a>`;
+                li.innerHTML = `<a href="${item.link || '#'}">${
+                  item.title
+                }</a>`;
                 ul.appendChild(li);
               }
             });
