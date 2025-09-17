@@ -25,7 +25,7 @@
     font-weight: 700;
     margin-bottom: 10px;
     color: #fff;
-    font-family: GTEestiLCDisplayMedium;
+    font-family: "GTEestiLCDisplayMedium", sans-serif;
 }
 
 .footer-wrapper .footer p {
@@ -36,7 +36,8 @@
 .footer-wrapper .footer .default-content-wrapper a {
     font-size: 15px;
     font-weight: 400;
-    font-family: GTEestiLCDisplayMedium;
+    font-family: "GTEestiLCDisplayMedium", sans-serif;
+
     color: #fff; /* force over default */
     text-decoration: none;
     background-color: transparent !important; /* avoid button bg */
@@ -64,7 +65,6 @@
         flex-wrap: wrap;
         justify-content: space-around;
         align-items: flex-start;
-        /* width: 100%; */
     }
 
     .footer-wrapper .footer > .default-content-wrapper {
