@@ -1,5 +1,3 @@
-
-
 import { getMetadata } from '../../scripts/aem.js';
 import { loadFragment } from '../fragment/fragment.js';
 
@@ -20,6 +18,3 @@ export default async function decorate(block) {
 
   block.append(footer);
 }
-
-
-
