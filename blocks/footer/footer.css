@@ -2,7 +2,7 @@
 .footer-wrapper {
   background-color: #1b2141; /* dark navy */
   padding: 40px 20px;
-  font-family: "Arial", "Helvetica Neue", Helvetica, sans-serif;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   color: #fff;
   width: 100%;
 }
@@ -25,7 +25,7 @@
   font-size: 18px;
   font-weight: 700;
   margin-bottom: 20px;
-  color: #ffffff;
+  color: #fff;
 }
 
 .footer-wrapper .footer p {
@@ -48,14 +48,15 @@
   margin-bottom: 15px;
   border-radius: 6px;
   cursor: pointer;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 5px rgb(0 0 0 / 20%);
 }
 
 /* Responsive: stack only on mobile */
-@media (max-width: 768px) {
+@media (width <= 768px) {
   .footer-wrapper .footer {
     flex-wrap: wrap;
   }
+
   .footer-wrapper .footer > .default-content-wrapper {
     max-width: 100%;
   }
