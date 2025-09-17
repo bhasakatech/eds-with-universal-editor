@@ -1,37 +1,20 @@
 import { getMetadata } from '../../scripts/aem.js';
 import { loadFragment } from '../fragment/fragment.js';
 
+/**
+ * loads and decorates the footer
+ * @param {Element} block The footer block element
+ */
 export default async function decorate(block) {
-  console.log('Footer block starting...');
-
+  // load footer as fragment
   const footerMeta = getMetadata('footer');
-  const footerPath = footerMeta
-    ? new URL(footerMeta, window.location).pathname
-    : '/footer';
+  const footerPath = footerMeta ? new URL(footerMeta, window.location).pathname : '/footer';
+  const fragment = await loadFragment(footerPath);
 
-  let fragment;
-  try {
-    fragment = await loadFragment(footerPath);
-    console.log('Fragment loaded:', fragment);
-  } catch (e) {
-    console.error('Error loading fragment:', e);
-    return;
-  }
-
-  // Clear block
+  // decorate footer DOM
   block.textContent = '';
-
-  // Create wrapper
   const footer = document.createElement('div');
-  footer.classList.add('footer-container');
-
-  // 👉 Instead of moving the original children (which causes recursion),
-  // clone them safely
-  [...fragment.children].forEach((child) => {
-    footer.append(child.cloneNode(true));
-  });
+  while (fragment.firstElementChild) footer.append(fragment.firstElementChild);
 
   block.append(footer);
-
-  console.log('Footer block finished.');
 }
