@@ -107,7 +107,6 @@
     }
 
     .footer.block > div .section:nth-child(5) .default-content-wrapper {
-        background: aqua;
         display: flex;
         flex-direction: row;
                 padding: 20px;
