@@ -56,51 +56,90 @@
     box-shadow: 0 2px 5px rgb(0 0 0 / 20%);
 }
 
-/* Reset 6th section to sit below the 5 top columns */
-.footer-wrapper .section:nth-of-type(6) {
-  flex-basis: 100%;
+/* Allow the main footer inner container to wrap (override earlier nowrap) */
+.footer-wrapper > .footer > div {
+  flex-wrap: wrap;
+}
+
+/* Make the 6th .section full width and push it below */
+.footer-wrapper > .footer > div > .section:nth-of-type(6) {
+  order: 99;               /* push to bottom */
+  flex: 0 0 100%;         /* occupy full row */
   width: 100%;
   margin-top: 20px;
-  border-top: 1px solid #444;
-  padding-top: 20px;
+  padding-top: 18px;
+  border-top: 1px solid rgb(255 255 255 / 6%); /* modern color notation */
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  align-items: center;
-  background-color: transparent; /* keep dark bg */
+  background: transparent; /* keep dark background from .footer-wrapper */
+  box-sizing: border-box;
 }
 
-/* Logo inside 6th section */
-.footer-wrapper .section:nth-of-type(6) .default-content-wrapper p:first-child img {
-  max-width: 180px;
-  height: auto;
-  margin-right: 20px;
-  cursor: default;
-  box-shadow: none;
-}
-
-/* Social icons */
-.footer-wrapper .section:nth-of-type(6) .default-content-wrapper {
+/* Make the inner wrapper (logo + icons) use full width and align items */
+.footer-wrapper > .footer > div > .section:nth-of-type(6) .default-content-wrapper {
   display: flex;
-  justify-content: flex-end;
   align-items: center;
-  gap: 15px;
+  justify-content: space-between;
+  width: 100%;
+  gap: 16px;
+  box-sizing: border-box;
 }
 
-.footer-wrapper .section:nth-of-type(6) .default-content-wrapper p:not(:first-child) {
+/* Logo sizing (assumes first picture is logo) */
+.footer-wrapper > .footer > div > .section:nth-of-type(6) .default-content-wrapper picture:first-child img,
+.footer-wrapper > .footer > div > .section:nth-of-type(6) .default-content-wrapper img.logo {
+  max-width: 200px;
+  height: auto;
+  width: auto; /* ensure logo keeps aspect ratio */
   margin: 0;
 }
 
-.footer-wrapper .section:nth-of-type(6) .default-content-wrapper p:not(:first-child) img {
+/* Social icons: keep them on the right, spaced */
+.footer-wrapper > .footer > div > .section:nth-of-type(6) .default-content-wrapper picture:not(:first-child),
+.footer-wrapper > .footer > div > .section:nth-of-type(6) .default-content-wrapper img.social {
+  margin-left: 12px;
+}
+
+.footer-wrapper > .footer > div > .section:nth-of-type(6) .default-content-wrapper picture:not(:first-child) img,
+.footer-wrapper > .footer > div > .section:nth-of-type(6) .default-content-wrapper img.social {
   width: 32px;
   height: 32px;
-  border-radius: 50%;
-  transition: transform 0.3s ease;
+  object-fit: contain;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  border-radius: 4px;
 }
 
-.footer-wrapper .section:nth-of-type(6) .default-content-wrapper p:not(:first-child) img:hover {
-  transform: scale(1.1);
+.footer-wrapper > .footer > div > .section:nth-of-type(6) .default-content-wrapper picture:not(:first-child) img:hover,
+.footer-wrapper > .footer > div > .section:nth-of-type(6) .default-content-wrapper img.social:hover {
+  transform: scale(1.08);
 }
 
+/* Responsive: stack on smaller screens (logo above, icons centered below) */
+@media (width <= 768px) {
+  .footer-wrapper > .footer > div {
+    /* still wrap; let sections stack naturally on small screens */
+    align-items: stretch;
+  }
+
+  .footer-wrapper > .footer > div > .section:nth-of-type(6) {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+  }
+
+  .footer-wrapper > .footer > div > .section:nth-of-type(6) .default-content-wrapper {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .footer-wrapper > .footer > div > .section:nth-of-type(6) .default-content-wrapper picture:not(:first-child),
+  .footer-wrapper > .footer > div > .section:nth-of-type(6) .default-content-wrapper img.social {
+    margin-left: 0;
+  }
+}
 
 /* Responsive: stack only on mobile */
 @media (width <= 768px) {
