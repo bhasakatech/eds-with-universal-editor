@@ -2,7 +2,10 @@
     padding: 40px 20px;
 }
 
-/* Layout: Left + Right */
+.section.download-app-container {
+    margin-bottom: 60px;
+}
+
 .download-app-layout {
     display: flex;
     flex-flow: row wrap;

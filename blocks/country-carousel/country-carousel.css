@@ -13,6 +13,7 @@
     text-align: center;
     overflow: hidden;
     position: relative;
+    margin-bottom: 20px;
 }
 
 .carousel-title {
@@ -47,7 +48,7 @@
 .countries-track {
     display: flex;
     transition: transform 0.4s ease-in-out;
-        gap: 32px; 
+    gap: 32px;
 }
 
 .country-item {
