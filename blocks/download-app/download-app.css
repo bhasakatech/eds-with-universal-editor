@@ -224,7 +224,7 @@
 
     .download-app-images {
         display: flex;
-        gap: 12px;
+        gap: 5px;
         flex-wrap: wrap;
         margin-top: 8px;
         width: 100%;
@@ -245,6 +245,11 @@
         width: 115%;
     }
 
+    .download-app-heading h2 {
+     
+                line-height: 17px;
+    }
+
     .download-app-layout {
         display: flex;
         flex-direction: row;
@@ -257,9 +262,15 @@
 
     .download-app-item p {
         font-size: 13px;
-        line-height: 20px;
+                line-height: 15px;
         margin: 0;
         width: fit-content;
+    }
+
+        .download-app-images {
+    
+        margin-top: 0;
+        width: 100%;
     }
 
     .download-app-left {
