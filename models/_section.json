@@ -63,7 +63,9 @@
         "blogList",
         "countryCarousel",
         "signup",
-        "footer"
+        "footer",
+        "form",
+        "embed-adaptive-form"
       ]
     }
   ]
