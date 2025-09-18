@@ -1,58 +1,61 @@
-/* Footer Wrapper */
+/* ===== Desktop Footer Wrapper ===== */
 .footer-wrapper {
-  background-color: #1a1a4f; /* dark blue background */
+  background-color: #1a1a4f;
   color: #fff;
   font-family: Arial, sans-serif;
-  padding: 40px 60px 20px;
+  padding: 60px 80px 30px;
 }
 
-/* Top Row (5 columns) */
-.footer-wrapper .footer > div {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin-bottom: 40px;
+/* ===== Top Row: Fixed 5 Columns ===== */
+.footer-wrapper .footer > .top-row {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 40px;
+  margin-bottom: 50px;
+  align-items: flex-start;
 }
 
 .footer-wrapper .section {
-  flex: 1;
-  min-width: 180px;
-  margin-right: 30px;
+  max-width: 220px;
 }
 
 .footer-wrapper h4 {
   font-size: 16px;
   font-weight: bold;
-  margin-bottom: 20px;
-  color: #fff;
+  margin-bottom: 16px;
+  font-family: GTEestiLCDisplayMedium, sans-serif;
 }
 
 .footer-wrapper .default-content-wrapper p,
 .footer-wrapper .default-content-wrapper a {
-  margin: 0 0 12px;
   font-size: 14px;
+  margin-bottom: 12px;
   color: #fff;
   text-decoration: none;
   display: block;
+  transition: color 0.2s ease-in-out;
 }
 
 .footer-wrapper .default-content-wrapper a:hover {
   text-decoration: underline;
 }
 
-/* Right column (Lyca on the go images stacked) */
-.footer-wrapper .default-content-wrapper picture {
+/* ===== App Store Images (Right Column) ===== */
+.footer-wrapper .section.lyca-on-the-go picture {
   display: block;
   margin-bottom: 15px;
 }
 
-.footer-wrapper .default-content-wrapper img {
-  max-width: 160px;
+.footer-wrapper .section.lyca-on-the-go img {
+  width: 160px;
   height: auto;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgb(0 0 0 / 20%);
+  cursor: pointer;
 }
 
-/* Bottom Row */
-.footer-wrapper .footer > div:last-child {
+/* ===== Bottom Row ===== */
+.footer-wrapper .footer > .bottom-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -60,43 +63,26 @@
   padding-top: 20px;
 }
 
-.footer-wrapper .footer > div:last-child p {
-  margin: 0;
+.footer-wrapper .bottom-row p {
   font-size: 13px;
-  color: #fff;
+  margin: 0;
 }
 
-/* Social Icons */
-.footer-wrapper .footer > div:last-child picture {
+/* ===== Social Icons ===== */
+.footer-wrapper .bottom-row .social-icons picture {
   display: inline-block;
   margin-left: 15px;
 }
 
-.footer-wrapper .footer > div:last-child img {
+.footer-wrapper .bottom-row .social-icons img {
   width: 32px;
   height: 32px;
   vertical-align: middle;
 }
 
-/* Accessibility Button (bottom-left blue circle) */
-.footer-wrapper .footer > div:last-child .default-content-wrapper picture img[alt*="lyca mobile"] {
+/* ===== Accessibility Button (Lyca Logo) ===== */
+.footer-wrapper .bottom-row .default-content-wrapper picture img[alt*="lyca mobile"] {
   width: 120px;
   height: auto;
   margin: 0 20px;
-}
-
-/* Responsive */
-@media (width <= 900px) {
-  .footer-wrapper .footer > div {
-    flex-direction: column;
-  }
-
-  .footer-wrapper .section {
-    margin-bottom: 30px;
-  }
-
-  .footer-wrapper .footer > div:last-child {
-    flex-direction: column;
-    align-items: flex-start;
-  }
 }
