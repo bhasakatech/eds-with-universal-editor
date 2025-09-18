@@ -190,25 +190,31 @@ export default async function decorate(block) {
     // ==========================
     // Carousel Functionality
     // ==========================
-    const track = countriesWrapper;
     let currentIndex = 0;
 
     const getStep = () => {
-      const item = track.querySelector('.country-item');
-      if (!item) return 0;
-      const style = window.getComputedStyle(track);
-      const gap = parseInt(style.gap || '40', 10); // default 40px
-      return item.offsetWidth + gap;
+      const firstItem = countriesWrapper.querySelector('.country-item');
+      if (!firstItem) return 0;
+      const style = window.getComputedStyle(countriesWrapper);
+      const gapValue = style.gap || '40px';
+      const gap = parseInt(gapValue, 10) || 40;
+      return firstItem.offsetWidth + gap;
     };
 
     const updateSlide = () => {
       const step = getStep();
-      track.style.transform = `translateX(-${currentIndex * step}px)`;
-      track.style.transition = 'transform 0.4s ease-in-out';
+      countriesWrapper.style.transition = 'transform 0.4s ease-in-out';
+      countriesWrapper.style.transform = `translateX(-${currentIndex * step}px)`;
+
+      // eslint-disable-next-line no-console
+      console.log('Slide updated → currentIndex:', currentIndex, 'transform:', countriesWrapper.style.transform);
     };
 
+    // Left arrow click
     if (leftArrow) {
       leftArrow.addEventListener('click', () => {
+        // eslint-disable-next-line no-console
+        console.log('Left arrow clicked');
         if (currentIndex > 0) {
           currentIndex -= 1;
           updateSlide();
@@ -216,10 +222,16 @@ export default async function decorate(block) {
       });
     }
 
+    // Right arrow click
     if (rightArrow) {
       rightArrow.addEventListener('click', () => {
-        const visibleItems = Math.floor(wrapper.offsetWidth / getStep());
-        const totalItems = track.querySelectorAll('.country-item').length;
+        // eslint-disable-next-line no-console
+        console.log('Right arrow clicked');
+        const totalItems = countriesWrapper.querySelectorAll('.country-item').length;
+        const visibleItems = Math.max(
+          1,
+          Math.floor(wrapper.offsetWidth / Math.max(1, getStep())),
+        );
         if (currentIndex < totalItems - visibleItems) {
           currentIndex += 1;
           updateSlide();
