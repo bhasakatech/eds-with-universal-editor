@@ -1,88 +1,23 @@
-/* ===== Desktop Footer Wrapper ===== */
-.footer-wrapper {
-  background-color: #1a1a4f;
-  color: #fff;
-  font-family: Arial, sans-serif;
-  padding: 60px 80px 30px;
-}
+/* ===== Desktop View Only ===== */
+@media (width <= 1024px) {
+  .footer-wrapper .footer > div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+  }
 
-/* ===== Top Row: Fixed 5 Columns ===== */
-.footer-wrapper .footer > .top-row {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 40px;
-  margin-bottom: 50px;
-  align-items: flex-start;
-}
+  .footer-wrapper .section {
+    flex: 0 0 calc(20% - 32px); /* 5 columns with spacing */
+    max-width: 220px;
+  }
 
-.footer-wrapper .section {
-  max-width: 220px;
-}
-
-.footer-wrapper h4 {
-  font-size: 16px;
-  font-weight: bold;
-  margin-bottom: 16px;
-  font-family: GTEestiLCDisplayMedium, sans-serif;
-}
-
-.footer-wrapper .default-content-wrapper p,
-.footer-wrapper .default-content-wrapper a {
-  font-size: 14px;
-  margin-bottom: 12px;
-  color: #fff;
-  text-decoration: none;
-  display: block;
-  transition: color 0.2s ease-in-out;
-}
-
-.footer-wrapper .default-content-wrapper a:hover {
-  text-decoration: underline;
-}
-
-/* ===== App Store Images (Right Column) ===== */
-.footer-wrapper .section.lyca-on-the-go picture {
-  display: block;
-  margin-bottom: 15px;
-}
-
-.footer-wrapper .section.lyca-on-the-go img {
-  width: 160px;
-  height: auto;
-  border-radius: 6px;
-  box-shadow: 0 2px 5px rgb(0 0 0 / 20%);
-  cursor: pointer;
-}
-
-/* ===== Bottom Row ===== */
-.footer-wrapper .footer > .bottom-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-top: 1px solid rgb(255 255 255 / 20%);
-  padding-top: 20px;
-}
-
-.footer-wrapper .bottom-row p {
-  font-size: 13px;
-  margin: 0;
-}
-
-/* ===== Social Icons ===== */
-.footer-wrapper .bottom-row .social-icons picture {
-  display: inline-block;
-  margin-left: 15px;
-}
-
-.footer-wrapper .bottom-row .social-icons img {
-  width: 32px;
-  height: 32px;
-  vertical-align: middle;
-}
-
-/* ===== Accessibility Button (Lyca Logo) ===== */
-.footer-wrapper .bottom-row .default-content-wrapper picture img[alt*="lyca mobile"] {
-  width: 120px;
-  height: auto;
-  margin: 0 20px;
+  /* Target the 6th section: force it to break line and span full width */
+  .footer-wrapper .section:nth-child(6) {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-top: 40px;
+    border-top: 1px solid rgb(255 255 255 / 20%);
+    padding-top: 30px;
+  }
 }
