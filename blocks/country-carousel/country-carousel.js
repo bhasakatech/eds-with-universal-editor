@@ -148,7 +148,7 @@ export default async function decorate(block) {
         .filter((key) => key.startsWith('item'))
         .forEach((key) => {
           const item = data.countryCarouselList[key];
-          if (!item) return;
+          if (!item || (!item.countryImage && !item.countryTitle)) return;
 
           const countryEl = document.createElement('div');
           countryEl.className = 'country-item';
@@ -187,9 +187,9 @@ export default async function decorate(block) {
     wrapper.appendChild(carouselRow);
     block.appendChild(wrapper);
 
-    // ==========================
-    // Carousel Functionality
-    // ==========================
+    // ----------------------------
+    // Carousel sliding logic
+    // ----------------------------
     let currentIndex = 0;
 
     const getStep = () => {
@@ -207,10 +207,9 @@ export default async function decorate(block) {
       countriesWrapper.style.transform = `translateX(-${currentIndex * step}px)`;
 
       // eslint-disable-next-line no-console
-      console.log('Slide updated → currentIndex:', currentIndex, 'transform:', countriesWrapper.style.transform);
+      console.log('Slide updated → currentIndex:', currentIndex);
     };
 
-    // Left arrow click
     if (leftArrow) {
       leftArrow.addEventListener('click', () => {
         // eslint-disable-next-line no-console
@@ -222,16 +221,12 @@ export default async function decorate(block) {
       });
     }
 
-    // Right arrow click
     if (rightArrow) {
       rightArrow.addEventListener('click', () => {
         // eslint-disable-next-line no-console
         console.log('Right arrow clicked');
         const totalItems = countriesWrapper.querySelectorAll('.country-item').length;
-        const visibleItems = Math.max(
-          1,
-          Math.floor(wrapper.offsetWidth / Math.max(1, getStep())),
-        );
+        const visibleItems = Math.floor(wrapper.offsetWidth / Math.max(1, getStep()));
         if (currentIndex < totalItems - visibleItems) {
           currentIndex += 1;
           updateSlide();
