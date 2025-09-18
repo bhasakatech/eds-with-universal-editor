@@ -1,8 +1,5 @@
 .download-app-wrapper {
     padding: 40px 20px;
-    max-width: 1280px;
-    margin: 0 auto;
-    box-sizing: border-box;
 }
 
 /* Layout: Left + Right */
@@ -16,16 +13,14 @@
 
 /* Left Side */
 .download-app-left {
-    flex: 1;
-    min-width: 300px;
-    max-width: 600px;
+       flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .download-app-main-img {
-    width: 86%;
+    width: 65%;
     max-width: 100%;
     height: auto;
     object-fit: contain;
@@ -66,7 +61,7 @@
     display: flex;
     align-items: center;
     gap: 20px;
-    width: 65%;
+    width: 55%;
 }
 
 .download-app-item p {
@@ -93,8 +88,10 @@
 
 @media (width <= 786px) {
     .download-app-layout {
-        gap: 30px;
+        gap: 70px;
         align-items: center;
+        background: aqua;
+        padding: 38px 10px;
     }
 
     .download-app-wrapper {
@@ -102,20 +99,20 @@
     }
 
     .download-app-right {
-        max-width: 100%;
-        width: 100%;
+        max-width: 61%;
+        width: 18%;
         font-family: GTEestiLCDisplayLight, sans-serif;
         gap: 19px;
-        padding: 0 24px;
+        padding: 0;
         box-sizing: border-box;
     }
 
     .download-app-left {
         flex: 0;
-        min-width: 300px;
+        min-width: 200px;
         max-width: 600px;
-        display: flex;
         margin-left: -40px;
+        display: inline !important;
         justify-content: center;
         align-items: center;
     }
@@ -138,7 +135,6 @@
 
     .download-app-item {
         display: flex;
-        align-items: center;
         gap: 20px;
         width: 100%;
     }
@@ -149,7 +145,7 @@
         margin: 0;
         font-weight: 500;
         color: #344054;
-        width: 350px;
+        width: 340px;
     }
 
     .download-app-images {
@@ -166,72 +162,80 @@
 }
 
 @media (width <= 430px) {
-  .download-app-layout {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 20px;
-    padding: 0 16px;
-    box-sizing: border-box;
-  }
+    .download-app-layout {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 34px;
+        justify-content: end;
+        box-sizing: border-box;
+        margin: auto;
+    }
 
-  .download-app-left {
-    width: 45%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+    .download-app-left {
+        /* width: 6%; */
+        min-width: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
-  .download-app-main-img {
-    width: 100%;
-    max-width: 180px;
-    height: auto;
-    object-fit: contain;
-  }
+    .download-app-main-img {
+        width: 100%;
+        max-width: 180px;
+        height: auto;
+        object-fit: contain;
+    }
 
-  .download-app-right {
-    width: 55%;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-  }
+    .download-app-right {
+        min-width: 90px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        padding: 0;
+        max-width: 65%;
+        background: aqua;
+    }
 
-  .download-app-heading h2 {
-    font-size: 18px;
-    line-height: 24px;
-    font-weight: 600;
-    margin: 0;
-  }
+    .download-app-heading h2 {
+        font-size: 18px;
+        line-height: 24px;
+        font-weight: 600;
+        margin: 0;
+    }
 
-  .download-app-list {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-  }
+    .download-app-list {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
 
-  .download-app-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-  }
+    .download-app-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        background: red;
+        width: 100%;
+    }
 
-  .download-app-item p {
-    font-size: 14px;
-    line-height: 20px;
-    margin: 0;
-  }
+    .download-app-item p {
+        font-size: 14px;
+        line-height: 20px;
+        margin: 0;
+        width: 199px;
+        background: red;
+    }
 
-  .download-app-images {
-    display: flex;
-    gap: 12px;
-    flex-wrap: wrap;
-    margin-top: 8px;
-  }
+    .download-app-images {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin-top: 8px;
+    }
 
-  .download-app-images img {
-    width: 100px;
-    height: auto;
-    object-fit: contain;
-  }
+    .download-app-images img {
+        width: 115px;
+        height: auto;
+        object-fit: contain;
+    }
 }
