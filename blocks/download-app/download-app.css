@@ -220,7 +220,7 @@
         font-size: 14px;
         line-height: 20px;
         margin: 0;
-                width: fit-content;
+        width: fit-content;
     }
 
     .download-app-images {
@@ -228,11 +228,42 @@
         gap: 12px;
         flex-wrap: wrap;
         margin-top: 8px;
+        width: 100%;
     }
 
     .download-app-images img {
-        width: 100px;
+        width: 44%;
         height: auto;
         object-fit: contain;
     }
+}
+
+@media (width <= 330px) {
+    .download-app-layout {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 19px;
+        justify-content: end;
+        box-sizing: border-box;
+        margin: auto;
+    }
+
+    .download-app-left {
+        min-width: 107px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .download-app-right {
+        min-width: 90px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        padding: 0;
+        max-width: 73%;
+    }
+
+   
 }
