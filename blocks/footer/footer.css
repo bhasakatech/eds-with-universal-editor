@@ -11,7 +11,7 @@
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: flex-start;
-    width: 100%;
+    width: 97%;
     margin-left: 14px;
 }
 
@@ -55,6 +55,55 @@
     cursor: pointer;
     box-shadow: 0 2px 5px rgb(0 0 0 / 20%);
 }
+
+/* Target only 6th section in footer */
+.footer-wrapper .section:nth-of-type(6) {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 20px;
+  border-top: 1px solid #ddd;
+  background-color: #fff; /* Change if needed */
+}
+
+/* Shared styling for all images in 6th section */
+.footer-wrapper .section:nth-of-type(6) .default-content-wrapper p img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+/* Left side (Lyca logo, first <p>) */
+.footer-wrapper .section:nth-of-type(6) .default-content-wrapper p:first-child {
+  margin: 0;
+}
+
+.footer-wrapper .section:nth-of-type(6) .default-content-wrapper p:first-child img {
+  max-width: 180px; /* Resize logo */
+  height: auto;
+  width: auto; /* Override generic width */
+  cursor: default; /* Logo not clickable */
+  transition: none;
+}
+
+/* Right side (social icons) */
+.footer-wrapper .section:nth-of-type(6) .default-content-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.footer-wrapper .section:nth-of-type(6) .default-content-wrapper p:not(:first-child) {
+  margin: 0 8px;
+}
+
+.footer-wrapper .section:nth-of-type(6) .default-content-wrapper p:not(:first-child) img:hover {
+  transform: scale(1.1);
+}
+
 
 /* Responsive: stack only on mobile */
 @media (width <= 768px) {
