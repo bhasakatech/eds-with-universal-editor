@@ -246,8 +246,7 @@
     }
 
     .download-app-heading h2 {
-     
-                line-height: 17px;
+        line-height: 17px;
     }
 
     .download-app-layout {
@@ -262,13 +261,12 @@
 
     .download-app-item p {
         font-size: 13px;
-                line-height: 15px;
+        line-height: 15px;
         margin: 0;
         width: fit-content;
     }
 
-        .download-app-images {
-    
+    .download-app-images {
         margin-top: 0;
         width: 100%;
     }
