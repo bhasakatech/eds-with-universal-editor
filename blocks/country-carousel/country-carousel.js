@@ -191,9 +191,7 @@ export default async function decorate(block) {
     wrapper.appendChild(carouselRow);
     block.appendChild(wrapper);
 
-    // ----------------------------
-    // Carousel sliding logic
-    // ----------------------------
+    // Carousel Functionality
     let currentIndex = 0;
 
     const getStep = () => {
@@ -213,7 +211,7 @@ export default async function decorate(block) {
       console.log('Slide updated → currentIndex:', currentIndex);
     };
 
-    // Attach left arrow listener once
+    // Attachi lef arow lisner
     if (leftArrow && !leftArrow.dataset.listener) {
       leftArrow.addEventListener('click', () => {
         // eslint-disable-next-line no-console
@@ -226,7 +224,7 @@ export default async function decorate(block) {
       leftArrow.dataset.listener = 'true';
     }
 
-    // Attach right arrow listener once
+    // Atach riht arow lisner e
     if (rightArrow && !rightArrow.dataset.listener) {
       rightArrow.addEventListener('click', () => {
         // eslint-disable-next-line no-console

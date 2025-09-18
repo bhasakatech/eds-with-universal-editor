@@ -20,7 +20,6 @@ export default async function decorate(block) {
       return;
     }
 
-    // === Build slides dynamically from JSON ===
     const slides = Object.keys(data.test)
       .filter((key) => key.startsWith('item'))
       .map((key) => data.test[key]);

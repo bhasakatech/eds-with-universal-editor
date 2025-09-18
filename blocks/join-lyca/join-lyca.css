@@ -20,7 +20,7 @@
   text-align: center;
   max-width: 800px;
   margin: 20px 1px 1px;
-  font-size: 48px; /* Default desktop */
+  font-size: 48px;
 }
 
 .join-lyca.block > div:nth-child(2) p {
@@ -59,9 +59,8 @@
   text-align: center;
 }
 
-/* -------- Responsive Breakpoints -------- */
 
-/* Tablet & small desktops (≤1024px) */
+
 @media (width <= 1024px) {
   .join-lyca.block > div:nth-child(1) h1 {
     font-size: 40px;
@@ -80,7 +79,7 @@
   }
 }
 
-/* Tablets portrait (≤768px) */
+
 @media (width <= 768px) {
   .join-lyca.block > div:nth-child(1) h1 {
     font-size: 32px;
@@ -99,7 +98,7 @@
   }
 }
 
-/* Small phones (≤430px) → still side by side, just smaller fonts */
+
 @media (width <= 430px) {
   .join-lyca.block > div:nth-child(1) h1 {
     font-size: 26px;
@@ -118,7 +117,7 @@
   }
 }
 
-/* Extra small phones (≤380px) → stack vertically */
+
 @media (width <= 380px) {
   .joinlyca-list {
     flex-wrap: wrap;

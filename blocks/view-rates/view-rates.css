@@ -15,10 +15,10 @@
   align-items: center;
   justify-content: center;
   gap: 16px;
-  background-color: #06c; /* same blue */
+  background-color: #06c;
   padding: 20px;
   color: #fff;
-  flex-wrap: wrap; /* allows wrapping on smaller devices */
+  flex-wrap: wrap; 
 }
 
 .view-rates-wrapper-dynamic a img {
@@ -28,7 +28,7 @@
     filter: brightness(0) invert(1);
 }
 
-/* Image (mobileImage) */
+
 .view-rates-wrapper-dynamic > img:nth-child(1) {
     width: 54px;
     height: auto;
@@ -98,8 +98,7 @@
     width: 20px;
     height: 20px;
   }
-  
-/* Image (mobileImage) */
+
 .view-rates-wrapper-dynamic > img:nth-child(1) {
     width: 40px;
     height: auto;
