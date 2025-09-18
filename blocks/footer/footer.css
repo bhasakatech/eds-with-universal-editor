@@ -59,22 +59,22 @@
 /* fffffffffffff */
 .footer-wrapper > .footer > div {
     display: grid;
-    grid-template-columns: repeat(5, 1fr); /* 5 equal columns */  
+    grid-template-columns: 200px 200px 200px 200px 200px;
     width: 97%;
     margin-left: 14px;
 }
 
 /* First 5 sections → auto in their own column */
-.footer-wrapper > .footer > div > .section:nth-of-type(-n+5) {
-  flex: unset;
-  padding-right: 20px;
-  box-sizing: border-box;
+.footer-wrapper > .footer > div > .section:nth-of-type(-n + 5) {
+    flex: unset;
+    padding-right: 20px;
+    box-sizing: border-box;
 }
 
 .footer-wrapper > .footer > div > .section:nth-of-type(6) {
     order: 99;
     flex: 0 0 100%;
-    width: 100%;
+    width: 1000px;
     margin-top: 20px;
     padding-top: 18px;
     border-top: 1px solid rgb(255 255 255 / 6%);
