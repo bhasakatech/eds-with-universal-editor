@@ -4,7 +4,7 @@
 }
 
 .country-carousel-wrapper {
-       padding: 0 !important;
+    padding: 0 !important;
     margin: 0;
 }
 
@@ -50,7 +50,7 @@
 }
 
 .country-item {
-    flex: 0 0 calc(23% - 32px); /* 5 items on desktop */
+    flex: 0 0 calc(14.7%);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -74,14 +74,14 @@
 /* Medium (3 visible) */
 @media (width <= 1024px) {
     .country-item {
-        flex: 0 0 calc(36% - 20px);
+        flex: 0 0 calc(12%);
     }
 }
 
 /* Small (2 visible) */
 @media (width <= 786px) {
     .country-item {
-        flex: 0 0 calc(36% - 20px);
+        flex: 0 0 calc(14%);
     }
 
     .carousel-title {
@@ -119,5 +119,3 @@
         z-index: 2;
     }
 }
-
-
