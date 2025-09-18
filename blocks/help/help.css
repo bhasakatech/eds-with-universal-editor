@@ -127,12 +127,12 @@
 }
 
 @media (width <= 330px) {
-    .help-wrapper {
-        padding:10px;
+        .help-wrapper {
+        padding: 35px 10px;
     }
 
     .help-heading h1 {
-        font-size: 30px;
+        font-size: 27px;
         font-weight: 700;
         color: #344054;
         margin: 0;
