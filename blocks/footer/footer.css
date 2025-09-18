@@ -56,27 +56,39 @@
     box-shadow: 0 2px 5px rgb(0 0 0 / 20%);
 }
 
-/* Allow the main footer inner container to wrap (override earlier nowrap) */
+
 .footer-wrapper > .footer > div {
   flex-wrap: wrap;
 }
 
-/* Make the 6th .section full width and push it below */
+/* fffffffffffff */
+.footer-wrapper > .footer > div {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 equal columns */
+  gap: 20px;
+  width: 97%;
+  margin-left: 14px;
+}
+
+/* First 5 sections → auto in their own column */
+.footer-wrapper > .footer > div > .section:nth-of-type(-n+5) {
+  flex: unset;
+}
 .footer-wrapper > .footer > div > .section:nth-of-type(6) {
-  order: 99;               /* push to bottom */
-  flex: 0 0 100%;         /* occupy full row */
+  order: 99;              
+  flex: 0 0 100%;         
   width: 100%;
   margin-top: 20px;
   padding-top: 18px;
-  border-top: 1px solid rgb(255 255 255 / 6%); /* modern color notation */
+  border-top: 1px solid rgb(255 255 255 / 6%);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: transparent; /* keep dark background from .footer-wrapper */
+  background: transparent; 
   box-sizing: border-box;
 }
 
-/* Make the inner wrapper (logo + icons) use full width and align items */
+
 .footer-wrapper > .footer > div > .section:nth-of-type(6) .default-content-wrapper {
   display: flex;
   align-items: center;
@@ -86,16 +98,16 @@
   box-sizing: border-box;
 }
 
-/* Logo sizing (assumes first picture is logo) */
+
 .footer-wrapper > .footer > div > .section:nth-of-type(6) .default-content-wrapper picture:first-child img,
 .footer-wrapper > .footer > div > .section:nth-of-type(6) .default-content-wrapper img.logo {
   max-width: 200px;
   height: auto;
-  width: auto; /* ensure logo keeps aspect ratio */
+  width: auto; 
   margin: 0;
 }
 
-/* Social icons: keep them on the right, spaced */
+
 .footer-wrapper > .footer > div > .section:nth-of-type(6) .default-content-wrapper picture:not(:first-child),
 .footer-wrapper > .footer > div > .section:nth-of-type(6) .default-content-wrapper img.social {
   margin-left: 12px;
@@ -116,10 +128,9 @@
   transform: scale(1.08);
 }
 
-/* Responsive: stack on smaller screens (logo above, icons centered below) */
+
 @media (width <= 768px) {
   .footer-wrapper > .footer > div {
-    /* still wrap; let sections stack naturally on small screens */
     align-items: stretch;
   }
 
