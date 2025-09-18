@@ -140,12 +140,12 @@
     }
 
     .download-app-item p {
-        font-size: 15px;
+        font-size: 14px;
         line-height: 23px;
         margin: 0;
         font-weight: 500;
         color: #344054;
-        width: 340px;
+        width: fit-content;
     }
 
     .download-app-images {
@@ -194,7 +194,6 @@
         gap: 16px;
         padding: 0;
         max-width: 65%;
-        background: aqua;
     }
 
     .download-app-heading h2 {
@@ -221,7 +220,7 @@
         font-size: 14px;
         line-height: 20px;
         margin: 0;
-        width: 199px;
+                width: fit-content;
     }
 
     .download-app-images {
