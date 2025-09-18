@@ -161,7 +161,7 @@
     /* Make grid single column */
     .prepaid-list {
         display: grid;
-        grid-template-columns: 1fr; /* 1 item per row */
+        grid-template-columns: 1fr; 
         gap: 20px;
         width: 100%;
     }
