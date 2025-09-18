@@ -97,10 +97,6 @@
         font-size: 16px;
     }
 
-    .footer.block > div .section:last-child {
-        border-top: 1px solid #fff;
-    }
-
     .footer-wrapper .footer picture img {
         display: block;
         width: 105px;
@@ -109,7 +105,8 @@
     .footer.block > div .section:nth-child(5) .default-content-wrapper {
         display: flex;
         flex-direction: row;
-                padding: 20px;
+        padding: 20px;
+        border-top: 1px solid #fff;
     }
 
     .footer.block > div .section:nth-child(5) .default-content-wrapper h4 {
@@ -122,5 +119,4 @@
     .footer.block > div .section:nth-child(5) .default-content-wrapper p {
         display: inline-block;
     }
-  
 }
