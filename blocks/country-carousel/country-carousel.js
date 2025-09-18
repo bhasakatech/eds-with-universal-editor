@@ -107,7 +107,6 @@ export default async function decorate(block) {
     if (!response.ok) return;
 
     const data = await response.json();
-
     // eslint-disable-next-line no-console
     console.log('country carousel data', data);
 
@@ -143,6 +142,10 @@ export default async function decorate(block) {
     const countriesWrapper = document.createElement('div');
     countriesWrapper.className = 'countries-wrapper';
 
+    // Track for sliding
+    const countriesTrack = document.createElement('div');
+    countriesTrack.className = 'countries-track';
+
     if (data.countryCarouselList) {
       Object.keys(data.countryCarouselList)
         .filter((key) => key.startsWith('item'))
@@ -168,10 +171,11 @@ export default async function decorate(block) {
             countryEl.appendChild(title);
           }
 
-          countriesWrapper.appendChild(countryEl);
+          countriesTrack.appendChild(countryEl);
         });
     }
 
+    countriesWrapper.appendChild(countriesTrack);
     carouselRow.appendChild(countriesWrapper);
 
     // Right Arrow
@@ -193,9 +197,9 @@ export default async function decorate(block) {
     let currentIndex = 0;
 
     const getStep = () => {
-      const firstItem = countriesWrapper.querySelector('.country-item');
+      const firstItem = countriesTrack.querySelector('.country-item');
       if (!firstItem) return 0;
-      const style = window.getComputedStyle(countriesWrapper);
+      const style = window.getComputedStyle(countriesTrack);
       const gapValue = style.gap || '40px';
       const gap = parseInt(gapValue, 10) || 40;
       return firstItem.offsetWidth + gap;
@@ -203,14 +207,14 @@ export default async function decorate(block) {
 
     const updateSlide = () => {
       const step = getStep();
-      countriesWrapper.style.transition = 'transform 0.4s ease-in-out';
-      countriesWrapper.style.transform = `translateX(-${currentIndex * step}px)`;
-
+      countriesTrack.style.transition = 'transform 0.4s ease-in-out';
+      countriesTrack.style.transform = `translateX(-${currentIndex * step}px)`;
       // eslint-disable-next-line no-console
       console.log('Slide updated → currentIndex:', currentIndex);
     };
 
-    if (leftArrow) {
+    // Attach left arrow listener once
+    if (leftArrow && !leftArrow.dataset.listener) {
       leftArrow.addEventListener('click', () => {
         // eslint-disable-next-line no-console
         console.log('Left arrow clicked');
@@ -219,19 +223,22 @@ export default async function decorate(block) {
           updateSlide();
         }
       });
+      leftArrow.dataset.listener = 'true';
     }
 
-    if (rightArrow) {
+    // Attach right arrow listener once
+    if (rightArrow && !rightArrow.dataset.listener) {
       rightArrow.addEventListener('click', () => {
         // eslint-disable-next-line no-console
         console.log('Right arrow clicked');
-        const totalItems = countriesWrapper.querySelectorAll('.country-item').length;
-        const visibleItems = Math.floor(wrapper.offsetWidth / Math.max(1, getStep()));
+        const totalItems = countriesTrack.querySelectorAll('.country-item').length;
+        const visibleItems = Math.floor(countriesWrapper.offsetWidth / Math.max(1, getStep()));
         if (currentIndex < totalItems - visibleItems) {
           currentIndex += 1;
           updateSlide();
         }
       });
+      rightArrow.dataset.listener = 'true';
     }
   } catch (err) {
     // eslint-disable-next-line no-console
