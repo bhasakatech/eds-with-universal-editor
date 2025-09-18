@@ -47,7 +47,7 @@
 .countries-track {
     display: flex;
     transition: transform 0.4s ease-in-out;
-    gap: 40px; /* same as carousel-row gap for spacing between items */
+        gap: 32px; 
 }
 
 .country-item {

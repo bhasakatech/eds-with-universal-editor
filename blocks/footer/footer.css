@@ -8,9 +8,10 @@
 
 .footer-wrapper div {
     display: flex;
-    flex-wrap: nowrap; /* keep all in one row */
+    flex-wrap: nowrap;
     justify-content: space-between;
     align-items: flex-start;
+    width: 100%;
 }
 
 .footer-wrapper > div .default-content-wrapper {
@@ -60,9 +61,10 @@
 @media (width <= 768px) {
     .footer-wrapper div {
         display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
+        flex-wrap: nowrap;
+        justify-content: space-between;
         align-items: flex-start;
+        width: 100%;
     }
 
     .footer-wrapper .footer > .default-content-wrapper {
