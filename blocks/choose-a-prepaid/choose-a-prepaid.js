@@ -57,15 +57,16 @@ export default async function decorate(block) {
         if (item.imageDescription) {
           const desc = document.createElement('div');
           desc.innerHTML = item.imageDescription; // richtext from AEM
-          itemEl.appendChild(desc);
-        }
 
-        if (item.arrowimage) {
-          const arrowimg = document.createElement('img');
-          arrowimg.src = item.arrowimage;
-          arrowimg.alt = item.title || 'arrow';
-          arrowimg.className = 'arrow-img'; // optional, for CSS styling
-          itemEl.appendChild(arrowimg);
+          if (item.arrowimage) {
+            const arrowimg = document.createElement('img');
+            arrowimg.src = item.arrowimage;
+            arrowimg.alt = item.title || 'arrow';
+            arrowimg.className = 'arrow-img';
+            desc.appendChild(arrowimg); // append inside text div
+          }
+
+          itemEl.appendChild(desc);
         }
 
         listContainer.appendChild(itemEl);
