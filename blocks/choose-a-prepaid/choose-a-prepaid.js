@@ -60,6 +60,14 @@ export default async function decorate(block) {
           itemEl.appendChild(desc);
         }
 
+        if (item.arrowimage) {
+          const arrowimg = document.createElement('img');
+          arrowimg.src = item.arrowimage;
+          arrowimg.alt = item.title || 'arrow';
+          arrowimg.className = 'arrow-img'; // optional, for CSS styling
+          itemEl.appendChild(arrowimg);
+        }
+
         listContainer.appendChild(itemEl);
       });
 
