@@ -20,7 +20,7 @@
     font-weight: 700;
     color: #384c72;
     text-align: center;
-   margin-bottom: 35px;
+    margin-bottom: 35px;
 }
 
 /* Blog Grid */
@@ -48,7 +48,7 @@
     display: flex;
     align-items: center;
     gap: 44px;
-    padding: 0 20px;
+    padding: 0 50px;
     justify-content: center;
 }
 
@@ -82,7 +82,7 @@
 
 /* Date + Author */
 .blog-card-content p:last-child {
-    font-size: .875rem;
+    font-size: 0.875rem;
     color: #87909f;
     margin-top: 8px;
 }

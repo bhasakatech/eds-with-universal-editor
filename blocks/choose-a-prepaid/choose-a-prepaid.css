@@ -25,6 +25,7 @@
     font-size: 48px;
     color: #384c72;
     text-align: center;
+    margin-bottom: 2px !important;
 }
 
 .prepaid-list {
@@ -58,6 +59,7 @@
     margin-left: 32px;
     top: 44px;
     line-height: 1.6;
+    padding: 22px 0;
 }
 
 .prepaid-list .prepaid-list-item:nth-child(1) div > p:nth-child(1) {
@@ -135,9 +137,9 @@
         line-height: 1.6;
     }
 
-.prepaid-list .prepaid-list-item:nth-child(2) div > p:nth-child(2) {
-    width: 250px;
-}
+    .prepaid-list .prepaid-list-item:nth-child(2) div > p:nth-child(2) {
+        width: 250px;
+    }
 
     .prepaid-list .prepaid-list-item:nth-child(3) div > p:nth-child(1) {
         width: 300px;
@@ -161,7 +163,7 @@
     /* Make grid single column */
     .prepaid-list {
         display: grid;
-        grid-template-columns: 1fr; 
+        grid-template-columns: 1fr;
         gap: 20px;
         width: 100%;
     }
