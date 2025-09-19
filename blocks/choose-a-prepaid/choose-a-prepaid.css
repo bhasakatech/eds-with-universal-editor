@@ -131,8 +131,8 @@
     width: 25px;
     height: 20px;
     position: absolute;
-    left: 104%;
-    top: 62%;
+    left: 103%;
+    top: 60%;
 }
 
 .prepaid-list .prepaid-list-item:nth-child(2) div > .arrow-img {
@@ -178,13 +178,22 @@
         width: 300px;
     }
 
+    .prepaid-list .prepaid-list-item:nth-child(1) div > .arrow-img {
+        /* background: aqua; */
+        width: 25px;
+        height: 20px;
+        position: absolute;
+        left: 103%;
+        top: 60%;
+    }
+
     .prepaid-list .prepaid-list-item:nth-child(2) div > .arrow-img {
         /* background: aqua; */
         width: 25px;
         height: 20px;
         position: absolute;
-        left: 74%;
-        top: 67%;
+        left: 72%;
+        top: 69%;
     }
 
     .prepaid-list .prepaid-list-item:nth-child(3) div > .arrow-img {
@@ -292,6 +301,15 @@
         object-fit: cover;
     }
 
+    .prepaid-list .prepaid-list-item:nth-child(1) div > .arrow-img {
+    /* background: aqua; */
+    width: 25px;
+    height: 20px;
+    position: absolute;
+    left: 103%;
+    top: 60%;
+}
+
     .prepaid-list .prepaid-list-item:nth-child(2) div > .arrow-img {
         /* background: aqua; */
         width: 25px;
@@ -391,6 +409,15 @@
     .prepaid-list-item:nth-child(3) img {
         border-radius: 5px !important;
         height: 100%;
+    }
+
+    .prepaid-list .prepaid-list-item:nth-child(1) div > .arrow-img {
+        /* background: aqua; */
+        width: 25px;
+        height: 20px;
+        position: absolute;
+        left: 100%;
+        top: 61%;
     }
 
     .prepaid-list .prepaid-list-item:nth-child(2) div > .arrow-img {
