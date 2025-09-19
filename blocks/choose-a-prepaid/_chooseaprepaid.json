@@ -57,7 +57,7 @@
               "component": "reference",
               "name": "arrowimage",
               "value": "",
-              "label": "Image",
+              "label": "Arrow Image",
               "valueType": "string"
             }
           ]
