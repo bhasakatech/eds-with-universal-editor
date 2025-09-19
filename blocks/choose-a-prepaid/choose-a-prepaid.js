@@ -43,7 +43,7 @@ export default async function decorate(block) {
             .filter((key) => key.startsWith("item"))
             .map((key) => data.choosePrepaidList[key]);
 
-      items.forEach((item) => {
+        items.forEach((item) => {
         const itemEl = document.createElement("div");
         itemEl.className = "prepaid-list-item";
 
