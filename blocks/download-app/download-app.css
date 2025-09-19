@@ -1,5 +1,7 @@
 .download-app-wrapper {
-    padding: 40px 20px;
+    padding: 0 !important;
+    width: 100%;
+    max-width: 100% !important;
 }
 
 .section.download-app-container {
