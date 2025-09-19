@@ -56,12 +56,19 @@
     box-shadow: 0 2px 5px rgb(0 0 0 / 20%);
 }
 
-/* fffffffffffff */
+/* this css is for for  footer bottom section  */
 .footer-wrapper > .footer > div {
     display: grid;
-    grid-template-columns: 200px 200px 200px 200px 200px;
-    width: 97%;
-    margin-left: 14px;
+    grid-template-columns: repeat(5,1fr);
+    width: 100%;
+}
+
+.footer-wrapper > .footer > div > .section:nth-of-type(6) .default-content-wrapper p:nth-child(1) {
+    margin-right: auto;
+}
+
+.footer-wrapper > .footer > div > .section:nth-of-type(6) .default-content-wrapper p:nth-child(2) {
+    margin-right: auto;
 }
 
 /* First 5 sections → auto in their own column */
@@ -74,14 +81,15 @@
 .footer-wrapper > .footer > div > .section:nth-of-type(6) {
     order: 99;
     flex: 0 0 100%;
-    width: 1000px;
+
+    /* width: 1000px; */
     margin-top: 20px;
     padding-top: 18px;
     border-top: 1px solid rgb(255 255 255 / 6%);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: transparent;
+    grid-column: 1 / -1;
     box-sizing: border-box;
 }
 
@@ -92,11 +100,7 @@
     .default-content-wrapper {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    width: 100%;
     flex-direction: row;
-    gap: 16px;
-    box-sizing: border-box;
 }
 
 .footer-wrapper
@@ -112,7 +116,7 @@
     > .section:nth-of-type(6)
     .default-content-wrapper
     img.logo {
-    max-width: 200px;
+    max-width: 80px;
     height: auto;
     width: auto;
     margin: 0;
