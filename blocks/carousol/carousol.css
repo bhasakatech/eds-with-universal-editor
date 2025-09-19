@@ -3,6 +3,7 @@
     position: relative;
     width: 100%;
     overflow: hidden;
+     z-index: 0;
 }
 
 .section.carousol-container .carousol-wrapper {
@@ -64,7 +65,7 @@
     transform: translateX(-50%);
     display: flex;
     gap: 10px;
-    z-index: 20;
+    z-index: 0;
 }
 
 /* Each dot */
