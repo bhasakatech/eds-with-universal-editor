@@ -1,4 +1,4 @@
-/* .header-wrapper {
+.header-wrapper {
     width: 100%;
     height: 81px;
     display: flex;
@@ -147,37 +147,4 @@
 
 .nav-sections .default-content-wrapper > p:nth-child(7) {
     margin: -4px 0 0;
-} */
-
-
-.header-wrapper .nav-wrapper nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.header-wrapper .nav-brand {
-  display: flex;
-  align-items: center;
-  gap: 20px; /* spacing between logo, menu button, and links */
-}
-
-.header-wrapper .nav-brand ul {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  gap: 20px;
-}
-
-.header-wrapper .nav-sections {
-  display: flex;
-  align-items: center;
-  gap: 15px; /* spacing between Quick recharge, icons, etc */
-}
-
-.header-wrapper .nav-sections p {
-  margin: 0;
-  display: flex;
-  align-items: center;
 }
