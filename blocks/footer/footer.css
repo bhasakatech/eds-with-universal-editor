@@ -21,7 +21,7 @@
 .footer-wrapper .footer h4 {
     font-size: 18px;
     font-weight: 700;
-    margin-bottom: 10px;
+    margin-bottom: 24px;
     color: #fff;
     font-family: GTEestiLCDisplayMedium, sans-serif;
 }
@@ -281,7 +281,7 @@
     /* Responsive: stack only on mobile top section 5 column section */
 
     .footer.block > div .section:last-child {
-        margin-top: 30px;
+        margin-top: 20px;
     }
 }
 
@@ -294,9 +294,8 @@
         display: grid;
         grid-template-columns: auto;
         width: 100%;
-        gap: 20px;
+        gap: 2px;
     }
-
 
     .footer-wrapper {
         background-color: #1b2141;
@@ -318,22 +317,30 @@
     .footer-wrapper .footer picture img {
         display: block;
         width: 105px;
+        margin-bottom: 0;
     }
 
-     .footer.block > div .section:nth-child(5) .default-content-wrapper p {
+    .footer.block > div .section:nth-child(5) .default-content-wrapper p {
         display: inline-block;
     }
 
-    .footer-wrapper > .footer > div > .section:nth-of-type(6) .default-content-wrapper p:nth-child(2) {
-    margin-right: auto;
-    font-size: 14px;
-}
+    .footer-wrapper
+        > .footer
+        > div
+        > .section:nth-of-type(6)
+        .default-content-wrapper
+        p:nth-child(2) {
+        margin-right: 0;
+        font-size: 14px;
+    }
 
     .footer.block > div .section:nth-child(5) .default-content-wrapper {
         display: flex;
         flex-direction: row;
-        padding: 20px;
+        padding: 0;
         border-top: 1px solid #fff;
+        gap: -19px !important;
+        justify-content: center;
     }
 
     .footer.block > div .section:nth-child(5) .default-content-wrapper h4 {
@@ -342,6 +349,4 @@
         margin-left: -10px;
         width: 100%;
     }
-
-   
 }
