@@ -1,5 +1,5 @@
 .whylyca-wrapper {
-        margin-top: -40px !important;
+    margin-top: -40px !important;
     max-width: 100% !important;
     background: #f2f9ff;
     padding: 16px 10px !important;
@@ -9,20 +9,21 @@
 .section.whylyca-container {
     margin: 0 !important;
     padding: 0 !important;
+    
 }
 
 .whylyca-wrapper h1 {
     font-size: 48px;
     font-weight: 700;
     margin-bottom: 17px;
-    margin-top: 0;
+    margin-top: 15px;
     color: #384c72;
 }
 
 .whylyca-list {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 15px;
+    gap: 11px;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -36,8 +37,8 @@
 }
 
 .whylyca-item img {
-    width: 80px;
-    height: 80px;
+    width: 102px;
+    height: auto;
     object-fit: contain;
     margin-bottom: 20px;
 }
@@ -68,7 +69,7 @@
 
 /* Text */
 .whylyca-item p strong {
-    font-size: 18px;
+    font-size: 19px;
     color: #384c72;
     line-height: 1.6;
     margin: 0;
@@ -82,7 +83,6 @@
     margin: 0;
     font-weight: 500;
 }
-
 
 @media (width <= 786px) {
     .whylyca-list {
@@ -99,11 +99,10 @@
     }
 }
 
-
 @media (width <= 430px) {
     .whylyca-list {
         grid-template-columns: 1fr;
-                width: 100%;
+        width: 100%;
     }
 
     .whylyca-wrapper h1 {
@@ -115,10 +114,10 @@
     }
 
     .whylyca-item p strong {
-    font-size: 18px;
-    color: #384c72;
-    line-height: 1.6;
-    margin: 0;
-    font-weight: 700;
-}
+        font-size: 18px;
+        color: #384c72;
+        line-height: 1.6;
+        margin: 0;
+        font-weight: 700;
+    }
 }

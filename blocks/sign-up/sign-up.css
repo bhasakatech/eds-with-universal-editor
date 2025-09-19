@@ -7,7 +7,7 @@
 }
 
 .signup-wrapper {
-    padding: 24px;
+    padding: 33px 38px;
 }
 
 .signup-heading h1 {
@@ -16,6 +16,7 @@
     font-weight: 600;
     color: #35445c;
     margin-bottom: 30px;
+    margin-top: 10px;
 }
 
 .signup-form {
@@ -37,7 +38,7 @@
 }
 
 .signup-button {
-    background: #0c8; 
+    background: #0c8;
     color: #fff;
     border: none;
     margin: 0;

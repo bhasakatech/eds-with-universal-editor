@@ -8,7 +8,7 @@
     width: 100% !important;
     max-width: 100% !important;
     margin: 0 auto;
-    padding: 30px 0;
+    padding: 45px 0;
     box-sizing: border-box;
     background-color: #eff8ff;
 }
@@ -29,7 +29,7 @@
 
 /* Help List Grid */
 .help-list {
-    width: 55%;
+    width: 50%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     justify-items: center;
@@ -44,7 +44,7 @@
 
 /* Help Item Image */
 .help-item img {
-    width: 106px;
+    width: 110px;
     height: auto;
     object-fit: cover;
 }
@@ -70,6 +70,16 @@
     color: #344054;
 }
 
+@media (width <= 1024px) {
+      .help-list {
+        width: 60%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        justify-items: center;
+        margin: auto;
+    }
+}
+
 @media (width <= 768px) {
     .help-heading h1 {
         font-size: 32px;
@@ -92,14 +102,14 @@
         height: auto;
         object-fit: cover;
     }
-    
+
     .help-desc p {
-    width: 107px;
-    font-size: 16px;
-    color: #444;
-    margin: 0;
-    line-height: 1.4;
-}
+        width: 107px;
+        font-size: 16px;
+        color: #444;
+        margin: 0;
+        line-height: 1.4;
+    }
 }
 
 @media (width <= 430px) {
@@ -127,7 +137,7 @@
 }
 
 @media (width <= 330px) {
-        .help-wrapper {
+    .help-wrapper {
         padding: 35px 10px;
     }
 

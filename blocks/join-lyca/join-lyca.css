@@ -19,15 +19,15 @@
 .join-lyca.block > div:nth-child(1) h1 {
     text-align: center;
     max-width: 800px;
-    margin: 20px 1px 1px;
+    margin: 25px 1px 1px;
     font-size: 48px;
 }
 
 .join-lyca.block > div:nth-child(2) p {
     max-width: 800px;
     margin: 15px auto;
-    font-size: 18px;
-    font-weight: 500;
+    font-size: 16px;
+    font-weight: 600;
     color: #fff;
     font-family: GTEestiLCDisplayRegular, sans-serif;
 }
@@ -35,7 +35,7 @@
 .joinlyca-list {
     display: flex;
     justify-content: center;
-    gap: 70px;
+    gap: 65px;
     margin-top: 20px;
     margin-bottom: 40px;
 }
@@ -57,12 +57,12 @@
     color: white;
     margin-top: 10px;
     text-align: center;
-    width: 101px;
+    width: 114px;
 }
 
 @media (width <= 1024px) {
     .join-lyca.block > div:nth-child(1) h1 {
-        font-size: 40px;
+        font-size: 3rem;
     }
 
     .join-lyca.block > div:nth-child(2) p {
