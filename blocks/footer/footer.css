@@ -49,7 +49,7 @@
     width: 160px;
     height: auto;
     margin-bottom: 15px;
-    border-radius: 6px;
+    border-radius: 0;
     cursor: pointer;
     box-shadow: 0 2px 5px rgb(0 0 0 / 20%);
 }
@@ -83,7 +83,7 @@
 /* First 5 sections → auto in their own column */
 .footer-wrapper > .footer > div > .section:nth-of-type(-n + 5) {
     flex: unset;
-    padding-right: 20px;
+    padding-right: 0;
     box-sizing: border-box;
 }
 
@@ -128,7 +128,7 @@
     max-width: 90px;
     height: auto;
     width: auto;
-    margin: 0;
+    margin-left: 14px;
     border-radius: 50px;
 }
 
@@ -168,20 +168,18 @@
     border-radius: 4px;
 }
 
-.footer-wrapper
-    > .footer
-    > div
-    > .section:nth-of-type(6)
-    .default-content-wrapper
-    picture:not(:first-child)
-    img:hover,
-.footer-wrapper
-    > .footer
-    > div
-    > .section:nth-of-type(6)
-    .default-content-wrapper
-    img.social:hover {
-    transform: scale(1.08);
+.footer-wrapper > .footer > div > .section:nth-of-type(6) .default-content-wrapper p:nth-child(3) img {
+    /* margin-right: auto; */
+    border-radius: 42px;
+}
+
+.footer-wrapper > .footer > div > .section:nth-of-type(6) .default-content-wrapper p:nth-child(4) img {
+    /* margin-right: auto; */
+    border-radius: 42px;
+}
+
+.footer-wrapper > .footer > div > .section:nth-of-type(6) .default-content-wrapper p:nth-child(5) img {   
+    border-radius: 42px;
 }
 
 /* this css is for for  footer bottom section  */
