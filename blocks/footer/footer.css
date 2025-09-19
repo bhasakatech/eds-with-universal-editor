@@ -1,6 +1,6 @@
 .footer-wrapper {
     background-color: #1b2141;
-    padding: 20px 40px;
+    padding: 20px 60px;
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
     color: #fff;
     margin-top: -40px;
@@ -9,10 +9,8 @@
 .footer-wrapper div {
     display: flex;
     flex-wrap: nowrap;
-    justify-content: space-between;
     align-items: flex-start;
-    width: 97%;
-    margin-left: 14px;
+    width: 100%;
 }
 
 .footer-wrapper > div .default-content-wrapper {
@@ -59,15 +57,26 @@
 /* this css is for for  footer bottom section  */
 .footer-wrapper > .footer > div {
     display: grid;
-    grid-template-columns: repeat(5,1fr);
+    grid-template-columns: auto auto auto auto 170px;
     width: 100%;
+    gap: 20px;
 }
 
-.footer-wrapper > .footer > div > .section:nth-of-type(6) .default-content-wrapper p:nth-child(1) {
+.footer-wrapper
+    > .footer
+    > div
+    > .section:nth-of-type(6)
+    .default-content-wrapper
+    p:nth-child(1) {
     margin-right: auto;
 }
 
-.footer-wrapper > .footer > div > .section:nth-of-type(6) .default-content-wrapper p:nth-child(2) {
+.footer-wrapper
+    > .footer
+    > div
+    > .section:nth-of-type(6)
+    .default-content-wrapper
+    p:nth-child(2) {
     margin-right: auto;
 }
 
@@ -116,10 +125,11 @@
     > .section:nth-of-type(6)
     .default-content-wrapper
     img.logo {
-    max-width: 80px;
+    max-width: 90px;
     height: auto;
     width: auto;
     margin: 0;
+    border-radius: 50px;
 }
 
 .footer-wrapper
@@ -174,6 +184,7 @@
     transform: scale(1.08);
 }
 
+/* this css is for for  footer bottom section  */
 @media (width <= 768px) {
     .footer-wrapper > .footer > div {
         align-items: stretch;
@@ -211,7 +222,7 @@
     }
 }
 
-/* Responsive: stack only on mobile */
+/* Responsive: stack only on mobile top section 5 column section */
 @media (width <= 768px) {
     .footer-wrapper div {
         display: flex;
