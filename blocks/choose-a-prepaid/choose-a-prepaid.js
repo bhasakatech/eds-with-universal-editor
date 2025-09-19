@@ -40,8 +40,8 @@ export default async function decorate(block) {
       const items = Array.isArray(data.choosePrepaidList)
         ? data.choosePrepaidList
         : Object.keys(data.choosePrepaidList)
-            .filter((key) => key.startsWith('item'))
-            .map((key) => data.choosePrepaidList[key]);
+          .filter((key) => key.startsWith('item'))
+          .map((key) => data.choosePrepaidList[key]);
 
       items.forEach((item) => {
         const itemEl = document.createElement('div');
