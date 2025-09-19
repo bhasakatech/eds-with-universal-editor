@@ -201,8 +201,26 @@
 
 /* this css is for for  footer bottom section  */
 @media (width <= 768px) {
+    .footer-wrapper {
+        background-color: #1b2141;
+        padding: 20px 30px;
+        font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+        color: #fff;
+        margin-top: -40px;
+    }
+
+    .footer-wrapper div {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+
     .footer-wrapper > .footer > div {
-        align-items: stretch;
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        width: 100%;
+        gap: 20px;
     }
 
     .footer-wrapper > .footer > div > .section:nth-of-type(6) {
@@ -212,13 +230,37 @@
         gap: 12px;
     }
 
+    .footer-wrapper .footer > .default-content-wrapper {
+        max-width: 100%;
+    }
+
     .footer-wrapper
         > .footer
         > div
         > .section:nth-of-type(6)
         .default-content-wrapper {
-        flex-direction: column;
+        flex-direction: row;
         gap: 12px;
+    }
+
+    .footer-wrapper
+        > .footer
+        > div
+        > .section:nth-of-type(6)
+        .default-content-wrapper
+        picture:first-child
+        img,
+    .footer-wrapper
+        > .footer
+        > div
+        > .section:nth-of-type(6)
+        .default-content-wrapper
+        img.logo {
+        max-width: 90px;
+        height: auto;
+        width: auto;
+        margin-left: 14px;
+        display: none;
     }
 
     .footer-wrapper
@@ -235,21 +277,8 @@
         img.social {
         margin-left: 0;
     }
-}
 
-/* Responsive: stack only on mobile top section 5 column section */
-@media (width <= 768px) {
-    .footer-wrapper div {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        align-items: flex-start;
-        width: fit-content;
-    }
-
-    .footer-wrapper .footer > .default-content-wrapper {
-        max-width: 100%;
-    }
+    /* Responsive: stack only on mobile top section 5 column section */
 
     .footer.block > div .section:last-child {
         margin-top: 30px;
