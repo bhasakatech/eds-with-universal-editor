@@ -287,6 +287,13 @@
             "name": "imageDescription",
             "label": "Image Description",
             "valueType": "string"
+          },
+          {
+            "component": "reference",
+            "name": "arrowimage",
+            "value": "",
+            "label": "Arrow Image",
+            "valueType": "string"
           }
         ]
       }
