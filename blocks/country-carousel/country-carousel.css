@@ -6,6 +6,7 @@
 .country-carousel-wrapper {
     padding: 0 !important;
     margin: 0;
+    max-width: 100% !important;
 }
 
 .country-carousel {
