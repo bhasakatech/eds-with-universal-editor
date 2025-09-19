@@ -126,17 +126,14 @@
 
 /* arow images */
 
-
-
 .prepaid-list .prepaid-list-item:nth-child(1) div > .arrow-img {
     /* background: aqua; */
     width: 30px;
     height: 20px;
     position: absolute;
     left: 104%;
-    top: 63%;
+    top: 62%;
 }
-
 
 .prepaid-list .prepaid-list-item:nth-child(2) div > .arrow-img {
     /* background: aqua; */
@@ -152,8 +149,8 @@
     width: 30px;
     height: 20px;
     position: absolute;
-    left: 92%;
-    top: 67%;
+    left: 91%;
+    top: 70%;
 }
 
 @media (width <= 1024px) {
@@ -179,6 +176,24 @@
 
     .prepaid-list .prepaid-list-item:nth-child(3) div > p:nth-child(2) {
         width: 300px;
+    }
+
+    .prepaid-list .prepaid-list-item:nth-child(2) div > .arrow-img {
+        /* background: aqua; */
+        width: 30px;
+        height: 20px;
+        position: absolute;
+        left: 74%;
+        top: 67%;
+    }
+
+    .prepaid-list .prepaid-list-item:nth-child(3) div > .arrow-img {
+        /* background: aqua; */
+        width: 30px;
+        height: 20px;
+        position: absolute;
+        left: 35%;
+        top: 77%;
     }
 }
 
@@ -276,6 +291,24 @@
         width: 1000px;
         object-fit: cover;
     }
+
+    .prepaid-list .prepaid-list-item:nth-child(2) div > .arrow-img {
+        /* background: aqua; */
+        width: 30px;
+        height: 20px;
+        position: absolute;
+        left: 62%;
+        top: 67%;
+    }
+
+    .prepaid-list .prepaid-list-item:nth-child(3) div > .arrow-img {
+        /* background: aqua; */
+        width: 30px;
+        height: 20px;
+        position: absolute;
+        left: 102%;
+        top: 66%;
+    }
 }
 
 @media (width <= 430px) {
@@ -358,5 +391,23 @@
     .prepaid-list-item:nth-child(3) img {
         border-radius: 5px !important;
         height: 100%;
+    }
+
+    .prepaid-list .prepaid-list-item:nth-child(2) div > .arrow-img {
+        /* background: aqua; */
+        width: 30px;
+        height: 20px;
+        position: absolute;
+        left: 82%;
+        top: 65%;
+    }
+
+    .prepaid-list .prepaid-list-item:nth-child(3) div > .arrow-img {
+        /* background: aqua; */
+        width: 30px;
+        height: 20px;
+        position: absolute;
+        left: 75%;
+        top: 66%;
     }
 }
