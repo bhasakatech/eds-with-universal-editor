@@ -29,7 +29,7 @@
     align-items: center;
     justify-content: center;
     gap: 20px;
-    padding: 0 40px;
+    padding: 0 10px;
 }
 
 .carousel-arrow {
@@ -96,6 +96,7 @@
     .carousel-title {
         font-size: 20px;
         margin: 0;
+        color: #667085;
     }
 
     .country-carousel {
