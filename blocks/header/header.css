@@ -1,6 +1,5 @@
 .header-wrapper {
     display: flex;
-    /* height: 25px; */
     margin-bottom: -33px;
     align-items: center;
 }
@@ -73,7 +72,6 @@
 }
 
 .prepaid-list .prepaid-list-item:nth-child(2) div > .arrow-img {
-    /* background: aqua; */
     width: 30px;
     height: 20px;
     position: absolute;
