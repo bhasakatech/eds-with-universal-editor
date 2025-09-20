@@ -10,7 +10,7 @@
 }
 
 .country-carousel {
-       padding: 16px 40px;
+    padding: 16px 40px;
     text-align: center;
     overflow: hidden;
     position: relative;
@@ -96,7 +96,7 @@
 
 @media (width <= 430px) {
     .carousel-title {
-        font-size: 20px;
+        font-size: 19px;
         margin: 0;
         color: #667085;
     }
@@ -105,7 +105,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 10px;
+        padding: 14px 0;
     }
 
     .countries-wrapper {
