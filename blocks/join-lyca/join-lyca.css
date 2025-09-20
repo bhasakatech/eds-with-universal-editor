@@ -97,6 +97,14 @@
 }
 
 @media (width <= 430px) {
+    .joinlyca-list {
+        display: flex;
+        justify-content: center;
+        gap: 27px;
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+
     .join-lyca.block > div:nth-child(1) h1 {
         font-size: 26px;
     }

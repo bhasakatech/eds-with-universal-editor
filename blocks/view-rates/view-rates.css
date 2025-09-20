@@ -17,7 +17,7 @@
   justify-content: center;
   gap: 16px;
   background-color: #06c;
-  padding: 20px 0;
+  padding: 28px 0;
   color: #fff;
   flex-wrap: wrap; 
 }
@@ -58,7 +58,7 @@
 /* Responsive Adjustments */
 @media (width <= 1024px) {
   .view-rates-wrapper-dynamic {
-    padding: 0;
+            padding: 28px 0;
     gap: 12px;
   }
 
@@ -70,6 +70,7 @@
 @media (width <= 768px) {
   .view-rates-wrapper-dynamic {
     text-align: center;
+          padding: 28px 0;
   }
 
   .view-rates-wrapper-dynamic a img {
@@ -93,6 +94,7 @@
 @media (width <= 430px) {
   .view-rates-wrapper-dynamic {
     text-align: center;
+           padding: 28px 0;
   }
 
   .view-rates-wrapper-dynamic a img {
