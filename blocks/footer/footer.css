@@ -278,6 +278,18 @@
         margin-left: 0;
     }
 
+    .footer-wrapper > .footer > div > .section:nth-of-type(5) {
+    grid-column: span 4;
+
+    /* width: 100%; */
+
+    /* justify-self: center; */
+    margin: auto;
+
+    /* background: aqua; */
+    max-width: fit-content;
+}
+
     /* Responsive: stack only on mobile top section 5 column section */
 
     .footer.block > div .section:last-child {

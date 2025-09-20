@@ -131,8 +131,8 @@
     width: 25px;
     height: 20px;
     position: absolute;
-    left: 103%;
-    top: 60%;
+    left: 105%;
+    top: 63%;
 }
 
 .prepaid-list .prepaid-list-item:nth-child(2) div > .arrow-img {
@@ -149,7 +149,7 @@
     width: 25px;
     height: 20px;
     position: absolute;
-    left: 91%;
+    left: 88%;
     top: 70%;
 }
 
@@ -183,8 +183,9 @@
         width: 25px;
         height: 20px;
         position: absolute;
-        left: 103%;
-        top: 60%;
+                left: 104%;
+        top: 64%;
+    
     }
 
     .prepaid-list .prepaid-list-item:nth-child(2) div > .arrow-img {
@@ -192,7 +193,7 @@
         width: 25px;
         height: 20px;
         position: absolute;
-        left: 72%;
+        left: 70%;
         top: 69%;
     }
 
@@ -306,7 +307,7 @@
     width: 25px;
     height: 20px;
     position: absolute;
-    left: 103%;
+    left: 106%;
     top: 60%;
 }
 
