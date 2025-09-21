@@ -113,6 +113,14 @@
     }
 
     .bloglist-inner {
+        display: flex;
+        align-items: center;
+        gap: 44px;
+        padding: 0 30px;
+        justify-content: center;
+    }
+
+    .bloglist-inner {
         flex-direction: column;
         gap: 20px;
         margin-left: 0;
