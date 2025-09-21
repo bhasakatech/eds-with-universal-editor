@@ -300,20 +300,12 @@
 @media (width <= 430px) {
     .footer-wrapper > .footer > div {
         display: flex;
-        /* grid-template-columns: 157px; */
-        width: 100%;
-       
+        width: 100%;       
         gap: 2px;
-    }
-    p.button-container {
-        display: none;
     }
 
-    .footer-wrapper > .footer > div {
-        display: grid;
-        grid-template-columns: auto;
-        width: 100%;
-        gap: 2px;
+    p.button-container {
+        display: none;
     }
 
     .footer-wrapper {
@@ -351,11 +343,6 @@
         p:nth-child(2) {
         margin-right: 0;
         font-size: 14px;
-    }
-
-    .footer-wrapper > .footer > div > .section:nth-of-type(6) {
-        grid-column: span 4;
-        margin: 0;
     }
 
     .footer.block > div .section:nth-child(5) .default-content-wrapper {

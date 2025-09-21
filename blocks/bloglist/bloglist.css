@@ -120,12 +120,6 @@
         justify-content: center;
     }
 
-    .bloglist-inner {
-        flex-direction: column;
-        gap: 20px;
-        margin-left: 0;
-    }
-
     .bloglist-wrapper h1 {
         font-size: 26px;
     }
