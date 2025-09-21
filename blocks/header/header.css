@@ -61,32 +61,6 @@
     padding: 0 40px;
 }
 
-.prepaid-list .prepaid-list-item:nth-child(1) div > .arrow-img {
-    /* background: aqua; */
-    width: 30px;
-    height: 20px;
-    position: absolute;
-    left: 104%;
-    top: 63%;
-}
-
-.prepaid-list .prepaid-list-item:nth-child(2) div > .arrow-img {
-    width: 30px;
-    height: 20px;
-    position: absolute;
-    left: 71%;
-    top: 67%;
-}
-
-.prepaid-list .prepaid-list-item:nth-child(3) div > .arrow-img {
-    /* background: aqua; */
-    width: 30px;
-    height: 20px;
-    position: absolute;
-    left: 92%;
-    top: 67%;
-}
-
 .nav-brand .default-content-wrapper > p:nth-child(3) {
     margin: 0 0 0 -12px;
     padding: 12px;
