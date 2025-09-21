@@ -7,6 +7,10 @@
     align-items: center;
 }
 
+.choose-a-prepaid-wrapper {
+    padding: 0 15px !important;
+}
+
 .choose-prepaid-dynamic p {
     margin: 0;
     font-size: 16px;
@@ -333,7 +337,7 @@
         display: grid;
         grid-template-columns: 1fr;
         gap: 20px;
-        padding: 20px;
+        padding: 0;
     }
 
     .choose-prepaid-dynamic {
@@ -440,7 +444,7 @@
         width: 25px;
         height: 20px;
         position: absolute;
-        left: 70%;
+        left: 75%;
         top: 66%;
     }
 }
@@ -448,7 +452,7 @@
 @media (width <= 380px) {
     .prepaid-list {
         display: grid;
-        padding: 20px 10px;
+        padding: 20px 0;
     }
 
     .prepaid-list .prepaid-list-item:nth-child(3) div > p:nth-child(2) {
@@ -462,9 +466,14 @@
     }
 }
 
-@media (width <= 380px) {
+@media (width <= 330px) {
+     .prepaid-list .prepaid-list-item:nth-child(3) div > p:nth-child(2) {
+        font-size: 12px;
+        width: 240px;
+    }
+
     .prepaid-list .prepaid-list-item:nth-child(3) div > .arrow-img {
-        left: 88%;
+        left: 86%;
         top: 66%;
     }
 }
