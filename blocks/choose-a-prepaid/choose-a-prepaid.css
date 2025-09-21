@@ -183,9 +183,8 @@
         width: 25px;
         height: 20px;
         position: absolute;
-                left: 104%;
+        left: 104%;
         top: 64%;
-    
     }
 
     .prepaid-list .prepaid-list-item:nth-child(2) div > .arrow-img {
@@ -222,7 +221,6 @@
         display: grid;
         grid-template-columns: 1fr;
         gap: 20px;
-        width: 100%;
     }
 
     .prepaid-list .prepaid-list-item:nth-child(1) div > p:nth-child(1) {
@@ -303,13 +301,13 @@
     }
 
     .prepaid-list .prepaid-list-item:nth-child(1) div > .arrow-img {
-    /* background: aqua; */
-    width: 25px;
-    height: 20px;
-    position: absolute;
-    left: 106%;
-    top: 60%;
-}
+        /* background: aqua; */
+        width: 25px;
+        height: 20px;
+        position: absolute;
+        left: 106%;
+        top: 60%;
+    }
 
     .prepaid-list .prepaid-list-item:nth-child(2) div > .arrow-img {
         /* background: aqua; */
@@ -331,6 +329,13 @@
 }
 
 @media (width <= 430px) {
+    .prepaid-list {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 20px;
+    }
+
     .choose-prepaid-dynamic {
         max-width: 100%;
         margin: 0 auto;
@@ -435,7 +440,31 @@
         width: 25px;
         height: 20px;
         position: absolute;
+        left: 70%;
+        top: 66%;
+    }
+}
+
+@media (width <= 380px) {
+    .prepaid-list {
+        display: grid;
+        padding: 20px 10px;
+    }
+
+    .prepaid-list .prepaid-list-item:nth-child(3) div > p:nth-child(2) {
+        font-size: 13px;
+        width: 240px;
+    }
+
+    .prepaid-list .prepaid-list-item:nth-child(3) div > .arrow-img {
         left: 75%;
+        top: 66%;
+    }
+}
+
+@media (width <= 380px) {
+    .prepaid-list .prepaid-list-item:nth-child(3) div > .arrow-img {
+        left: 88%;
         top: 66%;
     }
 }
