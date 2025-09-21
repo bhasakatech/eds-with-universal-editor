@@ -183,9 +183,8 @@
         width: 25px;
         height: 20px;
         position: absolute;
-                left: 104%;
+        left: 104%;
         top: 64%;
-    
     }
 
     .prepaid-list .prepaid-list-item:nth-child(2) div > .arrow-img {
@@ -303,13 +302,13 @@
     }
 
     .prepaid-list .prepaid-list-item:nth-child(1) div > .arrow-img {
-    /* background: aqua; */
-    width: 25px;
-    height: 20px;
-    position: absolute;
-    left: 106%;
-    top: 60%;
-}
+        /* background: aqua; */
+        width: 25px;
+        height: 20px;
+        position: absolute;
+        left: 106%;
+        top: 60%;
+    }
 
     .prepaid-list .prepaid-list-item:nth-child(2) div > .arrow-img {
         /* background: aqua; */
