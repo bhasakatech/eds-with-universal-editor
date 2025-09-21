@@ -115,7 +115,6 @@
     .bloglist-inner {
         display: flex;
         align-items: center;
-        gap: 44px;
         padding: 0 30px;
         justify-content: center;
         flex-direction: column;
