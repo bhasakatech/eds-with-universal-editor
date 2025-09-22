@@ -8,14 +8,14 @@
 
 img.carousel-slide {
     width: 100vw;
-    height: 70vh;
+    height: auto;
 }
- 
+
 .section.carousol-container .carousol-wrapper {
     padding: 0;
     position: relative;
     width: 100%;
-    max-width: 1405px;
+    max-width: 100% !important;
     overflow: hidden;
 }
 
@@ -137,6 +137,7 @@ img.carousel-slide {
 /* Mobile (480px) */
 @media (width<= 480px) {
     img.carousel-slide {
+        width: 100vw;
         height: 70vh;
     }
 

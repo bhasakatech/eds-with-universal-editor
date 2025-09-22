@@ -7,7 +7,7 @@
 }
 
 .signup-wrapper {
-    padding: 33px 25px;
+    padding: 13px 25px;
 }
 
 button.signup-button p {
@@ -35,7 +35,7 @@ button.signup-button p {
 }
 
 .signup-input {
-    padding: 10px 20px;
+    padding: 15px 20px;
     font-size: 16px;
     border: 1px solid #ddd;
     border-radius: 6px;
