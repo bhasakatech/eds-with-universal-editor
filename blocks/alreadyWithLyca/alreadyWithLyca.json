@@ -1,0 +1,88 @@
+{
+  "definitions": [
+    {
+      "title": "Already with Lyca",
+      "id": "alreadyWithLyca",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block",
+            "template": {
+              "name": "Already with Lyca",
+              "model": "alreadyWithLyca"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "alreadyWithLyca",
+      "fields": [
+        {
+          "component": "richtext",
+          "name": "heading",
+          "label": "Main Heading",
+          "valueType": "string",
+          "required": true
+        },
+        {
+          "component": "richtext",
+          "name": "subHeading",
+          "label": "Sub Heading",
+          "valueType": "string"
+        },
+        {
+          "component": "text",
+          "name": "rechargeButtonText",
+          "label": "Recharge Button Text",
+          "valueType": "string"
+        },
+        {
+          "component": "text",
+          "name": "renewButtonText",
+          "label": "Renew Plan Button Text",
+          "valueType": "string"
+        },
+        {
+          "component": "text",
+          "name": "countryCode",
+          "label": "Phone Country Code",
+          "valueType": "string"
+        },
+        {
+          "component": "text",
+          "name": "phonePlaceholder",
+          "label": "Phone Input Placeholder",
+          "valueType": "string"
+        },
+        {
+          "component": "reference",
+          "name": "ctaArrowImage",
+          "label": "CTA Arrow Image",
+          "valueType": "asset"
+        },
+        {
+          "component": "text",
+          "name": "validationMessage",
+          "label": "Validation Message",
+          "valueType": "string"
+        },
+        {
+          "component": "richtext",
+          "name": "appDownloadText",
+          "label": "App Download Text",
+          "valueType": "string"
+        },
+        {
+          "component": "link",
+          "name": "appDownloadLink",
+          "label": "App Download Link",
+          "valueType": "string"
+        }
+      ]
+    }
+  ],
+  "filters": []
+}
