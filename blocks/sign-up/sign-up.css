@@ -7,7 +7,13 @@
 }
 
 .signup-wrapper {
-    padding: 33px 38px;
+    padding: 33px 25px;
+}
+
+button.signup-button p {
+    margin: 0;
+    padding: 15px;
+    color: #21254f;
 }
 
 .signup-heading h1 {
@@ -78,17 +84,22 @@
     }
 
     .signup-input {
-        padding: 12px 0;
+        padding: 12px 0 12px 10px;
         font-size: 16px;
         border: 1px solid #ddd;
         border-radius: 6px;
         flex: 1;
-        width: 100%;
+        width: 98%;
     }
 
     .signup-button {
         width: 100%;
         margin: auto;
+    }
+
+    button.signup-button p {
+        margin: 0;
+        padding: 15px;
     }
 
     .signup-description {

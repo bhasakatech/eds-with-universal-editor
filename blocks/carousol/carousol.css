@@ -6,6 +6,11 @@
     z-index: 0;
 }
 
+img.carousel-slide {
+    width: 100vw;
+    height: 70vh;
+}
+ 
 .section.carousol-container .carousol-wrapper {
     padding: 0;
     position: relative;

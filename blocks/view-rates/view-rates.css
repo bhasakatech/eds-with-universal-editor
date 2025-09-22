@@ -95,6 +95,7 @@
     .view-rates-wrapper-dynamic {
         text-align: center;
         padding: 28px 0;
+        flex-direction: column;
     }
 
     .view-rates-wrapper-dynamic a img {
@@ -109,7 +110,7 @@
     }
 
     .view-rates-wrapper-dynamic p {
-        font-size: 0.8rem;
+        font-size: 1rem;
     }
 }
 
