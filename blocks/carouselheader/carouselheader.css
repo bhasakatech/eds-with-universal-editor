@@ -15,8 +15,8 @@
 /* carouselheader-wrapper */
 .carouselheader-wrapper {
     margin: 0 auto !important;
-    width:90%;
-        max-width: 100% !important;
+    width: 90%;
+    max-width: 100% !important;
     height: 100%;
     padding: 0 40px !important;
     display: flex;
@@ -94,6 +94,7 @@
     /* carouselheader-wrapper */
     .carouselheader-wrapper {
         padding: 0 16px !important;
+        margin-top: 12px !important;
     }
 
     /* carouselheader-para-main-div */
