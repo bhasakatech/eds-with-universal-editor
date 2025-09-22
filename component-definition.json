@@ -295,6 +295,20 @@
               }
             }
           }
+        },{
+          "title": "Already with Lyca",
+          "id": "alreadyWithLyca",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Already with Lyca",
+                  "model": "alreadyWithLyca"
+                }
+              }
+            }
+          }
         },
         {
           "title": "Teaser",
