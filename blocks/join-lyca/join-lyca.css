@@ -68,6 +68,10 @@
 }
 
 @media (width <= 1024px) {
+    .section.join-lyca-container {
+        height: 480px;
+    }
+
     .join-lyca.block > div:nth-child(1) h1 {
         font-size: 3rem;
     }
