@@ -80,10 +80,11 @@
           "name": "appDownloadText",
           "label": "App Download Text",
           "valueType": "string"
-        }, {
+        },
+        {
           "component": "reference",
-          "name": "handmobileimage",
-          "label": "Hand Mobile Image",
+          "name": "downloadapparrowimage",
+          "label": "Download App Arrow Image",
           "valueType": "asset"
         }
       ]
