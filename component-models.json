@@ -611,16 +611,22 @@
         "valueType": "string"
       },
       {
+        "component": "reference",
+        "name": "handmobileimage",
+        "label": "Hand Mobile Image",
+        "valueType": "asset"
+      },
+      {
         "component": "richtext",
         "name": "appDownloadText",
         "label": "App Download Text",
         "valueType": "string"
       },
       {
-        "component": "link",
-        "name": "appDownloadLink",
-        "label": "App Download Link",
-        "valueType": "string"
+        "component": "reference",
+        "name": "handmobileimage",
+        "label": "Hand Mobile Image",
+        "valueType": "asset"
       }
     ]
   },
