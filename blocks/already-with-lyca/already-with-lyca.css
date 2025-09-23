@@ -11,20 +11,31 @@
     padding: 24px;
     background-color: #fff;
     border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     font-family: Inter, sans-serif;
     box-shadow: 0 2px 8px rgb(0 0 0 / 5%);
 }
 
 .lyca-ui-heading h2 {
-    font-size: 24px;
-    margin-bottom: 8px;
-    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 3rem;
+    line-height: 3.48rem;
+    color: #384c72;
+    margin-bottom: 0.25rem;
 }
 
 .lyca-ui-subheading p {
-    font-size: 16px;
-    margin-bottom: 16px;
-    color: #555;
+    font-size: 1rem;
+    line-height: 1.16rem;
+    margin-bottom: 1.2rem;
+    color: #667085;
+    text-align: center;
+    margin-top: 0;
 }
 
 .lyca-ui-button-group {
@@ -35,12 +46,12 @@
 
 .lyca-ui-button {
     padding: 10px 20px;
-    background-color: #0072ce;
-    color: #fff;
+    background-color: #e8f4fe;
+    color: #131212;
     border: none;
-    border-radius: 4px;
     font-weight: 600;
     cursor: pointer;
+    border-radius: 21px;
     transition: background-color 0.3s ease;
 }
 
@@ -56,6 +67,7 @@
     display: flex;
     align-items: center;
     gap: 8px;
+    border: 1px solid #ababab;
 }
 
 .lyca-ui-country-code {
@@ -68,7 +80,8 @@
     flex: 1;
     padding: 8px 12px;
     border: 1px solid #ccc;
-    border-radius: 4px;
+
+    /* border-radius: 4px; */
     font-size: 15px;
 }
 
@@ -86,9 +99,8 @@
 }
 
 .lyca-ui-app-image {
-    width: 60px;
+    width: 36px;
     height: auto;
-    border-radius: 4px;
 }
 
 .lyca-ui-app-text {
@@ -102,4 +114,26 @@
     margin-top: 8px;
     width: 24px;
     height: auto;
+}
+
+.lyca-ui-app-text > div {
+    background: aliceblue;
+    display: flex;
+    margin-right: 10px;
+}
+
+.lyca-ui-app-text > div p {
+    font-size: 0.9rem;
+    line-height: 1.16rem;
+    margin-bottom: 1.2rem;
+    color: #667085;
+    text-align: center;
+    margin-top: 0;
+}
+
+.lyca-ui-app-text > div a {
+    font-size: 1.125rem;
+    line-height: 1.313rem;
+    color: #006ae0;
+    text-decoration: none;
 }
