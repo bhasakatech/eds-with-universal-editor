@@ -10,7 +10,6 @@ export default async function decorate(block) {
     if (!response.ok) return;
 
     const data = await response.json();
-    
     // eslint-disable-next-line no-console
     console.log('Lyca UI block data:', data);
 
