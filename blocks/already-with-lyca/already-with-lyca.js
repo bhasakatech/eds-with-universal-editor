@@ -10,7 +10,6 @@ export default async function decorate(block) {
     if (!response.ok) return;
 
     const data = await response.json();
-
     // eslint-disable-next-line no-console
     console.log('Lyca UI block data:', data);
 
@@ -59,15 +58,24 @@ export default async function decorate(block) {
 
     const countryCode = document.createElement('span');
     countryCode.className = 'lyca-ui-country-code';
-    countryCode.textContent = data.countryCode || '+91';
+    countryCode.textContent = data.countryCode || '+1';
 
     const phoneInput = document.createElement('input');
     phoneInput.type = 'tel';
-    phoneInput.placeholder = data.phonePlaceholder || 'Enter phone number';
+    phoneInput.placeholder = data.phonePlaceholder || 'Enter lyca number & get started';
     phoneInput.className = 'lyca-ui-phone-input';
 
     phoneWrapper.appendChild(countryCode);
     phoneWrapper.appendChild(phoneInput);
+
+    if (data.ctaArrowImage) {
+      const arrowImg = document.createElement('img');
+      arrowImg.src = data.ctaArrowImage;
+      arrowImg.alt = 'Arrow';
+      arrowImg.className = 'lyca-ui-phone-arrow';
+      phoneWrapper.appendChild(arrowImg);
+    }
+
     inputGroup.appendChild(phoneWrapper);
 
     const validationMsg = document.createElement('p');
@@ -116,7 +124,7 @@ export default async function decorate(block) {
         validationMsg.style.display = 'block';
       } else {
         validationMsg.style.display = 'none';
-        // Trigger recharge or renew logic here
+        // TODO: Add recharge/renew logic here
       }
     };
 
