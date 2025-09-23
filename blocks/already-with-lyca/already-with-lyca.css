@@ -3,7 +3,7 @@
     width: 100%;
     max-width: 100% !important;
     position: absolute;
-    top: 756px;
+    top: 806px;
 }
 
 .lyca-ui-wrapper {
@@ -131,7 +131,7 @@ img.lyca-ui-phone-arrow {
 }
 
 .lyca-ui-arrow-image {
-        display: block;
+    display: block;
     margin-top: 10px;
     width: 26px;
     height: 21px;
@@ -156,4 +156,70 @@ img.lyca-ui-phone-arrow {
     line-height: 1.313rem;
     color: #006ae0;
     text-decoration: none;
+}
+
+@media (width <= 1024px) {
+    .lyca-ui-wrapper {
+    max-width: 700px;
+}
+
+    .already-with-lyca-wrapper {
+        top: 700px;
+    }
+}
+
+@media (width <= 768px) {
+    .already-with-lyca-wrapper {
+        top: 607px;
+    }
+
+    .lyca-ui-wrapper {
+        max-width: 600px;
+    }
+    
+}
+
+@media (width <= 430px) {
+    .lyca-ui-heading h2 {
+        font-size: 2rem;
+        line-height: 3.48rem;
+    }
+
+    .lyca-ui-subheading p {
+        font-size: 0.9rem;
+    }
+
+    .lyca-ui-button-group {
+        margin-bottom: 20px;
+        width: 236px;
+    }
+
+    .lyca-ui-phone-wrapper {
+        gap: 8px;
+        width: 336px;
+        padding: 0 10px;
+    }
+
+    .lyca-ui-app-text > div p {
+        font-size: 0.7rem;
+        line-height: 1.16rem;
+        color: #667085;
+        text-align: center;
+    }
+
+    .lyca-ui-app-text > div a {
+        font-size: 0.8rem;
+    }
+
+    .lyca-ui-arrow-image {
+        display: block;
+        margin-top: 14px;
+        width: 19px;
+        height: 16px;
+    }
+
+    .lyca-ui-app-image {
+        width: 31px;
+        height: auto;
+    }
 }
