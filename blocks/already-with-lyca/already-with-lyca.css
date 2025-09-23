@@ -44,9 +44,20 @@
     margin-bottom: 20px;
 }
 
-.lyca-ui-button {
+.lyca-ui-button.recharge{
     padding: 10px 20px;
-    background-color: #e8f4fe;
+    background-color: #006ae0;
+    color: #fff;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 21px;
+    transition: background-color 0.3s ease;
+}
+
+.lyca-ui-button.renew{
+    padding: 10px 20px;
+    background-color: #000;
     color: #131212;
     border: none;
     font-weight: 600;
@@ -107,6 +118,7 @@
     font-size: 14px;
     line-height: 1.5;
     color: #333;
+    display: flex;
 }
 
 .lyca-ui-arrow-image {
@@ -117,15 +129,14 @@
 }
 
 .lyca-ui-app-text > div {
-    background: aliceblue;
     display: flex;
+    gap: 10px;
     margin-right: 10px;
 }
 
 .lyca-ui-app-text > div p {
     font-size: 0.9rem;
     line-height: 1.16rem;
-    margin-bottom: 1.2rem;
     color: #667085;
     text-align: center;
     margin-top: 0;
