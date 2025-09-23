@@ -1,11 +1,10 @@
 export default async function decorate(block) {
   try {
-    const itemEls = block.getAttribute('data-aue-resource');
-    if (!itemEls) return;
+    const resource = block.getAttribute('data-aue-resource');
+    if (!resource) return;
 
-    const jcrPath = itemEls.replace('urn:aemconnection:', '');
-    const domain = window.location.origin;
-    const url = `${domain}${jcrPath}.infinity.json`;
+    const jcrPath = resource.replace('urn:aemconnection:', '');
+    const url = `${window.location.origin}${jcrPath}.infinity.json`;
 
     const response = await fetch(url);
     if (!response.ok) return;
@@ -13,101 +12,122 @@ export default async function decorate(block) {
     const data = await response.json();
 
     // eslint-disable-next-line no-console
-    console.log('alreadyWithLyca data', data);
+    console.log('Lyca UI block data:', data);
 
-    // === Main Wrapper ===
+    // Create wrapper
     const wrapper = document.createElement('div');
-    wrapper.className = 'lyca-wrapper';
+    wrapper.className = 'lyca-ui-wrapper';
 
-    // === Heading Section ===
+    // Heading
     if (data.heading) {
       const heading = document.createElement('div');
-      heading.className = 'lyca-heading';
+      heading.className = 'lyca-ui-heading';
       heading.innerHTML = data.heading;
       wrapper.appendChild(heading);
     }
 
+    // Subheading
     if (data.subHeading) {
-      const subHeading = document.createElement('p');
-      subHeading.className = 'lyca-subheading';
+      const subHeading = document.createElement('div');
+      subHeading.className = 'lyca-ui-subheading';
       subHeading.innerHTML = data.subHeading;
       wrapper.appendChild(subHeading);
     }
 
-    // === Buttons (Recharge + Renew Plan) ===
-    const buttonContainer = document.createElement('div');
-    buttonContainer.className = 'lyca-buttons';
+    // Buttons
+    const buttonGroup = document.createElement('div');
+    buttonGroup.className = 'lyca-ui-button-group';
 
-    if (data.rechargeButtonText) {
-      const rechargeBtn = document.createElement('button');
-      rechargeBtn.className = 'lyca-btn recharge-btn';
-      rechargeBtn.textContent = data.rechargeButtonText;
-      buttonContainer.appendChild(rechargeBtn);
-    }
+    const rechargeBtn = document.createElement('button');
+    rechargeBtn.className = 'lyca-ui-button recharge';
+    rechargeBtn.textContent = data.rechargeButtonText || 'Recharge';
 
-    if (data.renewButtonText) {
-      const renewBtn = document.createElement('button');
-      renewBtn.className = 'lyca-btn renew-btn';
-      renewBtn.textContent = data.renewButtonText;
-      buttonContainer.appendChild(renewBtn);
-    }
+    const renewBtn = document.createElement('button');
+    renewBtn.className = 'lyca-ui-button renew';
+    renewBtn.textContent = data.renewButtonText || 'Renew Plan';
 
-    wrapper.appendChild(buttonContainer);
+    buttonGroup.appendChild(rechargeBtn);
+    buttonGroup.appendChild(renewBtn);
+    wrapper.appendChild(buttonGroup);
 
-    // === Phone Input Section ===
-    const phoneContainer = document.createElement('div');
-    phoneContainer.className = 'lyca-phone-container';
+    // Phone input
+    const inputGroup = document.createElement('div');
+    inputGroup.className = 'lyca-ui-input-group';
+
+    const phoneWrapper = document.createElement('div');
+    phoneWrapper.className = 'lyca-ui-phone-wrapper';
 
     const countryCode = document.createElement('span');
-    countryCode.className = 'lyca-country-code';
-    countryCode.textContent = data.countryCode || '+1';
+    countryCode.className = 'lyca-ui-country-code';
+    countryCode.textContent = data.countryCode || '+91';
 
-    const input = document.createElement('input');
-    input.type = 'text';
-    input.placeholder = data.phonePlaceholder || 'Enter your Number';
-    input.className = 'lyca-phone-input';
+    const phoneInput = document.createElement('input');
+    phoneInput.type = 'tel';
+    phoneInput.placeholder = data.phonePlaceholder || 'Enter phone number';
+    phoneInput.className = 'lyca-ui-phone-input';
 
-    const arrowBtn = document.createElement('button');
-    arrowBtn.className = 'lyca-arrow-btn';
-    if (data.ctaArrowImage) {
+    phoneWrapper.appendChild(countryCode);
+    phoneWrapper.appendChild(phoneInput);
+    inputGroup.appendChild(phoneWrapper);
+
+    const validationMsg = document.createElement('p');
+    validationMsg.className = 'lyca-ui-validation';
+    validationMsg.textContent = data.validationMessage || 'Please enter your phone number!';
+    validationMsg.style.display = 'none';
+    inputGroup.appendChild(validationMsg);
+
+    wrapper.appendChild(inputGroup);
+
+    // App download section
+    const appDownload = document.createElement('div');
+    appDownload.className = 'lyca-ui-app-download';
+
+    if (data.handmobileimage) {
+      const appImg = document.createElement('img');
+      appImg.src = data.handmobileimage;
+      appImg.alt = 'Mobile App';
+      appImg.className = 'lyca-ui-app-image';
+      appDownload.appendChild(appImg);
+    }
+
+    const appTextWrapper = document.createElement('div');
+    appTextWrapper.className = 'lyca-ui-app-text';
+
+    if (data.appDownloadText) {
+      const appText = document.createElement('div');
+      appText.innerHTML = data.appDownloadText;
+      appTextWrapper.appendChild(appText);
+    }
+
+    if (data.downloadapparrowimage) {
       const arrowImg = document.createElement('img');
-      arrowImg.src = data.ctaArrowImage;
-      arrowImg.alt = 'Submit';
-      arrowBtn.appendChild(arrowImg);
+      arrowImg.src = data.downloadapparrowimage;
+      arrowImg.alt = 'Arrow';
+      arrowImg.className = 'lyca-ui-arrow-image';
+      appTextWrapper.appendChild(arrowImg);
     }
 
-    phoneContainer.appendChild(countryCode);
-    phoneContainer.appendChild(input);
-    phoneContainer.appendChild(arrowBtn);
+    appDownload.appendChild(appTextWrapper);
+    wrapper.appendChild(appDownload);
 
-    wrapper.appendChild(phoneContainer);
+    // Validation logic
+    const validatePhone = () => {
+      if (!phoneInput.value.trim()) {
+        validationMsg.style.display = 'block';
+      } else {
+        validationMsg.style.display = 'none';
+        // Trigger recharge or renew logic here
+      }
+    };
 
-    // === Validation Message ===
-    if (data.validationMessage) {
-      const validation = document.createElement('div');
-      validation.className = 'lyca-validation';
-      validation.textContent = data.validationMessage;
-      wrapper.appendChild(validation);
-    }
+    rechargeBtn.addEventListener('click', validatePhone);
+    renewBtn.addEventListener('click', validatePhone);
 
-    // === App Download Link ===
-    if (data.appDownloadText && data.appDownloadLink) {
-      const appDownload = document.createElement('div');
-      appDownload.className = 'lyca-app-download';
-
-      const appLink = document.createElement('a');
-      appLink.href = data.appDownloadLink;
-      appLink.innerHTML = data.appDownloadText;
-      appDownload.appendChild(appLink);
-
-      wrapper.appendChild(appDownload);
-    }
-
-    // === Replace Block Content ===
+    // Final render
     block.innerHTML = '';
     block.appendChild(wrapper);
   } catch (error) {
     // eslint-disable-next-line no-console
-    console.error('alreadyWithLyca block error:', error);
+    console.error('Lyca UI block error:', error);
   }
 }
