@@ -70,8 +70,6 @@
 
 .lyca-ui-input-group {
     margin-bottom: 20px;
-    width: 32%;
-    background: aqua;
     padding: 0 20px;
 }
 
@@ -201,6 +199,19 @@ img.lyca-ui-phone-arrow {
     .lyca-ui-wrapper {
         max-width: 600px;
     }
+    .lyca-ui-button.recharge {
+        padding: 5px 20px;
+        margin: 0;
+        line-height: 2;
+        font-size: 13px;
+    }
+
+    .lyca-ui-button.renew {
+        margin: 0;
+        line-height: 2;
+        font-size: 13px;
+        padding: 10px 20px;
+    }
 }
 
 @media (width <= 430px) {
@@ -220,7 +231,6 @@ img.lyca-ui-phone-arrow {
 
     .lyca-ui-phone-wrapper {
         gap: 8px;
-        width: 336px;
         padding: 0 10px;
     }
 
