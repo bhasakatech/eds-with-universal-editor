@@ -103,9 +103,20 @@ img.lyca-ui-phone-arrow {
 }
 
 .lyca-ui-validation {
-    color: #d9534f;
+      color: #d9534f;
     font-size: 14px;
-    margin-top: 6px;
+    margin-top: 0px;
+    height: 2rem;
+    background-color: #fce38c;
+    font-size: .938rem;
+    color: #667085;
+    border-radius: 2px 2px 8px 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 5px 10px;
+    box-shadow: 9px 8px 14px -4px rgba(131, 128, 128, .2117647059);
+    border-top: 3px solid #e37171;
 }
 
 .lyca-ui-app-download {
