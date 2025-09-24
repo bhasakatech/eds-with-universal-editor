@@ -7,7 +7,7 @@
 }
 
 .lyca-ui-wrapper {
-    max-width: 999px;
+        max-width: 75%;
     margin: auto;
     padding: 24px;
     background-color: #fff;
@@ -182,23 +182,16 @@ img.lyca-ui-phone-arrow {
 }
 
 @media (width <= 1024px) {
-    .lyca-ui-wrapper {
-        max-width: 700px;
-    }
-
-    .already-with-lyca-wrapper {
+      .already-with-lyca-wrapper {
         top: 700px;
     }
 }
 
 @media (width <= 768px) {
-    .already-with-lyca-wrapper {
-        top: 607px;
-    }
-
     .lyca-ui-wrapper {
         max-width: 600px;
     }
+
     .lyca-ui-button.recharge {
         padding: 5px 20px;
         margin: 0;
