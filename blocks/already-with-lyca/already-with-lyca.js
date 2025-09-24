@@ -125,13 +125,21 @@ export default async function decorate(block) {
     wrapper.appendChild(appDownload);
 
     // Validation logic for phone input arrow
-    const validatePhone = () => {
-      if (!phoneInput.value.trim()) {
-        validationMsg.style.display = 'block';
+        const validatePhone = () => {
+      const phone = phoneInput.value.trim();
+      if (!phone) {
+        validationMsg.textContent = 'Please enter your phone number!';
+        validationMsg.style.display = 'flex';
+      } else if (!/^[0-9]{10}$/.test(phone)) {
+        validationMsg.textContent =
+          'This number is not a valid Lyca number. Please check and try again';
+        validationMsg.style.display = 'flex';
       } else {
         validationMsg.style.display = 'none';
       }
     };
+
+
 
     if (phoneArrowImg) {
       phoneArrowImg.addEventListener('click', validatePhone);
