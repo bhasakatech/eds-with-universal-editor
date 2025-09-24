@@ -10,6 +10,7 @@ export default async function decorate(block) {
     if (!response.ok) return;
 
     const data = await response.json();
+
     // eslint-disable-next-line no-console
     console.log('Lyca UI block data:', data);
 
@@ -68,16 +69,19 @@ export default async function decorate(block) {
     phoneWrapper.appendChild(countryCode);
     phoneWrapper.appendChild(phoneInput);
 
+    // Phone arrow image (ctaArrowImage)
+    let phoneArrowImg;
     if (data.ctaArrowImage) {
-      const arrowImg = document.createElement('img');
-      arrowImg.src = data.ctaArrowImage;
-      arrowImg.alt = 'Arrow';
-      arrowImg.className = 'lyca-ui-phone-arrow';
-      phoneWrapper.appendChild(arrowImg);
+      phoneArrowImg = document.createElement('img');
+      phoneArrowImg.src = data.ctaArrowImage;
+      phoneArrowImg.alt = 'Arrow';
+      phoneArrowImg.className = 'lyca-ui-phone-arrow';
+      phoneWrapper.appendChild(phoneArrowImg);
     }
 
     inputGroup.appendChild(phoneWrapper);
 
+    // Validation message
     const validationMsg = document.createElement('p');
     validationMsg.className = 'lyca-ui-validation';
     validationMsg.textContent = data.validationMessage || 'Please enter your phone number!';
@@ -107,29 +111,38 @@ export default async function decorate(block) {
       appTextWrapper.appendChild(appText);
     }
 
+    // Download arrow image (downloadapparrowimage)
+    let downloadArrowImg;
     if (data.downloadapparrowimage) {
-      const arrowImg = document.createElement('img');
-      arrowImg.src = data.downloadapparrowimage;
-      arrowImg.alt = 'Arrow';
-      arrowImg.className = 'lyca-ui-arrow-image';
-      appTextWrapper.appendChild(arrowImg);
+      downloadArrowImg = document.createElement('img');
+      downloadArrowImg.src = data.downloadapparrowimage;
+      downloadArrowImg.alt = 'Arrow';
+      downloadArrowImg.className = 'lyca-ui-arrow-image';
+      appTextWrapper.appendChild(downloadArrowImg);
     }
 
     appDownload.appendChild(appTextWrapper);
     wrapper.appendChild(appDownload);
 
-    // Validation logic
+    // Validation logic for phone input arrow
     const validatePhone = () => {
       if (!phoneInput.value.trim()) {
         validationMsg.style.display = 'block';
       } else {
         validationMsg.style.display = 'none';
-        // TODO: Add recharge/renew logic here
       }
     };
 
-    rechargeBtn.addEventListener('click', validatePhone);
-    renewBtn.addEventListener('click', validatePhone);
+    if (phoneArrowImg) {
+      phoneArrowImg.addEventListener('click', validatePhone);
+    }
+
+    if (downloadArrowImg) {
+      downloadArrowImg.addEventListener('click', () => {
+        // eslint-disable-next-line no-console
+        console.log('Download arrow clicked');
+      });
+    }
 
     // Final render
     block.innerHTML = '';

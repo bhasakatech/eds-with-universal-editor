@@ -3,7 +3,7 @@
     width: 100%;
     max-width: 100% !important;
     position: absolute;
-    top: 806px;
+    top: 760px;
 }
 
 .lyca-ui-wrapper {
@@ -66,10 +66,6 @@
     cursor: pointer;
     border-radius: 21px;
     transition: background-color 0.3s ease;
-}
-
-.lyca-ui-button:hover {
-    background-color: #005fa3;
 }
 
 .lyca-ui-input-group {
