@@ -76,7 +76,7 @@
     display: flex;
     align-items: center;
     gap: 8px;
-    width: 380px;
+    width: 300px;
     padding: 0 10px;
     border-radius: 5px;
     border: 1px solid #ababab;
@@ -84,9 +84,9 @@
 
 .lyca-ui-country-code {
     font-weight: bold;
-    font-size: 16px;
-    color: #333;
-    padding: 14px 8px;
+    font-size: 13px;
+    color: #d7d7d7;
+    padding: 11px 8px;
     border-right: 1px solid grey;
 }
 
@@ -94,27 +94,43 @@
     flex: 1;
     padding: 8px 12px;
     border: none;
-    font-size: 15px;
+    font-size: 13px;
 }
 
 img.lyca-ui-phone-arrow {
-    width: 30px;
+    width: 26px;
     height: auto;
 }
 
 .lyca-ui-validation {
-     margin-top: 0;
+    margin-top: 0;
     height: 2rem;
     background-color: #fce38c;
-    font-size: .938rem;
+    font-size: 0.938rem;
     color: #667085;
     border-radius: 2px 2px 8px 8px;
     display: flex;
     align-items: center;
     gap: 10px;
     padding: 5px 10px;
-    box-shadow: 9px 8px 14px -4px #84849c;
+    box-shadow: 1px 5px 5px -5px #84849c;
     border-top: 3px solid #e37171;
+}
+
+.lyca-ui-validation::before {
+    content: "!";
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    margin-right: 6px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #e37171;
+    border: 1px solid #e37171;
+    /* background-color: red; */
+    border-radius: 50%;
 }
 
 .lyca-ui-app-download {
@@ -124,7 +140,7 @@ img.lyca-ui-phone-arrow {
 }
 
 .lyca-ui-app-image {
-    width: 36px;
+    width: 30px;
     height: auto;
 }
 
@@ -137,9 +153,9 @@ img.lyca-ui-phone-arrow {
 
 .lyca-ui-arrow-image {
     display: block;
-    margin-top: 10px;
-    width: 26px;
-    height: 21px;
+    margin-top: 14px;
+    width: 20px;
+    height: 15px;
 }
 
 .lyca-ui-app-text > div {
@@ -165,8 +181,8 @@ img.lyca-ui-phone-arrow {
 
 @media (width <= 1024px) {
     .lyca-ui-wrapper {
-    max-width: 700px;
-}
+        max-width: 700px;
+    }
 
     .already-with-lyca-wrapper {
         top: 700px;
@@ -181,7 +197,6 @@ img.lyca-ui-phone-arrow {
     .lyca-ui-wrapper {
         max-width: 600px;
     }
-    
 }
 
 @media (width <= 430px) {
