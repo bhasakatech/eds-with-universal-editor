@@ -7,7 +7,7 @@
 }
 
 .lyca-ui-wrapper {
-        max-width: 75%;
+    max-width: 75%;
     margin: auto;
     padding: 24px;
     background-color: #fff;
@@ -182,21 +182,29 @@ img.lyca-ui-phone-arrow {
 }
 
 @media (width <= 1024px) {
-      .already-with-lyca-wrapper {
+    .already-with-lyca-wrapper {
         top: 700px;
+    }
+
+    .lyca-ui-wrapper {
+        max-width: 75%;
     }
 }
 
 @media (width <= 768px) {
-    .lyca-ui-wrapper {
-        max-width: 600px;
-    }
-
     .lyca-ui-button.recharge {
         padding: 5px 20px;
         margin: 0;
         line-height: 2;
         font-size: 13px;
+    }
+
+    .lyca-ui-wrapper {
+        max-width: 75%;
+    }
+
+    .already-with-lyca-wrapper {
+        top: 803px;
     }
 
     .lyca-ui-button.renew {
@@ -213,6 +221,19 @@ img.lyca-ui-phone-arrow {
         line-height: 3.48rem;
     }
 
+    .lyca-ui-wrapper {
+        max-width: 75%;
+    }
+
+    .lyca-ui-phone-wrapper {
+             top: 803px;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        border-radius: 5px;
+        border: 1px solid #ababab;
+    }
+
     .lyca-ui-subheading p {
         font-size: 0.9rem;
     }
@@ -220,11 +241,6 @@ img.lyca-ui-phone-arrow {
     .lyca-ui-button-group {
         margin-bottom: 20px;
         width: 236px;
-    }
-
-    .lyca-ui-phone-wrapper {
-        gap: 8px;
-        padding: 0 10px;
     }
 
     .lyca-ui-app-text > div p {
@@ -236,6 +252,59 @@ img.lyca-ui-phone-arrow {
 
     .lyca-ui-app-text > div a {
         font-size: 0.8rem;
+    }
+
+    .lyca-ui-arrow-image {
+        display: block;
+        margin-top: 14px;
+        width: 19px;
+        height: 16px;
+    }
+
+    .lyca-ui-app-image {
+        width: 31px;
+        height: auto;
+    }
+}
+
+
+@media (width <= 380px) {
+    .lyca-ui-heading h2 {
+        font-size: 1.8rem;
+        line-height: 3.48rem;
+    }
+
+    .lyca-ui-wrapper {
+        max-width: 75%;
+    }
+
+    .lyca-ui-phone-wrapper {
+        display: flex;
+        align-items: center;
+        top: 803px;
+        width: 100%;
+        border-radius: 5px;
+        border: 1px solid #ababab;
+    }
+
+    .lyca-ui-subheading p {
+        font-size: 0.8rem;
+    }
+
+    .lyca-ui-button-group {
+        margin-bottom: 20px;
+        width: 236px;
+    }
+    
+    .lyca-ui-app-text > div p {
+        font-size: 0.6rem;
+        line-height: 1.8rem;
+        color: #667085;
+        text-align: center;
+    }
+
+    .lyca-ui-app-text > div a {
+        font-size: 0.7rem;
     }
 
     .lyca-ui-arrow-image {
